@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="layer1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E3F2FD;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#BBDEFB;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="layer2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E8F5E8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C8E6C9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="layer3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFF3E0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFE0B2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="layer4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F3E5F5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E1BEE7;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#333">
+    电池NFT四层架构图
+  </text>
+  
+  <!-- Layer 4: 应用层 -->
+  <rect x="50" y="80" width="1100" height="160" fill="url(#layer4)" stroke="#8E24AA" stroke-width="2" rx="10" filter="url(#shadow)"/>
+  <text x="70" y="105" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#4A148C">
+    4. 应用层（用户交互与收益系统）
+  </text>
+  
+  <!-- Application Layer Components -->
+  <rect x="80" y="120" width="280" height="100" fill="#F8BBD9" stroke="#AD1457" stroke-width="1" rx="5"/>
+  <text x="90" y="140" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4A148C">每日收益结算引擎</text>
+  <text x="90" y="158" font-family="Arial, sans-serif" font-size="12" fill="#6A1B9A">• 实时收益计算</text>
+  <text x="90" y="175" font-family="Arial, sans-serif" font-size="12" fill="#6A1B9A">• 换电量 × 0.5 HKD/kWh</text>
+  <text x="90" y="192" font-family="Arial, sans-serif" font-size="12" fill="#6A1B9A">• 智能分润机制</text>
+  <text x="90" y="209" font-family="Arial, sans-serif" font-size="12" fill="#6A1B9A">• 税收处理</text>
+  
+  <rect x="390" y="120" width="280" height="100" fill="#F8BBD9" stroke="#AD1457" stroke-width="1" rx="5"/>
+  <text x="400" y="140" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4A148C">碳减排排行榜</text>
+  <text x="400" y="158" font-family="Arial, sans-serif" font-size="12" fill="#6A1B9A">• 个人碳减排量统计</text>
+  <text x="400" y="175" font-family="Arial, sans-serif" font-size="12" fill="#6A1B9A">• 社区排行榜</text>
+  <text x="400" y="192" font-family="Arial, sans-serif" font-size="12" fill="#6A1B9A">• 绿色出行激励</text>
+  <text x="400" y="209" font-family="Arial, sans-serif" font-size="12" fill="#6A1B9A">• ESG报告生成</text>
+  
+  <rect x="700" y="120" width="280" height="100" fill="#F8BBD9" stroke="#AD1457" stroke-width="1" rx="5"/>
+  <text x="710" y="140" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4A148C">NFT二级市场增强</text>
+  <text x="710" y="158" font-family="Arial, sans-serif" font-size="12" fill="#6A1B9A">• NFT交易平台</text>
+  <text x="710" y="175" font-family="Arial, sans-serif" font-size="12" fill="#6A1B9A">• 价值评估算法</text>
+  <text x="710" y="192" font-family="Arial, sans-serif" font-size="12" fill="#6A1B9A">• 流动性挖矿</text>
+  <text x="710" y="209" font-family="Arial, sans-serif" font-size="12" fill="#6A1B9A">• 版权保护</text>
+  
+  <!-- Layer 3: 公链层 -->
+  <rect x="50" y="260" width="1100" height="160" fill="url(#layer3)" stroke="#F57C00" stroke-width="2" rx="10" filter="url(#shadow)"/>
+  <text x="70" y="285" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#E65100">
+    3. 公链层（以太坊Layer 2动态NFT）
+  </text>
+  
+  <!-- Public Chain Components -->
+  <rect x="80" y="300" width="250" height="100" fill="#FFE0B2" stroke="#FF8F00" stroke-width="1" rx="5"/>
+  <text x="90" y="320" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#E65100">动态NFT标准</text>
+  <text x="90" y="338" font-family="Arial, sans-serif" font-size="12" fill="#F57C00">• ERC-3664协议</text>
+  <text x="90" y="355" font-family="Arial, sans-serif" font-size="12" fill="#F57C00">• 链上属性更新</text>
+  <text x="90" y="372" font-family="Arial, sans-serif" font-size="12" fill="#F57C00">• 元数据演进</text>
+  <text x="90" y="389" font-family="Arial, sans-serif" font-size="12" fill="#F57C00">• 版本控制</text>
+  
+  <rect x="360" y="300" width="250" height="100" fill="#FFE0B2" stroke="#FF8F00" stroke-width="1" rx="5"/>
+  <text x="370" y="320" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#E65100">预言机机制</text>
+  <text x="370" y="338" font-family="Arial, sans-serif" font-size="12" fill="#F57C00">• Chainlink节点</text>
+  <text x="370" y="355" font-family="Arial, sans-serif" font-size="12" fill="#F57C00">• 24小时验证周期</text>
+  <text x="370" y="372" font-family="Arial, sans-serif" font-size="12" fill="#F57C00">• ZKP验证</text>
+  <text x="370" y="389" font-family="Arial, sans-serif" font-size="12" fill="#F57C00">• 去中心化共识</text>
+  
+  <rect x="640" y="300" width="280" height="100" fill="#FFE0B2" stroke="#FF8F00" stroke-width="1" rx="5"/>
+  <text x="650" y="320" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#E65100">收益计算引擎</text>
+  <text x="650" y="338" font-family="Arial, sans-serif" font-size="12" fill="#F57C00">• 今日收益 = 换电量 × 0.5 HKD/kWh</text>
+  <text x="650" y="355" font-family="Arial, sans-serif" font-size="12" fill="#F57C00">• 智能合约自动执行</text>
+  <text x="650" y="372" font-family="Arial, sans-serif" font-size="12" fill="#F57C00">• Gas费优化</text>
+  <text x="650" y="389" font-family="Arial, sans-serif" font-size="12" fill="#F57C00">• Layer 2扩容</text>
+  
+  <!-- Layer 2: 联盟链层 -->
+  <rect x="50" y="440" width="1100" height="180" fill="url(#layer2)" stroke="#388E3C" stroke-width="2" rx="10" filter="url(#shadow)"/>
+  <text x="70" y="465" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1B5E20">
+    2. 联盟链层
+  </text>
+  
+  <!-- Consortium Chain Components -->
+  <rect x="80" y="480" width="220" height="120" fill="#C8E6C9" stroke="#4CAF50" stroke-width="1" rx="5"/>
+  <text x="90" y="500" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1B5E20">数据存证</text>
+  <text x="90" y="518" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32">• 全量原始数据上链</text>
+  <text x="90" y="535" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32">• 不可篡改时间戳</text>
+  <text x="90" y="552" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32">• 分布式存储</text>
+  <text x="90" y="569" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32">• 数据溯源</text>
+  <text x="90" y="586" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32">• 合规审计</text>
+  
+  <rect x="320" y="480" width="220" height="120" fill="#C8E6C9" stroke="#4CAF50" stroke-width="1" rx="5"/>
+  <text x="330" y="500" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1B5E20">资产绑定</text>
+  <text x="330" y="518" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32">• 电池ID与NFT预绑定</text>
+  <text x="330" y="535" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32">• 数字身份管理</text>
+  <text x="330" y="552" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32">• 所有权转移</text>
+  <text x="330" y="569" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32">• 智能合约托管</text>
+  <text x="330" y="586" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32">• 权限管理</text>
+  
+  <rect x="560" y="480" width="220" height="120" fill="#C8E6C9" stroke="#4CAF50" stroke-width="1" rx="5"/>
+  <text x="570" y="500" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1B5E20">ZKP生成</text>
+  <text x="570" y="518" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32">• 零知识证明</text>
+  <text x="570" y="535" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32">• 隐私保护</text>
+  <text x="570" y="552" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32">• 数据完整性验证</text>
+  <text x="570" y="569" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32">• 高效压缩算法</text>
+  <text x="570" y="586" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32">• 批量证明生成</text>
+  
+  <rect x="800" y="480" width="280" height="120" fill="#C8E6C9" stroke="#4CAF50" stroke-width="1" rx="5"/>
+  <text x="810" y="500" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1B5E20">跨链网关</text>
+  <text x="810" y="518" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32">• TSS门限签名技术</text>
+  <text x="810" y="535" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32">• 向公链传输哈希摘要</text>
+  <text x="810" y="552" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32">• 多链兼容协议</text>
+  <text x="810" y="569" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32">• 原子性跨链交易</text>
+  <text x="810" y="586" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32">• 安全多方计算</text>
+  
+  <!-- Layer 1: 数据采集层 -->
+  <rect x="50" y="640" width="1100" height="200" fill="url(#layer1)" stroke="#1976D2" stroke-width="2" rx="10" filter="url(#shadow)"/>
+  <text x="70" y="665" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0D47A1">
+    1. 数据采集及处理层（物理世界→数字映射）
+  </text>
+  
+  <!-- Data Collection Components -->
+  <rect x="80" y="680" width="300" height="140" fill="#BBDEFB" stroke="#2196F3" stroke-width="1" rx="5"/>
+  <text x="90" y="700" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0D47A1">电池BMS传感器</text>
+  <text x="90" y="718" font-family="Arial, sans-serif" font-size="12" fill="#1565C0">• 实时监测电压</text>
+  <text x="90" y="735" font-family="Arial, sans-serif" font-size="12" fill="#1565C0">• 电流强度检测</text>
+  <text x="90" y="752" font-family="Arial, sans-serif" font-size="12" fill="#1565C0">• 温度传感器阵列</text>
+  <text x="90" y="769" font-family="Arial, sans-serif" font-size="12" fill="#1565C0">• SOH健康度算法</text>
+  <text x="90" y="786" font-family="Arial, sans-serif" font-size="12" fill="#1565C0">• 预测性维护</text>
+  <text x="90" y="803" font-family="Arial, sans-serif" font-size="12" fill="#1565C0">• 故障诊断系统</text>
+  
+  <rect x="400" y="680" width="300" height="140" fill="#BBDEFB" stroke="#2196F3" stroke-width="1" rx="5"/>
+  <text x="410" y="700" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0D47A1">车载T-Box</text>
+  <text x="410" y="718" font-family="Arial, sans-serif" font-size="12" fill="#1565C0">• 行驶里程精确记录</text>
+  <text x="410" y="735" font-family="Arial, sans-serif" font-size="12" fill="#1565C0">• 充放电次数统计</text>
+  <text x="410" y="752" font-family="Arial, sans-serif" font-size="12" fill="#1565C0">• GPS轨迹跟踪</text>
+  <text x="410" y="769" font-family="Arial, sans-serif" font-size="12" fill="#1565C0">• 驾驶行为分析</text>
+  <text x="410" y="786" font-family="Arial, sans-serif" font-size="12" fill="#1565C0">• 能耗优化建议</text>
+  <text x="410" y="803" font-family="Arial, sans-serif" font-size="12" fill="#1565C0">• OTA远程升级</text>
+  
+  <rect x="720" y="680" width="380" height="140" fill="#BBDEFB" stroke="#2196F3" stroke-width="1" rx="5"/>
+  <text x="730" y="700" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0D47A1">换电站终端</text>
+  <text x="730" y="718" font-family="Arial, sans-serif" font-size="12" fill="#1565C0">• 换电时间精确记录（78秒/次）</text>
+  <text x="730" y="735" font-family="Arial, sans-serif" font-size="12" fill="#1565C0">• 服务车型识别与适配</text>
+  <text x="730" y="752" font-family="Arial, sans-serif" font-size="12" fill="#1565C0">• 自动化换电流程</text>
+  <text x="730" y="769" font-family="Arial, sans-serif" font-size="12" fill="#1565C0">• 电池状态检测</text>
+  <text x="730" y="786" font-family="Arial, sans-serif" font-size="12" fill="#1565C0">• 库存管理系统</text>
+  <text x="730" y="803" font-family="Arial, sans-serif" font-size="12" fill="#1565C0">• 用户身份验证</text>
+  
+  <!-- Data Flow Arrows -->
+  <!-- Layer 1 to 2 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+     refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+  
+  <line x1="600" y1="630" x2="600" y2="650" stroke="#333" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="610" y="640" font-family="Arial, sans-serif" font-size="12" fill="#333">数据上传</text>
+  
+  <!-- Layer 2 to 3 -->
+  <line x1="600" y1="430" x2="600" y2="450" stroke="#333" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="610" y="440" font-family="Arial, sans-serif" font-size="12" fill="#333">ZKP+哈希</text>
+  
+  <!-- Layer 3 to 4 -->
+  <line x1="600" y1="250" x2="600" y2="270" stroke="#333" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="610" y="260" font-family="Arial, sans-serif" font-size="12" fill="#333">NFT更新</text>
+  
+  <!-- Additional annotations -->
+  <rect x="1020" y="120" width="120" height="80" fill="#FFFDE7" stroke="#F57F17" stroke-width="1" rx="5"/>
+  <text x="1030" y="140" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#F57F17">关键指标</text>
+  <text x="1030" y="155" font-family="Arial, sans-serif" font-size="10" fill="#F9A825">换电效率: 78s</text>
+  <text x="1030" y="170" font-family="Arial, sans-serif" font-size="10" fill="#F9A825">收益率: 0.5HKD/kWh</text>
+  <text x="1030" y="185" font-family="Arial, sans-serif" font-size="10" fill="#F9A825">更新频率: 24h</text>
+  
+</svg>
