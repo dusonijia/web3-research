@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmind-workbook xmlns="urn:xmind:xmap:xmlns:content:2.0" version="2.0">
+  <sheet id="web3-architecture" theme="business">
+    <topic id="root">
+      <title>Web3.0 生态业务架构图 (L0-L5)</title>
+      <children>
+        <topics type="attached">
+          <!-- L0: 物理设施层 -->
+          <topic id="l0" color="#8B4513">
+            <title>L0: 物理设施层 (Physical Infrastructure Layer)</title>
+            <children>
+              <topics type="attached">
+                <topic id="l0-network" color="#A0522D">
+                  <title>网络基础设施</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l0-p2p" color="#32CD32" priority="high">
+                        <title>🔗 P2P网络协议 (Libp2p) - 核心技术</title>
+                        <notes>点对点网络协议，Web3的基础通信层</notes>
+                      </topic>
+                      <topic id="l0-internet" color="#708090">
+                        <title>互联网基础设施</title>
+                      </topic>
+                      <topic id="l0-cdn" color="#708090">
+                        <title>CDN网络</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l0-hardware" color="#A0522D">
+                  <title>硬件设施</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l0-datacenter" color="#708090">
+                        <title>数据中心</title>
+                      </topic>
+                      <topic id="l0-servers" color="#708090">
+                        <title>服务器集群</title>
+                      </topic>
+                      <topic id="l0-storage" color="#708090">
+                        <title>存储设备</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l0-compute" color="#A0522D">
+                  <title>计算平台</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l0-evm" color="#1E90FF" priority="high">
+                        <title>⚡ EVM (以太坊虚拟机) - 先进技术</title>
+                        <notes>智能合约执行环境，Web3应用的运行平台</notes>
+                      </topic>
+                      <topic id="l0-wasm" color="#1E90FF">
+                        <title>🚀 WASM (WebAssembly) - 先进技术</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+
+          <!-- L1: 协议层 (公链层) -->
+          <topic id="l1" color="#2E8B57">
+            <title>L1: 协议层 (公链层) - Blockchain Protocol Layer</title>
+            <children>
+              <topics type="attached">
+                <topic id="l1-blockchains" color="#228B22">
+                  <title>主要公链</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l1-ethereum" color="#DC143C" priority="critical">
+                        <title>🏆 以太坊 (Ethereum) - 关键核心技术</title>
+                        <notes>智能合约平台，Web3生态的核心基础设施</notes>
+                      </topic>
+                      <topic id="l1-bitcoin" color="#DC143C" priority="critical">
+                        <title>💰 比特币 (Bitcoin) - 关键核心技术</title>
+                        <notes>价值存储和转移的基础，区块链技术的起源</notes>
+                      </topic>
+                      <topic id="l1-polkadot" color="#1E90FF" priority="high">
+                        <title>🌐 波卡 (Polkadot) - 跨链先进技术</title>
+                        <notes>多链互操作性平台，跨链技术的重要实现</notes>
+                      </topic>
+                      <topic id="l1-solana" color="#1E90FF">
+                        <title>⚡ Solana - 高性能公链</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l1-consensus" color="#B22222">
+                  <title>共识机制</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l1-hash" color="#DC143C" priority="critical">
+                        <title>🔐 哈希算法 (SHA-256, Keccak-256) - 关键核心技术</title>
+                        <notes>区块链安全的数学基础，所有加密货币的核心</notes>
+                      </topic>
+                      <topic id="l1-pow" color="#32CD32">
+                        <title>⛏️ 工作量证明 (PoW) - 核心技术</title>
+                      </topic>
+                      <topic id="l1-pos" color="#1E90FF" priority="high">
+                        <title>🔥 权益证明 (PoS) - 先进技术</title>
+                        <notes>更环保的共识机制，以太坊2.0采用</notes>
+                      </topic>
+                      <topic id="l1-dpos" color="#FFD700" priority="future">
+                        <title>🌟 委托权益证明 (DPoS) - 未来重点技术</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l1-storage" color="#4682B4">
+                  <title>分布式存储</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l1-ipfs" color="#1E90FF" priority="high">
+                        <title>🌌 IPFS - 星际文件系统 (先进技术)</title>
+                        <notes>去中心化存储网络，Web3内容分发的基础</notes>
+                      </topic>
+                      <topic id="l1-swarm" color="#32CD32">
+                        <title>🐝 Swarm - 以太坊存储</title>
+                      </topic>
+                      <topic id="l1-arweave" color="#1E90FF">
+                        <title>♾️ Arweave - 永久存储</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+
+          <!-- L2: 中间件层 -->
+          <topic id="l2" color="#4169E1">
+            <title>L2: 中间件层 - Middleware Layer</title>
+            <children>
+              <topics type="attached">
+                <topic id="l2-scaling" color="#6A5ACD">
+                  <title>扩展性解决方案</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l2-zk-rollups" color="#FFD700" priority="future">
+                        <title>🎯 零知识证明 (ZK-Rollups) - 未来重点技术</title>
+                        <notes>结合隐私保护和扩展性的突破性技术</notes>
+                      </topic>
+                      <topic id="l2-optimistic" color="#1E90FF">
+                        <title>⚡ Optimistic Rollups - 先进技术</title>
+                      </topic>
+                      <topic id="l2-channels" color="#32CD32">
+                        <title>⚡ 状态通道 (Lightning Network)</title>
+                      </topic>
+                      <topic id="l2-sidechains" color="#32CD32">
+                        <title>🔗 侧链 (Polygon)</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l2-interop" color="#FF6347">
+                  <title>跨链技术</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l2-bridges" color="#FFD700" priority="future">
+                        <title>🌉 跨链桥 (Cross-chain Bridges) - 未来重点技术</title>
+                        <notes>连接不同区块链生态系统的关键基础设施</notes>
+                      </topic>
+                      <topic id="l2-atomic" color="#1E90FF">
+                        <title>🔄 原子交换 (Atomic Swaps)</title>
+                      </topic>
+                      <topic id="l2-relay" color="#1E90FF">
+                        <title>🔗 中继链 (Relay Chain)</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l2-privacy" color="#8B008B">
+                  <title>隐私保护</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l2-zk-proofs" color="#FFD700" priority="future">
+                        <title>🛡️ 零知识证明 (zk-SNARKs/STARKs) - 未来重点技术</title>
+                        <notes>隐私保护和可扩展性的革命性技术</notes>
+                      </topic>
+                      <topic id="l2-ring-sig" color="#1E90FF">
+                        <title>💍 环签名 (Ring Signatures)</title>
+                      </topic>
+                      <topic id="l2-homomorphic" color="#1E90FF">
+                        <title>🔒 同态加密</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+
+          <!-- L3: 组件层 -->
+          <topic id="l3" color="#9932CC">
+            <title>L3: 组件层 - Component Layer</title>
+            <children>
+              <topics type="attached">
+                <topic id="l3-oracles" color="#FF4500">
+                  <title>预言机服务</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l3-chainlink" color="#DC143C" priority="critical">
+                        <title>🔮 Chainlink - 去中心化预言机网络 (关键核心技术)</title>
+                        <notes>连接链上链下世界的关键基础设施</notes>
+                      </topic>
+                      <topic id="l3-band" color="#1E90FF">
+                        <title>📡 Band Protocol - 先进技术</title>
+                      </topic>
+                      <topic id="l3-tellor" color="#32CD32">
+                        <title>📊 Tellor</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l3-smart-contracts" color="#9370DB">
+                  <title>智能合约平台</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l3-solidity" color="#DC143C" priority="critical">
+                        <title>📝 Solidity - 智能合约语言 (关键核心技术)</title>
+                        <notes>Web3应用开发的主要编程语言</notes>
+                      </topic>
+                      <topic id="l3-rust" color="#1E90FF">
+                        <title>⚡ Rust - 高性能合约语言</title>
+                      </topic>
+                      <topic id="l3-vyper" color="#32CD32">
+                        <title>🐍 Vyper - Python风格合约</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l3-dev-tools" color="#20B2AA">
+                  <title>开发工具</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l3-web3js" color="#32CD32">
+                        <title>🔧 Web3.js / Ethers.js</title>
+                      </topic>
+                      <topic id="l3-frameworks" color="#32CD32">
+                        <title>🛠️ Truffle / Hardhat</title>
+                      </topic>
+                      <topic id="l3-metamask-sdk" color="#1E90FF">
+                        <title>🦊 MetaMask SDK</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l3-identity" color="#CD853F">
+                  <title>身份与认证</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l3-did" color="#1E90FF" priority="high">
+                        <title>🆔 DID (去中心化身份) - 先进技术</title>
+                      </topic>
+                      <topic id="l3-ens" color="#32CD32">
+                        <title>🌐 ENS (以太坊域名服务)</title>
+                      </topic>
+                      <topic id="l3-vc" color="#FFD700" priority="future">
+                        <title>📜 Verifiable Credentials - 未来重点</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+
+          <!-- L4: 场景层 -->
+          <topic id="l4" color="#FF1493">
+            <title>L4: 场景层 - Application Scenario Layer</title>
+            <children>
+              <topics type="attached">
+                <topic id="l4-defi" color="#FF1493">
+                  <title>去中心化金融 (DeFi)</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l4-dex" color="#DC143C" priority="critical">
+                        <title>💱 去中心化交易所 (Uniswap, SushiSwap) - 关键应用</title>
+                        <notes>DeFi生态的核心基础设施</notes>
+                      </topic>
+                      <topic id="l4-lending" color="#1E90FF">
+                        <title>🏦 借贷协议 (Aave, Compound)</title>
+                      </topic>
+                      <topic id="l4-yield" color="#32CD32">
+                        <title>🌾 流动性挖矿</title>
+                      </topic>
+                      <topic id="l4-synth" color="#1E90FF">
+                        <title>🔄 合成资产 (Synthetix)</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l4-nft" color="#FF69B4">
+                  <title>NFT与数字资产</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l4-marketplace" color="#1E90FF">
+                        <title>🎨 NFT市场 (OpenSea)</title>
+                      </topic>
+                      <topic id="l4-metaverse-assets" color="#FFD700" priority="future">
+                        <title>🌐 元宇宙资产 - 未来重点</title>
+                      </topic>
+                      <topic id="l4-digital-art" color="#32CD32">
+                        <title>🖼️ 数字艺术品</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l4-gamefi" color="#DA70D6">
+                  <title>GameFi与元宇宙</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l4-p2e" color="#FFD700" priority="future">
+                        <title>🎮 Play-to-Earn游戏 - 未来重点</title>
+                      </topic>
+                      <topic id="l4-virtual-worlds" color="#1E90FF">
+                        <title>🏰 虚拟世界 (Decentraland)</title>
+                      </topic>
+                      <topic id="l4-game-economy" color="#FFD700" priority="future">
+                        <title>💰 游戏内经济系统 - 未来重点</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l4-dao" color="#BA55D3">
+                  <title>DAO与治理</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l4-dao-org" color="#1E90FF">
+                        <title>🏛️ 去中心化自治组织</title>
+                      </topic>
+                      <topic id="l4-governance" color="#32CD32">
+                        <title>🗳️ 治理代币</title>
+                      </topic>
+                      <topic id="l4-voting" color="#FFD700" priority="future">
+                        <title>📊 链上投票系统 - 未来重点</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+
+          <!-- L5: 接入层 -->
+          <topic id="l5" color="#FF8C00">
+            <title>L5: 接入层 - Access Layer</title>
+            <children>
+              <topics type="attached">
+                <topic id="l5-wallets" color="#FF8C00">
+                  <title>钱包与身份管理</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l5-metamask" color="#DC143C" priority="critical">
+                        <title>🦊 MetaMask - 浏览器钱包 (关键入口)</title>
+                        <notes>Web3世界的主要入口，用户与DApp交互的桥梁</notes>
+                      </topic>
+                      <topic id="l5-walletconnect" color="#1E90FF">
+                        <title>🔗 WalletConnect - 钱包协议</title>
+                      </topic>
+                      <topic id="l5-hardware" color="#32CD32">
+                        <title>🔐 硬件钱包 (Ledger)</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l5-interfaces" color="#FFA500">
+                  <title>用户界面</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l5-dapp-browser" color="#32CD32">
+                        <title>🌐 Web3 DApp浏览器</title>
+                      </topic>
+                      <topic id="l5-mobile" color="#1E90FF">
+                        <title>📱 移动端DApp</title>
+                      </topic>
+                      <topic id="l5-desktop" color="#708090">
+                        <title>💻 桌面应用</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l5-gateways" color="#FF7F50">
+                  <title>Web3网关</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l5-infura" color="#1E90FF">
+                        <title>🌐 Infura - 节点服务</title>
+                      </topic>
+                      <topic id="l5-alchemy" color="#32CD32">
+                        <title>⚗️ Alchemy - 开发平台</title>
+                      </topic>
+                      <topic id="l5-quicknode" color="#1E90FF">
+                        <title>⚡ QuickNode - RPC服务</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+        </topics>
+      </children>
+    </topic>
+  </sheet>
+</xmind-workbook>
