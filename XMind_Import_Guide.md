@@ -2,21 +2,20 @@
 
 ## 文件说明
 
-由于技术限制，我创建了以下文件：
+我已经创建了完整的XMind格式文件：
 
-1. **Web3_Architecture_L0-L5.xml** - 思维导图结构文件
+1. **Web3_Ecosystem_Architecture_L0-L5.xmind** - 完整的XMind思维导图文件
 2. **Web3_Architecture_Documentation.md** - 详细架构说明文档
 3. **XMind_Import_Guide.md** - 本导入指南
 
 ## 导入方法
 
-### 方法一：使用XMind软件（推荐）
+### 方法一：直接打开XMind文件（推荐）
 
 1. 下载并安装XMind软件 (https://xmind.app/)
-2. 打开XMind
-3. 选择"文件" → "导入" → "从XML导入"
-4. 选择 `Web3_Architecture_L0-L5.xml` 文件
-5. 根据导入向导完成设置
+2. 双击 `Web3_Ecosystem_Architecture_L0-L5.xmind` 文件
+3. 或者打开XMind后，选择"文件" → "打开" → 选择该xmind文件
+4. 文件将直接在XMind中打开，包含所有颜色和样式设置
 
 ### 方法二：手动创建思维导图
 
