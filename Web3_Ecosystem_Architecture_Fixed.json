@@ -1,0 +1,223 @@
+{
+  "title": "Web3.0 生态业务架构",
+  "structure": "map",
+  "theme": "professional",
+  "children": [
+    {
+      "title": "L5: 接入层 (Access Layer)",
+      "note": "用户与Web3交互的合规入口",
+      "children": [
+        {
+          "title": "🔐 钱包 (Wallets)",
+          "children": [
+            {"title": "MetaMask (以太坊生态)"},
+            {"title": "Phantom (Solana生态)"},
+            {"title": "Ledger (硬件钱包)"}
+          ]
+        },
+        {
+          "title": "📋 合规网关",
+          "children": [
+            {"title": "Securitize (KYC/AML)"},
+            {"title": "Coinbase (中心化交易所)"}
+          ]
+        },
+        {
+          "title": "🌐 DApp浏览器"
+        }
+      ]
+    },
+    {
+      "title": "L4: 场景层 (Scene Layer)",
+      "note": "落地应用",
+      "children": [
+        {
+          "title": "💰 DeFi (去中心化金融)",
+          "children": [
+            {"title": "交易所 (Uniswap, SushiSwap)"},
+            {"title": "借贷 (Aave, Compound)"},
+            {"title": "衍生品"}
+          ]
+        },
+        {
+          "title": "🎮 GameFi / 元宇宙",
+          "children": [
+            {"title": "Axie Infinity"},
+            {"title": "The Sandbox"}
+          ]
+        },
+        {
+          "title": "👥 SocialFi",
+          "children": [
+            {"title": "Lens Protocol"}
+          ]
+        },
+        {
+          "title": "🏗️ DePIN",
+          "children": [
+            {"title": "Helium (去中心化无线网络)"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "L3: 组件层 (Component Layer)",
+      "note": "封装金融协议与开发者工具",
+      "children": [
+        {
+          "title": "💵 稳定币 (Stablecoins) ⭐",
+          "children": [
+            {"title": "USDC (Circle)"},
+            {"title": "USDT (Tether)"},
+            {"title": "DAI (MakerDAO)"}
+          ]
+        },
+        {
+          "title": "🏢 真实世界资产 (RWA) ⭐",
+          "children": [
+            {"title": "BlackRock BUIDL"},
+            {"title": "Ondo Finance"},
+            {"title": "Centrifuge"}
+          ]
+        },
+        {
+          "title": "🎨 NFT (非同质化代币)",
+          "children": [
+            {"title": "OpenSea"},
+            {"title": "Yuga Labs"}
+          ]
+        },
+        {
+          "title": "🔧 DeFi协议原语",
+          "children": [
+            {"title": "Uniswap (UNI)"},
+            {"title": "Aave"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "L2: 中间件层 (Middleware Layer)",
+      "note": "扩展性能、跨链互通、链下数据接入",
+      "children": [
+        {
+          "title": "⚡ Layer2扩容方案",
+          "children": [
+            {
+              "title": "🔒 零知识证明 (ZKP) ⭐",
+              "children": [
+                {"title": "StarkWare (Starknet)"},
+                {"title": "Matter Labs (zkSync)"},
+                {"title": "Scroll"}
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌉 跨链技术 (Cross-Chain) ⭐",
+          "children": [
+            {"title": "LayerZero"},
+            {"title": "Wormhole"},
+            {"title": "Axelar"},
+            {"title": "Chainlink CCIP"}
+          ]
+        },
+        {
+          "title": "🔮 预言机 (Oracle) ⭐",
+          "children": [
+            {"title": "Chainlink (LINK) - 市场领导者"},
+            {"title": "Band Protocol"},
+            {"title": "API3"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "L1: 区块链层 (Blockchain Layer)",
+      "note": "价值结算与智能合约执行",
+      "children": [
+        {
+          "title": "⛓️ 公链平台 ⭐",
+          "children": [
+            {
+              "title": "以太坊 (ETH) - PoS共识",
+              "note": "全球结算层，最大开发者生态"
+            },
+            {
+              "title": "Solana (SOL) - PoH+PoS",
+              "note": "高性能，65,000 TPS理论值"
+            },
+            {
+              "title": "比特币 (BTC) - PoW",
+              "note": "数字黄金，最去中心化"
+            }
+          ]
+        },
+        {
+          "title": "🧮 核心算法 ⭐",
+          "children": [
+            {
+              "title": "哈希函数 (SHA-256) ⭐",
+              "note": "数据不可篡改性基石"
+            },
+            {
+              "title": "共识机制",
+              "children": [
+                {"title": "PoS (权益证明)"},
+                {"title": "PoW (工作量证明)"},
+                {"title": "PoH (历史证明)"}
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🏢 市场主体",
+          "children": [
+            {"title": "以太坊基金会"},
+            {"title": "ConsenSys"},
+            {"title": "Solana Labs"},
+            {"title": "验证者网络"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "L0: 物理设施层 (Physical Infrastructure Layer)",
+      "note": "提供分布式网络基础资源",
+      "children": [
+        {
+          "title": "🌐 P2P网络 ⭐",
+          "note": "去中心化通信协议基础"
+        },
+        {
+          "title": "💾 去中心化存储",
+          "children": [
+            {"title": "IPFS"},
+            {"title": "Filecoin (FIL)"}
+          ]
+        },
+        {
+          "title": "🏭 市场主体",
+          "children": [
+            {
+              "title": "节点运营商",
+              "children": [
+                {"title": "Infura"},
+                {"title": "Alchemy"}
+              ]
+            },
+            {
+              "title": "硬件制造商",
+              "children": [
+                {"title": "比特大陆 (Bitmain)"},
+                {"title": "英伟达 (NVIDIA)"}
+              ]
+            },
+            {
+              "title": "存储矿工"}
+          ]
+        }
+      ]
+    }
+  ]
+}
