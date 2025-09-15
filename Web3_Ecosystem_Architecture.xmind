@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmap-content xmlns="urn:xmind:xmap:xmlns:content:2.0" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" version="2.0">
+  <sheet id="sheet1" theme="professional">
+    <topic id="root" structure-class="org.xmind.ui.logic.right">
+      <title>Web3.0 生态业务架构</title>
+      <children>
+        <topics type="attached">
+          <!-- L5: 接入层 -->
+          <topic id="l5" structure-class="org.xmind.ui.logic.right">
+            <title>L5: 接入层 (Access Layer)</title>
+            <notes>
+              <plain>用户与Web3交互的合规入口</plain>
+            </notes>
+            <children>
+              <topics type="attached">
+                <topic id="l5-wallets">
+                  <title>🔐 钱包 (Wallets)</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l5-metamask"><title>MetaMask (以太坊生态)</title></topic>
+                      <topic id="l5-phantom"><title>Phantom (Solana生态)</title></topic>
+                      <topic id="l5-ledger"><title>Ledger (硬件钱包)</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l5-compliance">
+                  <title>📋 合规网关</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l5-securitize"><title>Securitize (KYC/AML)</title></topic>
+                      <topic id="l5-coinbase"><title>Coinbase (中心化交易所)</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l5-browsers">
+                  <title>🌐 DApp浏览器</title>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          
+          <!-- L4: 场景层 -->
+          <topic id="l4" structure-class="org.xmind.ui.logic.right">
+            <title>L4: 场景层 (Scene Layer)</title>
+            <notes>
+              <plain>落地应用</plain>
+            </notes>
+            <children>
+              <topics type="attached">
+                <topic id="l4-defi">
+                  <title>💰 DeFi (去中心化金融)</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l4-defi-trading"><title>交易所 (Uniswap, SushiSwap)</title></topic>
+                      <topic id="l4-defi-lending"><title>借贷 (Aave, Compound)</title></topic>
+                      <topic id="l4-defi-derivatives"><title>衍生品</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l4-gamefi">
+                  <title>🎮 GameFi / 元宇宙</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l4-axie"><title>Axie Infinity</title></topic>
+                      <topic id="l4-sandbox"><title>The Sandbox</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l4-socialfi">
+                  <title>👥 SocialFi</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l4-lens"><title>Lens Protocol</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l4-depin">
+                  <title>🏗️ DePIN</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l4-helium"><title>Helium (去中心化无线网络)</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          
+          <!-- L3: 组件层 -->
+          <topic id="l3" structure-class="org.xmind.ui.logic.right">
+            <title>L3: 组件层 (Component Layer)</title>
+            <notes>
+              <plain>封装金融协议与开发者工具</plain>
+            </notes>
+            <children>
+              <topics type="attached">
+                <topic id="l3-stablecoins">
+                  <title>💵 稳定币 (Stablecoins)</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l3-usdc"><title>USDC (Circle)</title></topic>
+                      <topic id="l3-usdt"><title>USDT (Tether)</title></topic>
+                      <topic id="l3-dai"><title>DAI (MakerDAO)</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l3-rwa">
+                  <title>🏢 真实世界资产 (RWA)</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l3-blackrock"><title>BlackRock BUIDL</title></topic>
+                      <topic id="l3-ondo"><title>Ondo Finance</title></topic>
+                      <topic id="l3-centrifuge"><title>Centrifuge</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l3-nft">
+                  <title>🎨 NFT (非同质化代币)</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l3-opensea"><title>OpenSea</title></topic>
+                      <topic id="l3-yuga"><title>Yuga Labs</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l3-defi-protocols">
+                  <title>🔧 DeFi协议原语</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l3-uniswap"><title>Uniswap (UNI)</title></topic>
+                      <topic id="l3-aave"><title>Aave</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          
+          <!-- L2: 中间件层 -->
+          <topic id="l2" structure-class="org.xmind.ui.logic.right">
+            <title>L2: 中间件层 (Middleware Layer)</title>
+            <notes>
+              <plain>扩展性能、跨链互通、链下数据接入</plain>
+            </notes>
+            <children>
+              <topics type="attached">
+                <topic id="l2-scaling">
+                  <title>⚡ Layer2扩容方案</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l2-zkp">
+                        <title>🔒 零知识证明 (ZKP) ⭐</title>
+                        <children>
+                          <topics type="attached">
+                            <topic id="l2-starknet"><title>StarkWare (Starknet)</title></topic>
+                            <topic id="l2-zksync"><title>Matter Labs (zkSync)</title></topic>
+                            <topic id="l2-scroll"><title>Scroll</title></topic>
+                          </topics>
+                        </children>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l2-crosschain">
+                  <title>🌉 跨链技术 (Cross-Chain) ⭐</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l2-layerzero"><title>LayerZero</title></topic>
+                      <topic id="l2-wormhole"><title>Wormhole</title></topic>
+                      <topic id="l2-axelar"><title>Axelar</title></topic>
+                      <topic id="l2-ccip"><title>Chainlink CCIP</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l2-oracle">
+                  <title>🔮 预言机 (Oracle) ⭐</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l2-chainlink"><title>Chainlink (LINK) - 市场领导者</title></topic>
+                      <topic id="l2-band"><title>Band Protocol</title></topic>
+                      <topic id="l2-api3"><title>API3</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          
+          <!-- L1: 区块链层 -->
+          <topic id="l1" structure-class="org.xmind.ui.logic.right">
+            <title>L1: 区块链层 (Blockchain Layer)</title>
+            <notes>
+              <plain>价值结算与智能合约执行</plain>
+            </notes>
+            <children>
+              <topics type="attached">
+                <topic id="l1-blockchains">
+                  <title>⛓️ 公链平台 ⭐</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l1-ethereum">
+                        <title>以太坊 (ETH) - PoS共识</title>
+                        <notes>
+                          <plain>全球结算层，最大开发者生态</plain>
+                        </notes>
+                      </topic>
+                      <topic id="l1-solana">
+                        <title>Solana (SOL) - PoH+PoS</title>
+                        <notes>
+                          <plain>高性能，65,000 TPS理论值</plain>
+                        </notes>
+                      </topic>
+                      <topic id="l1-bitcoin">
+                        <title>比特币 (BTC) - PoW</title>
+                        <notes>
+                          <plain>数字黄金，最去中心化</plain>
+                        </notes>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l1-algorithms">
+                  <title>🧮 核心算法 ⭐</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l1-hash">
+                        <title>哈希函数 (SHA-256) ⭐</title>
+                        <notes>
+                          <plain>数据不可篡改性基石</plain>
+                        </notes>
+                      </topic>
+                      <topic id="l1-consensus">
+                        <title>共识机制</title>
+                        <children>
+                          <topics type="attached">
+                            <topic id="l1-pos"><title>PoS (权益证明)</title></topic>
+                            <topic id="l1-pow"><title>PoW (工作量证明)</title></topic>
+                            <topic id="l1-poh"><title>PoH (历史证明)</title></topic>
+                          </topics>
+                        </children>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l1-players">
+                  <title>🏢 市场主体</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l1-ethereum-foundation"><title>以太坊基金会</title></topic>
+                      <topic id="l1-consensys"><title>ConsenSys</title></topic>
+                      <topic id="l1-solana-labs"><title>Solana Labs</title></topic>
+                      <topic id="l1-validators"><title>验证者网络</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          
+          <!-- L0: 物理设施层 -->
+          <topic id="l0" structure-class="org.xmind.ui.logic.right">
+            <title>L0: 物理设施层 (Physical Infrastructure Layer)</title>
+            <notes>
+              <plain>提供分布式网络基础资源</plain>
+            </notes>
+            <children>
+              <topics type="attached">
+                <topic id="l0-p2p">
+                  <title>🌐 P2P网络 ⭐</title>
+                  <notes>
+                    <plain>去中心化通信协议基础</plain>
+                  </notes>
+                </topic>
+                <topic id="l0-storage">
+                  <title>💾 去中心化存储</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l0-ipfs"><title>IPFS</title></topic>
+                      <topic id="l0-filecoin"><title>Filecoin (FIL)</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="l0-players">
+                  <title>🏭 市场主体</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="l0-node-operators">
+                        <title>节点运营商</title>
+                        <children>
+                          <topics type="attached">
+                            <topic id="l0-infura"><title>Infura</title></topic>
+                            <topic id="l0-alchemy"><title>Alchemy</title></topic>
+                          </topics>
+                        </children>
+                      </topic>
+                      <topic id="l0-hardware">
+                        <title>硬件制造商</title>
+                        <children>
+                          <topics type="attached">
+                            <topic id="l0-bitmain"><title>比特大陆 (Bitmain)</title></topic>
+                            <topic id="l0-nvidia"><title>英伟达 (NVIDIA)</title></topic>
+                          </topics>
+                        </children>
+                      </topic>
+                      <topic id="l0-miners">
+                        <title>存储矿工</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+        </topics>
+      </children>
+    </topic>
+  </sheet>
+</xmap-content>
