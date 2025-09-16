@@ -1,0 +1,313 @@
+<mxfile host="app.diagrams.net" modified="2025-09-16T12:00:00.000Z" agent="5.0" etag="abc123" version="24.7.7" type="device">
+  <diagram name="Web3.0生态架构" id="web3-ecosystem">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2339" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Background -->
+        <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="50" y="50" width="1554" height="2239" as="geometry" />
+        </mxCell>
+        
+        <!-- Title -->
+        <mxCell id="title" value="Web3.0生态业务架构图" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="727" y="70" width="200" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- L5: 接入层 -->
+        <mxCell id="L5_container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="100" y="150" width="1454" height="300" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="L5_title" value="L5: 接入层 (用户入口)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#01579b;" vertex="1" parent="1">
+          <mxGeometry x="120" y="170" width="200" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="L5_function" value="核心功能: 合规交互入口" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="200" width="200" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- L5 Technologies -->
+        <mxCell id="L5_tech_container" value="代表技术与资产" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#01579b;align=left;verticalAlign=top;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="230" width="300" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="L5_tech" value="• MPC钱包技术 (MetaMask)&#xa;• 生物识别验证&#xa;• KYC/AML合规网关&#xa;• 法币通道 (稳定币出入金)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="130" y="250" width="280" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- L5 Players -->
+        <mxCell id="L5_players_container" value="核心玩家" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#01579b;align=left;verticalAlign=top;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="230" width="350" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="L5_players" value="• 钱包: MetaMask(ETH), Phantom(SOL)&#xa;• 交易所: Coinbase, Binance&#xa;• 合规服务: Securitize (RWA KYC)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="450" y="250" width="330" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- L5 Competition -->
+        <mxCell id="L5_comp_container" value="技术先进性/竞争维度" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#01579b;align=left;verticalAlign=top;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="230" width="400" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="L5_comp" value="• 入口战争: Phantom占Solana生态90%份额&#xa;• 机构通道: 贝莱德通过Securitize接入BUIDL&#xa;• 用户体验: 生物识别降低使用门槛" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="820" y="250" width="380" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- L4: 场景层 -->
+        <mxCell id="L4_container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#4a148c;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="100" y="480" width="1454" height="300" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="L4_title" value="L4: 场景层 (应用生态)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#4a148c;" vertex="1" parent="1">
+          <mxGeometry x="120" y="500" width="200" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="L4_function" value="核心功能: 落地应用实现" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="530" width="200" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- L4 Technologies -->
+        <mxCell id="L4_tech_container" value="代表技术与资产" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4a148c;align=left;verticalAlign=top;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="560" width="300" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="L4_tech" value="• GameFi: Axie Infinity, StepN&#xa;• SocialFi: Lens Protocol, Farcaster&#xa;• DeFi应用: Raydium(SOL), Compound(ETH)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="130" y="580" width="280" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- L4 Players -->
+        <mxCell id="L4_players_container" value="核心玩家" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4a148c;align=left;verticalAlign=top;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="560" width="350" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="L4_players" value="• DApp开发: Sky Mavis (Axie), YGG公会&#xa;• 内容创作: NFT艺术家 (Beeple)&#xa;• 用户社区: DAO治理参与者" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="450" y="580" width="330" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- L4 Competition -->
+        <mxCell id="L4_comp_container" value="技术先进性/竞争维度" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4a148c;align=left;verticalAlign=top;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="560" width="400" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="L4_comp" value="• 性能依赖: Solana高TPS支撑高频GameFi&#xa;• 数据主权: 用户拥有链上资产与行为数据&#xa;• 用户体验: 降低Web3使用门槛" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="820" y="580" width="380" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- L3: 组件层 -->
+        <mxCell id="L3_container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="100" y="810" width="1454" height="300" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="L3_title" value="L3: 组件层 (资产协议层)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#2e7d32;" vertex="1" parent="1">
+          <mxGeometry x="120" y="830" width="250" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="L3_function" value="核心功能: 封装金融协议与资产" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="860" width="250" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- L3 Technologies -->
+        <mxCell id="L3_tech_container" value="代表技术与资产" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e7d32;align=left;verticalAlign=top;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="890" width="300" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="L3_tech" value="• 稳定币: USDC(Circle), USDT(Tether)&#xa;• RWA引擎: 代币化国债(Ondo), 房地产&#xa;• DeFi原语: AMM(Uniswap), 借贷(Aave)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="130" y="910" width="280" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- L3 Players -->
+        <mxCell id="L3_players_container" value="核心玩家" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e7d32;align=left;verticalAlign=top;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="890" width="350" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="L3_players" value="• 稳定币发行: Circle, Tether&#xa;• RWA平台: 贝莱德(BUIDL), Ondo Finance&#xa;• DeFi协议: MakerDAO(DAI), Uniswap Labs" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="450" y="910" width="330" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- L3 Competition -->
+        <mxCell id="L3_comp_container" value="技术先进性/竞争维度" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e7d32;align=left;verticalAlign=top;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="890" width="400" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="L3_comp" value="• RWA爆发: 代币化美债规模$220亿(2025)&#xa;• 合规创新: ERC-1400证券型代币标准&#xa;• Solana优势: Serum DEX高频交易" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="820" y="910" width="380" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- L2: 中间件层 -->
+        <mxCell id="L2_container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1140" width="1454" height="300" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="L2_title" value="L2: 中间件层 (扩展与连接)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#e65100;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1160" width="280" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="L2_function" value="核心功能: 跨链互通/链下数据接入" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1190" width="280" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- L2 Technologies -->
+        <mxCell id="L2_tech_container" value="代表技术与资产" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e65100;align=left;verticalAlign=top;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1220" width="300" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="L2_tech" value="• ZK-Rollup: zk-SNARKs(zkSync)&#xa;• 预言机: 去中心化网络(Chainlink)&#xa;• 跨链桥: LayerZero, Wormhole" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1240" width="280" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- L2 Players -->
+        <mxCell id="L2_players_container" value="核心玩家" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e65100;align=left;verticalAlign=top;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="1220" width="350" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="L2_players" value="• 扩容方案: Matter Labs(zkSync), StarkWare&#xa;• 预言机: Chainlink(LINK), Band Protocol&#xa;• 跨链协议: LayerZero, Wormhole" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="450" y="1240" width="330" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- L2 Competition -->
+        <mxCell id="L2_comp_container" value="技术先进性/竞争维度" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e65100;align=left;verticalAlign=top;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="1220" width="400" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="L2_comp" value="• ZK技术突破: 递归证明压缩成本90%+&#xa;• 安全挑战: 跨链桥年损失超$1B(2024)&#xa;• Solana集成: Wormhole实现SOL-ETH跨链" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="820" y="1240" width="380" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- L1: 区块链层 -->
+        <mxCell id="L1_container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffebee;strokeColor=#c62828;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1470" width="1454" height="350" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="L1_title" value="L1: 区块链层 (结算与合约)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#c62828;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1490" width="280" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="L1_function" value="核心功能: 公链共识与价值结算" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1520" width="280" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- L1 Technologies -->
+        <mxCell id="L1_tech_container" value="代表技术与资产" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c62828;align=left;verticalAlign=top;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1550" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="L1_tech" value="• 比特币: PoW共识/SHA-256&#xa;• 以太坊: PoS共识/EVM智能合约&#xa;• Solana: PoH+PoS/Sealevel并行引擎" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1570" width="280" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- L1 Players -->
+        <mxCell id="L1_players_container" value="核心玩家" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c62828;align=left;verticalAlign=top;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="1550" width="350" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="L1_players" value="• 协议方: 比特币核心开发者, 以太坊基金会&#xa;• 节点运营: Foundry USA, Lido, Jump Crypto&#xa;• 生态资本: a16z(多链), Multicoin(Solana)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="450" y="1570" width="330" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- L1 Competition -->
+        <mxCell id="L1_comp_container" value="技术先进性/竞争维度" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c62828;align=left;verticalAlign=top;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="1550" width="400" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="L1_comp" value="• 不可能三角平衡:&#xa;  - 比特币: 安全优先(10,000+节点)&#xa;  - 以太坊: 去中心化优先(8,000+节点)&#xa;  - Solana: 性能优先(TPS 2,700+)&#xa;• 中心化风险: Solana前22节点控制33%质押" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="820" y="1570" width="380" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- L0: 物理设施层 -->
+        <mxCell id="L0_container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#33691e;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1850" width="1454" height="350" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="L0_title" value="L0: 物理设施层 (分布式基础)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#33691e;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1870" width="300" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="L0_function" value="核心功能: 提供节点/存储/网络资源" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1900" width="300" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- L0 Technologies -->
+        <mxCell id="L0_tech_container" value="代表技术与资产" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#33691e;align=left;verticalAlign=top;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1930" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="L0_tech" value="• P2P网络协议&#xa;• 去中心化存储 (IPFS)&#xa;• 硬件加速 (ZK证明)&#xa;• 分布式计算资源" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1950" width="280" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- L0 Players -->
+        <mxCell id="L0_players_container" value="核心玩家" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#33691e;align=left;verticalAlign=top;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="1930" width="350" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="L0_players" value="• 硬件商: 英伟达(GPU), 比特大陆(ASIC)&#xa;• 存储节点: Filecoin矿工, Arweave节点&#xa;• DePIN项目: Helium(去中心化无线网络)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="450" y="1950" width="330" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- L0 Competition -->
+        <mxCell id="L0_comp_container" value="技术先进性/竞争维度" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#33691e;align=left;verticalAlign=top;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="1930" width="400" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="L0_comp" value="• 去中心化程度: 全球节点分布密度&#xa;  (Filecoin超4,000节点)&#xa;• 性能瓶颈: ZK证明生成速度依赖硬件算力&#xa;• 基础设施竞争: GPU算力与存储成本" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="820" y="1950" width="380" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- Vertical arrows showing data flow -->
+        <mxCell id="arrow_L0_L1" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=3;strokeColor=#666666;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="827" y="1850" as="sourcePoint" />
+            <mxPoint x="827" y="1820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow_L1_L2" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=3;strokeColor=#666666;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="827" y="1470" as="sourcePoint" />
+            <mxPoint x="827" y="1440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow_L2_L3" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=3;strokeColor=#666666;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="827" y="1140" as="sourcePoint" />
+            <mxPoint x="827" y="1110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow_L3_L4" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=3;strokeColor=#666666;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="827" y="810" as="sourcePoint" />
+            <mxPoint x="827" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow_L4_L5" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=3;strokeColor=#666666;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="827" y="480" as="sourcePoint" />
+            <mxPoint x="827" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Side labels for arrows -->
+        <mxCell id="data_flow_label" value="数据流向" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="1100" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Legend -->
+        <mxCell id="legend_container" value="图例" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="150" width="200" height="150" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend_l5" value="L5: 接入层" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="180" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend_l4" value="L4: 场景层" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#4a148c;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="205" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend_l3" value="L3: 组件层" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="230" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend_l2" value="L2: 中间件层" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="255" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend_l1" value="L1: 区块链层" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffebee;strokeColor=#c62828;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="180" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend_l0" value="L0: 物理设施层" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#33691e;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="205" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
