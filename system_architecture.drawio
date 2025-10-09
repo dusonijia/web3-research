@@ -6,230 +6,202 @@
         <mxCell id="1" parent="0" />
         
         <!-- Title -->
-        <mxCell id="title" value="System Architecture: Document Processing and Knowledge Extraction" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="300" y="20" width="569" height="30" as="geometry" />
+        <mxCell id="title" value="Figure 1: System Architecture Overview" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontFamily=Times New Roman" vertex="1" parent="1">
+          <mxGeometry x="350" y="30" width="400" height="25" as="geometry" />
         </mxCell>
         
         <!-- Input Documents -->
-        <mxCell id="input-docs" value="Input Documents&#xa;• PDFs&#xa;• DOCX&#xa;• HTML&#xa;• Scanned Images" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;align=left;spacingLeft=10;" vertex="1" parent="1">
-          <mxGeometry x="50" y="100" width="150" height="80" as="geometry" />
+        <mxCell id="input-docs" value="Input Documents&#xa;• PDFs, DOCX&#xa;• HTML&#xa;• Scanned Images" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#333333;fontSize=11;align=left;spacingLeft=8;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="140" height="70" as="geometry" />
         </mxCell>
         
         <!-- Parser Agent -->
-        <mxCell id="parser-agent" value="Parser Agent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="280" y="80" width="200" height="40" as="geometry" />
+        <mxCell id="parser-agent" value="Parser Agent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9ecef;strokeColor=#333333;fontSize=12;fontStyle=1;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="300" y="85" width="180" height="35" as="geometry" />
         </mxCell>
         
         <!-- Parser Agent Sub-processes -->
-        <mxCell id="content-ingestion" value="1. Content Ingestion&#xa;• Batch upload&#xa;• Chunked streaming" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;align=left;spacingLeft=5;" vertex="1" parent="1">
-          <mxGeometry x="240" y="140" width="120" height="50" as="geometry" />
+        <mxCell id="content-ingestion" value="1. Content Ingestion" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=10;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="260" y="140" width="110" height="30" as="geometry" />
         </mxCell>
         
-        <mxCell id="modality-detection" value="2. Modality Detection&#xa;• CLIP model&#xa;• Paragraph/Table/&#xa;  Figure/Chart" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;align=left;spacingLeft=5;" vertex="1" parent="1">
-          <mxGeometry x="380" y="140" width="120" height="50" as="geometry" />
+        <mxCell id="modality-detection" value="2. Modality Detection" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=10;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="385" y="140" width="110" height="30" as="geometry" />
         </mxCell>
         
-        <mxCell id="specialized-handling" value="3. Specialized Handling" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="520" y="140" width="120" height="30" as="geometry" />
+        <mxCell id="specialized-handling" value="3. Specialized Handling" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=10;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="510" y="140" width="110" height="30" as="geometry" />
         </mxCell>
         
-        <!-- OCR -->
-        <mxCell id="ocr" value="OCR&#xa;• PaddleOCR&#xa;• Language correction&#xa;• Text cleaning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;align=left;spacingLeft=5;" vertex="1" parent="1">
-          <mxGeometry x="480" y="190" width="80" height="60" as="geometry" />
+        <!-- OCR and Table Extraction -->
+        <mxCell id="ocr" value="OCR Processing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#666666;fontSize=9;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="480" y="185" width="80" height="25" as="geometry" />
         </mxCell>
         
-        <!-- Table Extraction -->
-        <mxCell id="table-extraction" value="Table Extraction&#xa;• pdfplumber&#xa;• Rule-based&#xa;• LLM-driven&#xa;• list[list[str]]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;align=left;spacingLeft=5;" vertex="1" parent="1">
-          <mxGeometry x="580" y="190" width="90" height="60" as="geometry" />
+        <mxCell id="table-extraction" value="Table Extraction" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#666666;fontSize=9;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="570" y="185" width="80" height="25" as="geometry" />
         </mxCell>
         
         <!-- Structured Output -->
-        <mxCell id="structured-output" value="4. Structured Output&#xa;• JSON format" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;align=left;spacingLeft=5;" vertex="1" parent="1">
-          <mxGeometry x="320" y="200" width="120" height="40" as="geometry" />
+        <mxCell id="structured-output" value="4. Structured Output (JSON)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=10;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="335" y="185" width="110" height="30" as="geometry" />
         </mxCell>
         
         <!-- Knowledge Extraction Agent -->
-        <mxCell id="knowledge-agent" value="Knowledge Extraction Agent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="280" y="300" width="200" height="40" as="geometry" />
+        <mxCell id="knowledge-agent" value="Knowledge Extraction Agent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9ecef;strokeColor=#333333;fontSize=12;fontStyle=1;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="300" y="260" width="180" height="35" as="geometry" />
         </mxCell>
         
         <!-- LLM Integration -->
-        <mxCell id="llm-integration" value="LLM Integration&#xa;• GPT-4-o&#xa;• LoRA fine-tuning&#xa;• IPBench training&#xa;• GPU acceleration&#xa;• Batch requests" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f7ff;strokeColor=#1890ff;fontSize=10;align=left;spacingLeft=5;" vertex="1" parent="1">
-          <mxGeometry x="200" y="360" width="120" height="80" as="geometry" />
-        </mxCell>
-        
-        <!-- Prompt Engineering -->
-        <mxCell id="prompt-engineering" value="Prompt Engineering&#xa;• Task instruction&#xa;• Few-shot examples&#xa;• Constraints&#xa;• Golden-standard dataset" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f7ff;strokeColor=#1890ff;fontSize=10;align=left;spacingLeft=5;" vertex="1" parent="1">
-          <mxGeometry x="340" y="360" width="120" height="80" as="geometry" />
+        <mxCell id="llm-integration" value="LLM Integration&#xa;• GPT-4-o&#xa;• LoRA fine-tuning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=10;align=left;spacingLeft=5;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="230" y="315" width="110" height="50" as="geometry" />
         </mxCell>
         
         <!-- Knowledge Extraction Tasks -->
-        <mxCell id="extraction-tasks" value="Extraction Tasks&#xa;• General knowledge&#xa;• IP value assessment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f7ff;strokeColor=#1890ff;fontSize=10;align=left;spacingLeft=5;" vertex="1" parent="1">
-          <mxGeometry x="480" y="360" width="120" height="50" as="geometry" />
+        <mxCell id="extraction-tasks" value="Extraction Tasks&#xa;• General knowledge&#xa;• IP value assessment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=10;align=left;spacingLeft=5;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="360" y="315" width="110" height="50" as="geometry" />
         </mxCell>
         
         <!-- RL Prompt Optimizer -->
-        <mxCell id="rl-optimizer" value="RL Prompt Optimizer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="280" y="500" width="200" height="40" as="geometry" />
+        <mxCell id="rl-optimizer" value="RL Prompt Optimizer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9ecef;strokeColor=#333333;fontSize=12;fontStyle=1;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="300" y="410" width="180" height="35" as="geometry" />
         </mxCell>
         
         <!-- MDP Components -->
-        <mxCell id="mdp-state" value="State (S)&#xa;• Text snippet&#xa;• Prompt template&#xa;• Cumulative reward" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffebcd;strokeColor=#d79b00;fontSize=10;align=left;spacingLeft=5;" vertex="1" parent="1">
-          <mxGeometry x="200" y="560" width="120" height="60" as="geometry" />
+        <mxCell id="mdp-state" value="State (S)&#xa;• Text snippet&#xa;• Prompt template&#xa;• Cumulative reward" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=9;align=left;spacingLeft=5;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="230" y="465" width="110" height="55" as="geometry" />
         </mxCell>
         
-        <mxCell id="mdp-action" value="Action (A)&#xa;• Synonym replacement&#xa;• Add/remove examples&#xa;• Adjust constraints" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffebcd;strokeColor=#d79b00;fontSize=10;align=left;spacingLeft=5;" vertex="1" parent="1">
-          <mxGeometry x="340" y="560" width="120" height="60" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="optimization-goal" value="Optimization Goal&#xa;• Maximize FKE&#xa;• Maximize FIP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffebcd;strokeColor=#d79b00;fontSize=10;align=left;spacingLeft=5;" vertex="1" parent="1">
-          <mxGeometry x="480" y="560" width="120" height="50" as="geometry" />
+        <mxCell id="mdp-action" value="Action (A)&#xa;• Synonym replacement&#xa;• Add/remove examples&#xa;• Adjust constraints" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=9;align=left;spacingLeft=5;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="360" y="465" width="110" height="55" as="geometry" />
         </mxCell>
         
         <!-- External Tools -->
-        <mxCell id="external-tools" value="External Tools" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="750" y="300" width="120" height="30" as="geometry" />
+        <mxCell id="external-tools" value="External Tools" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#333333;fontSize=11;fontStyle=1;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="580" y="275" width="100" height="25" as="geometry" />
         </mxCell>
         
-        <mxCell id="vector-db" value="Vector Database" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="720" y="350" width="80" height="30" as="geometry" />
+        <mxCell id="vector-db" value="Vector DB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=9;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="550" y="315" width="60" height="25" as="geometry" />
         </mxCell>
         
-        <mxCell id="table-parsers" value="Table Parsers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="820" y="350" width="80" height="30" as="geometry" />
+        <mxCell id="table-parsers" value="Table Parsers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=9;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="620" y="315" width="70" height="25" as="geometry" />
         </mxCell>
         
-        <mxCell id="ocr-tools" value="OCR Tools" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="770" y="390" width="80" height="30" as="geometry" />
+        <mxCell id="ocr-tools" value="OCR Tools" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=9;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="585" y="350" width="60" height="25" as="geometry" />
         </mxCell>
         
         <!-- Output -->
-        <mxCell id="output" value="Extracted Knowledge&#xa;• Structured data&#xa;• IP assessments&#xa;• Quality metrics" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;align=left;spacingLeft=10;" vertex="1" parent="1">
-          <mxGeometry x="750" y="500" width="150" height="80" as="geometry" />
+        <mxCell id="output" value="Extracted Knowledge&#xa;• Structured data&#xa;• IP assessments&#xa;• Quality metrics (FKE, FIP)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#333333;fontSize=11;align=left;spacingLeft=8;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="580" y="450" width="140" height="70" as="geometry" />
         </mxCell>
         
-        <!-- Arrows -->
-        <!-- Input to Parser -->
-        <mxCell id="arrow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1" source="input-docs" target="parser-agent">
+        <!-- Main flow arrows -->
+        <mxCell id="arrow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="input-docs" target="parser-agent">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         
         <!-- Parser to sub-processes -->
-        <mxCell id="arrow2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="parser-agent" target="content-ingestion">
+        <mxCell id="arrow2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;strokeColor=#666666;" edge="1" parent="1" source="parser-agent" target="content-ingestion">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         
-        <mxCell id="arrow3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="parser-agent" target="modality-detection">
+        <mxCell id="arrow3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;strokeColor=#666666;" edge="1" parent="1" source="parser-agent" target="modality-detection">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         
-        <mxCell id="arrow4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="parser-agent" target="specialized-handling">
+        <mxCell id="arrow4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;strokeColor=#666666;" edge="1" parent="1" source="parser-agent" target="specialized-handling">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         
         <!-- Specialized handling to OCR and Table -->
-        <mxCell id="arrow5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="specialized-handling" target="ocr">
+        <mxCell id="arrow5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;strokeColor=#666666;" edge="1" parent="1" source="specialized-handling" target="ocr">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         
-        <mxCell id="arrow6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="specialized-handling" target="table-extraction">
+        <mxCell id="arrow6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;strokeColor=#666666;" edge="1" parent="1" source="specialized-handling" target="table-extraction">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         
         <!-- Parser to Knowledge Agent -->
-        <mxCell id="arrow7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="1" source="structured-output" target="knowledge-agent">
+        <mxCell id="arrow7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="structured-output" target="knowledge-agent">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         
         <!-- Knowledge Agent to sub-components -->
-        <mxCell id="arrow8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;fillColor=#e6f7ff;strokeColor=#1890ff;" edge="1" parent="1" source="knowledge-agent" target="llm-integration">
+        <mxCell id="arrow8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;strokeColor=#666666;" edge="1" parent="1" source="knowledge-agent" target="llm-integration">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         
-        <mxCell id="arrow9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;fillColor=#e6f7ff;strokeColor=#1890ff;" edge="1" parent="1" source="knowledge-agent" target="prompt-engineering">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="arrow10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;fillColor=#e6f7ff;strokeColor=#1890ff;" edge="1" parent="1" source="knowledge-agent" target="extraction-tasks">
+        <mxCell id="arrow9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;strokeColor=#666666;" edge="1" parent="1" source="knowledge-agent" target="extraction-tasks">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         
         <!-- Knowledge Agent to RL Optimizer -->
-        <mxCell id="arrow11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" edge="1" parent="1" source="knowledge-agent" target="rl-optimizer">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="380" y="450" as="sourcePoint" />
-            <mxPoint x="380" y="500" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="arrow10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="knowledge-agent" target="rl-optimizer">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         
         <!-- RL Optimizer to MDP components -->
-        <mxCell id="arrow12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;fillColor=#ffebcd;strokeColor=#d79b00;" edge="1" parent="1" source="rl-optimizer" target="mdp-state">
+        <mxCell id="arrow11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;strokeColor=#666666;" edge="1" parent="1" source="rl-optimizer" target="mdp-state">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         
-        <mxCell id="arrow13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;fillColor=#ffebcd;strokeColor=#d79b00;" edge="1" parent="1" source="rl-optimizer" target="mdp-action">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="arrow14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;fillColor=#ffebcd;strokeColor=#d79b00;" edge="1" parent="1" source="rl-optimizer" target="optimization-goal">
+        <mxCell id="arrow12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;strokeColor=#666666;" edge="1" parent="1" source="rl-optimizer" target="mdp-action">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         
         <!-- External Tools connections -->
-        <mxCell id="arrow15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;" edge="1" parent="1" source="knowledge-agent" target="external-tools">
+        <mxCell id="arrow13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=1;strokeColor=#666666;dashed=1;" edge="1" parent="1" source="knowledge-agent" target="external-tools">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         
         <!-- External Tools to sub-tools -->
-        <mxCell id="arrow16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;" edge="1" parent="1" source="external-tools" target="vector-db">
+        <mxCell id="arrow14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;strokeColor=#666666;" edge="1" parent="1" source="external-tools" target="vector-db">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         
-        <mxCell id="arrow17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;" edge="1" parent="1" source="external-tools" target="table-parsers">
+        <mxCell id="arrow15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;strokeColor=#666666;" edge="1" parent="1" source="external-tools" target="table-parsers">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         
-        <mxCell id="arrow18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;" edge="1" parent="1" source="external-tools" target="ocr-tools">
+        <mxCell id="arrow16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;strokeColor=#666666;" edge="1" parent="1" source="external-tools" target="ocr-tools">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         
         <!-- Final output -->
-        <mxCell id="arrow19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#9673a6;" edge="1" parent="1" source="rl-optimizer" target="output">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="480" y="520" as="sourcePoint" />
-            <mxPoint x="750" y="540" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="arrow17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="rl-optimizer" target="output">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         
-        <!-- Feedback loop from RL to Prompt Engineering -->
-        <mxCell id="arrow20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#ff6b6b;strokeColor=#d63031;dashed=1;" edge="1" parent="1" source="rl-optimizer" target="prompt-engineering">
+        <!-- Feedback loop from RL to Knowledge Agent -->
+        <mxCell id="arrow18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#333333;dashed=1;" edge="1" parent="1" source="rl-optimizer" target="knowledge-agent">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="180" y="520" />
-              <mxPoint x="180" y="400" />
+              <mxPoint x="250" y="428" />
+              <mxPoint x="250" y="278" />
             </Array>
           </mxGeometry>
         </mxCell>
         
-        <!-- Legend -->
-        <mxCell id="legend-title" value="Legend:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="50" y="650" width="60" height="20" as="geometry" />
+        <!-- Feedback loop label -->
+        <mxCell id="feedback-label" value="Feedback Loop" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=2;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="190" y="350" width="70" height="20" as="geometry" />
         </mxCell>
         
-        <mxCell id="legend-main" value="Main Modules" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="50" y="680" width="80" height="25" as="geometry" />
+        <!-- Module labels -->
+        <mxCell id="module1-label" value="Module 1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="520" y="85" width="50" height="20" as="geometry" />
         </mxCell>
         
-        <mxCell id="legend-sub" value="Sub-processes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="140" y="680" width="80" height="25" as="geometry" />
+        <mxCell id="module2-label" value="Module 2" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="520" y="260" width="50" height="20" as="geometry" />
         </mxCell>
         
-        <mxCell id="legend-tools" value="External Tools" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="230" y="680" width="80" height="25" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="legend-feedback" value="Feedback Loop" style="text;html=1;strokeColor=#d63031;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;dashed=1;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="320" y="680" width="80" height="25" as="geometry" />
+        <mxCell id="module3-label" value="Module 3" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;fontFamily=Arial" vertex="1" parent="1">
+          <mxGeometry x="520" y="410" width="50" height="20" as="geometry" />
         </mxCell>
         
       </root>
