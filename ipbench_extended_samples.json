@@ -1,0 +1,157 @@
+[
+  {
+    "id": "IPE_001",
+    "category": "patent",
+    "task_type": "knowledge_extraction",
+    "source": "technical_report",
+    "language": "en",
+    "text": "The novel lithium-ion battery management system developed by our research team incorporates an adaptive thermal regulation algorithm that dynamically adjusts cooling parameters based on real-time temperature monitoring. This innovative approach reduces battery degradation by 23% compared to conventional static cooling methods. The system utilizes machine learning models trained on historical thermal data to predict optimal cooling strategies for different operating conditions.",
+    "entities": [
+      {"text": "lithium-ion battery management system", "label": "TECHNOLOGY", "start": 10, "end": 46},
+      {"text": "adaptive thermal regulation algorithm", "label": "METHOD", "start": 81, "end": 118},
+      {"text": "machine learning models", "label": "TECHNOLOGY", "start": 398, "end": 421}
+    ],
+    "relations": [
+      {"subject": "lithium-ion battery management system", "predicate": "incorporates", "object": "adaptive thermal regulation algorithm"},
+      {"subject": "adaptive thermal regulation algorithm", "predicate": "reduces", "object": "battery degradation by 23%"},
+      {"subject": "system", "predicate": "utilizes", "object": "machine learning models"}
+    ],
+    "ip_classification": {
+      "is_ip": true,
+      "ip_type": "patent",
+      "novelty_score": 0.87,
+      "commercial_value": 0.92,
+      "technical_merit": 0.89
+    },
+    "metadata": {
+      "domain": "automotive",
+      "complexity": "high",
+      "annotation_confidence": 0.95
+    }
+  },
+  {
+    "id": "IPE_002",
+    "category": "trade_secret",
+    "task_type": "ip_detection",
+    "source": "meeting_minutes",
+    "language": "en",
+    "text": "During the R&D meeting, Dr. Smith presented the proprietary synthesis pathway for compound XYZ-401, which involves a unique three-step catalytic process using our internally developed catalyst blend. This process achieves 94% yield efficiency, significantly higher than industry standards of 78%. The specific catalyst composition and reaction conditions must remain confidential as they represent our core competitive advantage.",
+    "entities": [
+      {"text": "proprietary synthesis pathway", "label": "PROCESS", "start": 49, "end": 78},
+      {"text": "compound XYZ-401", "label": "PRODUCT", "start": 83, "end": 99},
+      {"text": "three-step catalytic process", "label": "METHOD", "start": 125, "end": 153},
+      {"text": "catalyst blend", "label": "MATERIAL", "start": 189, "end": 203},
+      {"text": "catalyst composition", "label": "FORMULA", "start": 338, "end": 358}
+    ],
+    "relations": [
+      {"subject": "proprietary synthesis pathway", "predicate": "involves", "object": "three-step catalytic process"},
+      {"subject": "process", "predicate": "achieves", "object": "94% yield efficiency"},
+      {"subject": "catalyst composition", "predicate": "must_remain", "object": "confidential"}
+    ],
+    "ip_classification": {
+      "is_ip": true,
+      "ip_type": "trade_secret",
+      "novelty_score": 0.91,
+      "commercial_value": 0.96,
+      "technical_merit": 0.88
+    },
+    "metadata": {
+      "domain": "pharmaceutical",
+      "complexity": "high",
+      "annotation_confidence": 0.93
+    }
+  },
+  {
+    "id": "IPE_003",
+    "category": "patent",
+    "task_type": "knowledge_extraction",
+    "source": "research_paper",
+    "language": "en",
+    "text": "We propose a novel deep learning architecture called HierarchicalTransformer for document understanding tasks. The model employs a two-stage attention mechanism: local attention for intra-paragraph relationships and global attention for cross-paragraph dependencies. Experimental results on three benchmark datasets show 12% improvement in F1-score over state-of-the-art methods. The architecture is particularly effective for long documents exceeding 10,000 tokens.",
+    "entities": [
+      {"text": "HierarchicalTransformer", "label": "MODEL", "start": 67, "end": 90},
+      {"text": "two-stage attention mechanism", "label": "METHOD", "start": 138, "end": 167},
+      {"text": "local attention", "label": "TECHNIQUE", "start": 169, "end": 184},
+      {"text": "global attention", "label": "TECHNIQUE", "start": 217, "end": 233}
+    ],
+    "relations": [
+      {"subject": "HierarchicalTransformer", "predicate": "employs", "object": "two-stage attention mechanism"},
+      {"subject": "model", "predicate": "shows", "object": "12% improvement in F1-score"},
+      {"subject": "architecture", "predicate": "is_effective_for", "object": "long documents"}
+    ],
+    "ip_classification": {
+      "is_ip": true,
+      "ip_type": "patent",
+      "novelty_score": 0.84,
+      "commercial_value": 0.79,
+      "technical_merit": 0.86
+    },
+    "metadata": {
+      "domain": "software",
+      "complexity": "medium",
+      "annotation_confidence": 0.91
+    }
+  },
+  {
+    "id": "IPE_004",
+    "category": "trademark",
+    "task_type": "ip_detection",
+    "source": "technical_report",
+    "language": "en",
+    "text": "The new product line will be marketed under the brand name 'EcoFlow Pro' with the distinctive logo featuring a stylized leaf integrated with circuit patterns. The marketing team has developed comprehensive brand guidelines including specific color schemes (Pantone 348 C for the leaf, Pantone 286 C for circuits) and typography requirements. This branding strategy aims to position our products as environmentally conscious technology solutions.",
+    "entities": [
+      {"text": "EcoFlow Pro", "label": "BRAND", "start": 60, "end": 71},
+      {"text": "distinctive logo", "label": "DESIGN", "start": 81, "end": 97},
+      {"text": "stylized leaf", "label": "DESIGN_ELEMENT", "start": 108, "end": 121},
+      {"text": "circuit patterns", "label": "DESIGN_ELEMENT", "start": 137, "end": 153}
+    ],
+    "relations": [
+      {"subject": "product line", "predicate": "marketed_under", "object": "EcoFlow Pro"},
+      {"subject": "logo", "predicate": "features", "object": "stylized leaf"},
+      {"subject": "branding strategy", "predicate": "aims_to_position", "object": "environmentally conscious technology solutions"}
+    ],
+    "ip_classification": {
+      "is_ip": true,
+      "ip_type": "trademark",
+      "novelty_score": 0.72,
+      "commercial_value": 0.85,
+      "technical_merit": 0.65
+    },
+    "metadata": {
+      "domain": "manufacturing",
+      "complexity": "low",
+      "annotation_confidence": 0.89
+    }
+  },
+  {
+    "id": "IPE_005",
+    "category": "patent",
+    "task_type": "knowledge_extraction",
+    "source": "meeting_minutes",
+    "language": "zh",
+    "text": "张工程师提出了一种新型的智能传感器融合算法，该算法能够实时处理来自多个传感器的数据流，通过深度学习模型自动识别异常模式。初步测试显示，该算法在故障检测准确率方面比现有方法提高了18%。该技术有望应用于工业4.0智能制造系统中。",
+    "entities": [
+      {"text": "智能传感器融合算法", "label": "ALGORITHM", "start": 12, "end": 22},
+      {"text": "深度学习模型", "label": "MODEL", "start": 52, "end": 58},
+      {"text": "异常模式", "label": "PATTERN", "start": 62, "end": 66},
+      {"text": "工业4.0智能制造系统", "label": "SYSTEM", "start": 108, "end": 118}
+    ],
+    "relations": [
+      {"subject": "智能传感器融合算法", "predicate": "能够", "object": "实时处理数据流"},
+      {"subject": "算法", "predicate": "提高了", "object": "故障检测准确率18%"},
+      {"subject": "技术", "predicate": "应用于", "object": "工业4.0智能制造系统"}
+    ],
+    "ip_classification": {
+      "is_ip": true,
+      "ip_type": "patent",
+      "novelty_score": 0.89,
+      "commercial_value": 0.91,
+      "technical_merit": 0.87
+    },
+    "metadata": {
+      "domain": "manufacturing",
+      "complexity": "high",
+      "annotation_confidence": 0.92
+    }
+  }
+]
