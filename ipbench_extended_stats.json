@@ -1,0 +1,35 @@
+{
+  "total_samples": 5474,
+  "categories": {
+    "patent": 2465,
+    "trade_secret": 1369,
+    "trademark": 821,
+    "copyright": 437,
+    "design_right": 218,
+    "know_how": 164
+  },
+  "domains": {
+    "automotive": 798,
+    "pharmaceutical": 788,
+    "software": 747,
+    "manufacturing": 793,
+    "aerospace": 802,
+    "energy": 775,
+    "biotechnology": 771
+  },
+  "languages": {
+    "en": 904,
+    "zh": 896,
+    "de": 926,
+    "fr": 904,
+    "ja": 956,
+    "es": 888
+  },
+  "sources": {
+    "technical_report": 1047,
+    "meeting_minutes": 1089,
+    "research_paper": 1123,
+    "legal_document": 1089,
+    "patent_application": 1126
+  }
+}
