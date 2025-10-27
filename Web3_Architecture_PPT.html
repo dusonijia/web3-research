@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3.0 生态业务架构图 (L0-L5) - PPT演示</title>
+    <style>
+        /* PPT样式设计 - 麦肯锡风格 */
+        body {
+            font-family: 'Segoe UI', Arial, 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            color: #333;
+        }
+        
+        .slide {
+            width: 1920px;
+            height: 1080px;
+            padding: 60px 80px;
+            box-sizing: border-box;
+            page-break-after: always;
+            position: relative;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* 标题页样式 */
+        .title-slide {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #1f4e79 0%, #2e5984 100%);
+            color: white;
+        }
+        
+        .title-slide h1 {
+            font-size: 72px;
+            font-weight: 300;
+            margin: 0 0 40px 0;
+            letter-spacing: -2px;
+        }
+        
+        .title-slide h2 {
+            font-size: 36px;
+            font-weight: 300;
+            margin: 0 0 60px 0;
+            opacity: 0.9;
+        }
+        
+        .title-slide .subtitle {
+            font-size: 24px;
+            opacity: 0.8;
+            margin-bottom: 40px;
+        }
+        
+        .title-slide .date {
+            font-size: 18px;
+            opacity: 0.7;
+            position: absolute;
+            bottom: 60px;
+            right: 80px;
+        }
+        
+        /* 内容页样式 */
+        .slide h1 {
+            font-size: 48px;
+            color: #1f4e79;
+            margin: 0 0 40px 0;
+            font-weight: 300;
+            border-bottom: 3px solid #1f4e79;
+            padding-bottom: 15px;
+        }
+        
+        .slide h2 {
+            font-size: 32px;
+            color: #2e5984;
+            margin: 30px 0 20px 0;
+            font-weight: 400;
+        }
+        
+        /* 架构图容器 */
+        .architecture-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        /* 分层架构样式 */
+        .layer-stack {
+            width: 100%;
+            max-width: 1600px;
+            height: 800px;
+            position: relative;
+        }
+        
+        .layer {
+            width: 100%;
+            height: 130px;
+            margin-bottom: 5px;
+            border-radius: 8px;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        /* 层级颜色 - 麦肯锡专业蓝色系 */
+        .layer-l5 { background: linear-gradient(90deg, #b5d6f3 0%, #c9e2f7 100%); }
+        .layer-l4 { background: linear-gradient(90deg, #8bb8e0 0%, #a0c7ea 100%); }
+        .layer-l3 { background: linear-gradient(90deg, #6699cc 0%, #7aa9d6 100%); }
+        .layer-l2 { background: linear-gradient(90deg, #4a7ba7 0%, #5a8ab8 100%); }
+        .layer-l1 { background: linear-gradient(90deg, #2e5984 0%, #3d6b94 100%); }
+        .layer-l0 { background: linear-gradient(90deg, #1f4e79 0%, #2e5984 100%); }
+        
+        .layer-header {
+            height: 50px;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 600;
+            color: white;
+            background: rgba(0,0,0,0.1);
+        }
+        
+        .layer-content {
+            height: 80px;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .tech-box {
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            white-space: nowrap;
+            border: 1px solid rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.9);
+            color: #333;
+        }
+        
+        /* 技术重要性颜色 */
+        .critical {
+            background: #d73027 !important;
+            color: white !important;
+            border-color: #c82333 !important;
+            font-weight: 600;
+        }
+        
+        .future {
+            background: #f39c12 !important;
+            color: white !important;
+            border-color: #e67e22 !important;
+            font-weight: 600;
+        }
+        
+        .advanced {
+            background: #1f4e79 !important;
+            color: white !important;
+            border-color: #1f4e79 !important;
+        }
+        
+        .core {
+            background: #4a7ba7 !important;
+            color: white !important;
+            border-color: #4a7ba7 !important;
+        }
+        
+        .basic {
+            background: #6c757d !important;
+            color: white !important;
+            border-color: #495057 !important;
+        }
+        
+        /* 图例样式 */
+        .legend {
+            position: absolute;
+            top: 60px;
+            right: 80px;
+            width: 300px;
+            background: white;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .legend h3 {
+            margin: 0 0 15px 0;
+            font-size: 16px;
+            color: #1f4e79;
+            font-weight: 600;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            font-size: 12px;
+        }
+        
+        .legend-color {
+            width: 16px;
+            height: 12px;
+            border-radius: 2px;
+            margin-right: 8px;
+            border: 1px solid #ccc;
+        }
+        
+        /* 页码 */
+        .slide-number {
+            position: absolute;
+            bottom: 30px;
+            right: 80px;
+            font-size: 16px;
+            color: #666;
+        }
+        
+        /* 层级详情页样式 */
+        .layer-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            flex: 1;
+            margin-top: 20px;
+        }
+        
+        .detail-section {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 30px;
+            border-left: 4px solid #1f4e79;
+        }
+        
+        .detail-section h3 {
+            font-size: 20px;
+            color: #1f4e79;
+            margin: 0 0 15px 0;
+            font-weight: 600;
+        }
+        
+        .detail-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .detail-section li {
+            margin: 10px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        /* 战略分析表格 */
+        .strategy-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .strategy-table th {
+            background: #1f4e79;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .strategy-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e9ecef;
+            font-size: 14px;
+        }
+        
+        .strategy-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        /* 箭头连接线 */
+        .arrow-down {
+            position: absolute;
+            left: 50%;
+            bottom: -15px;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 15px solid #1f4e79;
+            z-index: 10;
+        }
+        
+        /* 响应式调整 */
+        @media print {
+            .slide {
+                width: 297mm;
+                height: 210mm;
+                padding: 20mm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 幻灯片1: 标题页 -->
+    <div class="slide title-slide">
+        <h1>Web3.0 生态业务架构图</h1>
+        <h2>L0-L5 分层技术架构分析</h2>
+        <div class="subtitle">麦肯锡咨询风格 | 战略技术分析</div>
+        <div class="date">2024年9月</div>
+    </div>
+    
+    <!-- 幻灯片2: 完整架构概览 -->
+    <div class="slide">
+        <h1>Web3.0 分层架构总览</h1>
+        <div class="architecture-container">
+            <div class="layer-stack">
+                <div class="layer layer-l5">
+                    <div class="layer-header">L5: 接入层 (Access Layer)</div>
+                    <div class="layer-content">
+                        <div class="tech-box critical">MetaMask - 关键入口</div>
+                        <div class="tech-box advanced">WalletConnect</div>
+                        <div class="tech-box core">Web3 DApp浏览器</div>
+                        <div class="tech-box advanced">Infura - 节点服务</div>
+                        <div class="tech-box core">Alchemy - 开发平台</div>
+                        <div class="tech-box basic">硬件钱包</div>
+                    </div>
+                    <div class="arrow-down"></div>
+                </div>
+                
+                <div class="layer layer-l4">
+                    <div class="layer-header">L4: 场景层 (Application Scenario Layer)</div>
+                    <div class="layer-content">
+                        <div class="tech-box critical">DEX (Uniswap) - 关键</div>
+                        <div class="tech-box advanced">借贷协议 (Aave)</div>
+                        <div class="tech-box advanced">NFT市场 (OpenSea)</div>
+                        <div class="tech-box future">元宇宙资产 - 未来</div>
+                        <div class="tech-box future">P2E游戏 - 未来</div>
+                        <div class="tech-box advanced">DAO治理</div>
+                    </div>
+                    <div class="arrow-down"></div>
+                </div>
+                
+                <div class="layer layer-l3">
+                    <div class="layer-header">L3: 组件层 (Component Layer)</div>
+                    <div class="layer-content">
+                        <div class="tech-box critical">Chainlink - 关键</div>
+                        <div class="tech-box critical">Solidity - 关键</div>
+                        <div class="tech-box advanced">Band Protocol</div>
+                        <div class="tech-box advanced">Rust</div>
+                        <div class="tech-box core">Web3.js / Ethers.js</div>
+                        <div class="tech-box future">Verifiable Credentials</div>
+                    </div>
+                    <div class="arrow-down"></div>
+                </div>
+                
+                <div class="layer layer-l2">
+                    <div class="layer-header">L2: 中间件层 (Middleware Layer)</div>
+                    <div class="layer-content">
+                        <div class="tech-box future">零知识证明 (ZK-Rollups)</div>
+                        <div class="tech-box advanced">Optimistic Rollups</div>
+                        <div class="tech-box future">跨链桥 - 未来重点</div>
+                        <div class="tech-box advanced">原子交换</div>
+                        <div class="tech-box future">zk-SNARKs/STARKs</div>
+                        <div class="tech-box core">状态通道</div>
+                    </div>
+                    <div class="arrow-down"></div>
+                </div>
+                
+                <div class="layer layer-l1">
+                    <div class="layer-header">L1: 协议层 (公链层) - Blockchain Protocol Layer</div>
+                    <div class="layer-content">
+                        <div class="tech-box critical">以太坊 (Ethereum)</div>
+                        <div class="tech-box critical">比特币 (Bitcoin)</div>
+                        <div class="tech-box critical">哈希算法 (SHA-256)</div>
+                        <div class="tech-box advanced">波卡 (Polkadot)</div>
+                        <div class="tech-box advanced">IPFS - 星际文件系统</div>
+                        <div class="tech-box future">DPoS - 未来</div>
+                    </div>
+                    <div class="arrow-down"></div>
+                </div>
+                
+                <div class="layer layer-l0">
+                    <div class="layer-header">L0: 物理设施层 (Physical Infrastructure Layer)</div>
+                    <div class="layer-content">
+                        <div class="tech-box core">P2P网络 (Libp2p)</div>
+                        <div class="tech-box advanced">EVM (以太坊虚拟机)</div>
+                        <div class="tech-box advanced">WASM (WebAssembly)</div>
+                        <div class="tech-box basic">数据中心</div>
+                        <div class="tech-box basic">服务器集群</div>
+                        <div class="tech-box basic">CDN网络</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 图例 -->
+        <div class="legend">
+            <h3>技术重要性分类</h3>
+            <div class="legend-item">
+                <div class="legend-color critical"></div>
+                <span>关键核心技术</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color future"></div>
+                <span>未来重点技术</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color advanced"></div>
+                <span>重要技术</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color core"></div>
+                <span>核心技术</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color basic"></div>
+                <span>基础技术</span>
+            </div>
+        </div>
+        
+        <div class="slide-number">2</div>
+    </div>
+    
+    <!-- 幻灯片3: L5接入层详解 -->
+    <div class="slide">
+        <h1>L5: 接入层 (Access Layer)</h1>
+        <h2>用户与Web3.0生态的直接接触点</h2>
+        
+        <div class="layer-detail">
+            <div class="detail-section">
+                <h3>钱包与身份管理</h3>
+                <ul>
+                    <li><span class="tech-box critical">MetaMask - 关键入口</span><br>
+                        Web3世界的主要入口，用户与DApp交互的桥梁</li>
+                    <li><span class="tech-box advanced">WalletConnect</span><br>
+                        开放协议，连接钱包与DApp</li>
+                    <li><span class="tech-box basic">硬件钱包 (Ledger)</span><br>
+                        冷存储解决方案，提供最高安全性</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>用户界面</h3>
+                <ul>
+                    <li><span class="tech-box core">Web3 DApp浏览器</span><br>
+                        专门为去中心化应用设计的浏览器</li>
+                    <li><span class="tech-box advanced">移动端DApp</span><br>
+                        移动设备上的Web3应用入口</li>
+                    <li><span class="tech-box basic">桌面应用</span><br>
+                        传统桌面环境的Web3接入</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Web3网关</h3>
+                <ul>
+                    <li><span class="tech-box advanced">Infura - 节点服务</span><br>
+                        提供以太坊节点访问服务</li>
+                    <li><span class="tech-box core">Alchemy - 开发平台</span><br>
+                        区块链开发者平台和工具</li>
+                    <li><span class="tech-box advanced">QuickNode - RPC服务</span><br>
+                        高性能区块链RPC服务</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>战略意义</h3>
+                <ul>
+                    <li><strong>流量聚集：</strong>控制用户入口，具有重要战略价值</li>
+                    <li><strong>用户体验：</strong>决定Web3.0的普及程度</li>
+                    <li><strong>生态护城河：</strong>形成用户粘性和网络效应</li>
+                    <li><strong>商业模式：</strong>手续费、广告、增值服务</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="slide-number">3</div>
+    </div>
+    
+    <!-- 幻灯片4: L4场景层详解 -->
+    <div class="slide">
+        <h1>L4: 场景层 (Application Scenario Layer)</h1>
+        <h2>Web3.0价值实现和商业模式创新的核心</h2>
+        
+        <div class="layer-detail">
+            <div class="detail-section">
+                <h3>去中心化金融 (DeFi)</h3>
+                <ul>
+                    <li><span class="tech-box critical">DEX (Uniswap) - 关键</span><br>
+                        去中心化交易所，DeFi生态核心基础设施</li>
+                    <li><span class="tech-box advanced">借贷协议 (Aave)</span><br>
+                        去中心化借贷平台</li>
+                    <li><span class="tech-box core">流动性挖矿</span><br>
+                        通过提供流动性获得奖励的机制</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>NFT与数字资产</h3>
+                <ul>
+                    <li><span class="tech-box advanced">NFT市场 (OpenSea)</span><br>
+                        最大的NFT交易平台</li>
+                    <li><span class="tech-box future">元宇宙资产 - 未来</span><br>
+                        虚拟世界中的数字资产</li>
+                    <li><span class="tech-box core">数字艺术品</span><br>
+                        区块链确权的数字艺术作品</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>GameFi与元宇宙</h3>
+                <ul>
+                    <li><span class="tech-box future">P2E游戏 - 未来</span><br>
+                        边玩边赚的游戏模式</li>
+                    <li><span class="tech-box advanced">虚拟世界 (Decentraland)</span><br>
+                        去中心化的虚拟世界平台</li>
+                    <li><span class="tech-box future">游戏内经济 - 未来</span><br>
+                        基于区块链的游戏经济系统</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>DAO与治理</h3>
+                <ul>
+                    <li><span class="tech-box advanced">去中心化自治组织</span><br>
+                        基于智能合约的组织形式</li>
+                    <li><span class="tech-box core">治理代币</span><br>
+                        用于协议治理的代币</li>
+                    <li><span class="tech-box future">链上投票 - 未来</span><br>
+                        透明的链上治理投票系统</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="slide-number">4</div>
+    </div>
+    
+    <!-- 幻灯片5: L3组件层详解 -->
+    <div class="slide">
+        <h1>L3: 组件层 (Component Layer)</h1>
+        <h2>Web3.0开发者生态和技术创新的支撑</h2>
+        
+        <div class="layer-detail">
+            <div class="detail-section">
+                <h3>预言机服务</h3>
+                <ul>
+                    <li><span class="tech-box critical">Chainlink - 关键</span><br>
+                        连接链上链下世界的关键基础设施</li>
+                    <li><span class="tech-box advanced">Band Protocol</span><br>
+                        跨链数据预言机协议</li>
+                    <li><span class="tech-box core">Tellor</span><br>
+                        去中心化预言机网络</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>智能合约平台</h3>
+                <ul>
+                    <li><span class="tech-box critical">Solidity - 关键</span><br>
+                        Web3应用开发的主要编程语言</li>
+                    <li><span class="tech-box advanced">Rust</span><br>
+                        高性能智能合约语言</li>
+                    <li><span class="tech-box core">Vyper</span><br>
+                        Python风格的智能合约语言</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>开发工具</h3>
+                <ul>
+                    <li><span class="tech-box core">Web3.js / Ethers.js</span><br>
+                        JavaScript区块链交互库</li>
+                    <li><span class="tech-box core">Truffle / Hardhat</span><br>
+                        智能合约开发框架</li>
+                    <li><span class="tech-box advanced">MetaMask SDK</span><br>
+                        钱包集成开发工具包</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>身份与认证</h3>
+                <ul>
+                    <li><span class="tech-box advanced">DID (去中心化身份)</span><br>
+                        自主身份管理系统</li>
+                    <li><span class="tech-box core">ENS (以太坊域名服务)</span><br>
+                        区块链域名解析服务</li>
+                    <li><span class="tech-box future">Verifiable Credentials</span><br>
+                        可验证的数字凭证</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="slide-number">5</div>
+    </div>
+    
+    <!-- 幻灯片6: L2中间件层详解 -->
+    <div class="slide">
+        <h1>L2: 中间件层 (Middleware Layer)</h1>
+        <h2>Web3.0技术突破和扩展的关键层级</h2>
+        
+        <div class="layer-detail">
+            <div class="detail-section">
+                <h3>扩展性解决方案</h3>
+                <ul>
+                    <li><span class="tech-box future">零知识证明 (ZK-Rollups)</span><br>
+                        结合隐私保护和扩展性的突破性技术</li>
+                    <li><span class="tech-box advanced">Optimistic Rollups</span><br>
+                        乐观rollup扩容方案</li>
+                    <li><span class="tech-box core">状态通道 (Lightning)</span><br>
+                        链下交易通道</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>跨链技术</h3>
+                <ul>
+                    <li><span class="tech-box future">跨链桥 - 未来重点</span><br>
+                        连接不同区块链生态的关键基础设施</li>
+                    <li><span class="tech-box advanced">原子交换</span><br>
+                        无需第三方的跨链资产交换</li>
+                    <li><span class="tech-box advanced">中继链</span><br>
+                        连接多条平行链的中心链</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>隐私保护</h3>
+                <ul>
+                    <li><span class="tech-box future">zk-SNARKs/STARKs</span><br>
+                        零知识证明算法，保护隐私</li>
+                    <li><span class="tech-box advanced">环签名</span><br>
+                        匿名签名技术</li>
+                    <li><span class="tech-box advanced">同态加密</span><br>
+                        支持密文计算的加密技术</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>技术趋势</h3>
+                <ul>
+                    <li><strong>性能突破：</strong>TPS从数十提升到数万</li>
+                    <li><strong>成本降低：</strong>交易费用大幅下降</li>
+                    <li><strong>隐私保护：</strong>零知识证明技术成熟</li>
+                    <li><strong>互操作性：</strong>多链生态互联互通</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="slide-number">6</div>
+    </div>
+    
+    <!-- 幻灯片7: L1协议层详解 -->
+    <div class="slide">
+        <h1>L1: 协议层 (公链层)</h1>
+        <h2>整个Web3.0生态系统的基础和价值锚定</h2>
+        
+        <div class="layer-detail">
+            <div class="detail-section">
+                <h3>主要公链</h3>
+                <ul>
+                    <li><span class="tech-box critical">以太坊 (Ethereum)</span><br>
+                        智能合约平台，Web3生态核心基础设施</li>
+                    <li><span class="tech-box critical">比特币 (Bitcoin)</span><br>
+                        价值存储和转移的基础，区块链技术起源</li>
+                    <li><span class="tech-box advanced">波卡 (Polkadot)</span><br>
+                        多链互操作性平台</li>
+                    <li><span class="tech-box advanced">Solana</span><br>
+                        高性能公链</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>共识机制</h3>
+                <ul>
+                    <li><span class="tech-box critical">哈希算法 (SHA-256)</span><br>
+                        区块链安全的数学基础</li>
+                    <li><span class="tech-box core">工作量证明 (PoW)</span><br>
+                        比特币使用的共识机制</li>
+                    <li><span class="tech-box advanced">权益证明 (PoS)</span><br>
+                        更环保的共识机制，以太坊2.0采用</li>
+                    <li><span class="tech-box future">DPoS - 未来</span><br>
+                        委托权益证明</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>分布式存储</h3>
+                <ul>
+                    <li><span class="tech-box advanced">IPFS - 星际文件系统</span><br>
+                        去中心化存储网络</li>
+                    <li><span class="tech-box core">Swarm</span><br>
+                        以太坊生态的存储解决方案</li>
+                    <li><span class="tech-box advanced">Arweave</span><br>
+                        永久存储区块链</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>市场地位</h3>
+                <ul>
+                    <li><strong>以太坊：</strong>智能合约领导者，生态最完善</li>
+                    <li><strong>比特币：</strong>数字黄金，价值存储首选</li>
+                    <li><strong>新兴公链：</strong>在性能、成本等方面有所突破</li>
+                    <li><strong>发展趋势：</strong>多链并存，各有专长</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="slide-number">7</div>
+    </div>
+    
+    <!-- 幻灯片8: L0物理设施层详解 -->
+    <div class="slide">
+        <h1>L0: 物理设施层</h1>
+        <h2>支撑整个Web3.0生态系统运行的物理基础</h2>
+        
+        <div class="layer-detail">
+            <div class="detail-section">
+                <h3>网络基础设施</h3>
+                <ul>
+                    <li><span class="tech-box core">P2P网络 (Libp2p)</span><br>
+                        点对点网络协议，Web3的基础通信层</li>
+                    <li><span class="tech-box basic">互联网基础设施</span><br>
+                        传统互联网基础设施</li>
+                    <li><span class="tech-box basic">CDN网络</span><br>
+                        内容分发网络</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>硬件设施</h3>
+                <ul>
+                    <li><span class="tech-box basic">数据中心</span><br>
+                        托管区块链节点的物理设施</li>
+                    <li><span class="tech-box basic">服务器集群</span><br>
+                        运行区块链节点的服务器</li>
+                    <li><span class="tech-box basic">存储设备</span><br>
+                        区块链数据存储设备</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>计算平台</h3>
+                <ul>
+                    <li><span class="tech-box advanced">EVM (以太坊虚拟机)</span><br>
+                        智能合约执行环境</li>
+                    <li><span class="tech-box advanced">WASM (WebAssembly)</span><br>
+                        高性能的Web执行环境</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>基础设施趋势</h3>
+                <ul>
+                    <li><strong>去中心化：</strong>从中心化向分布式转变</li>
+                    <li><strong>专业化：</strong>针对区块链优化的硬件</li>
+                    <li><strong>绿色化：</strong>更节能的共识机制和硬件</li>
+                    <li><strong>边缘化：</strong>边缘计算与区块链结合</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="slide-number">8</div>
+    </div>
+    
+    <!-- 幻灯片9: 战略分析 -->
+    <div class="slide">
+        <h1>战略分析与投资建议</h1>
+        
+        <table class="strategy-table">
+            <thead>
+                <tr>
+                    <th>技术分类</th>
+                    <th>代表技术</th>
+                    <th>战略价值</th>
+                    <th>投资时机</th>
+                    <th>风险等级</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="tech-box critical">关键核心技术</span></td>
+                    <td>以太坊、比特币、Chainlink</td>
+                    <td>生态基石，长期价值</td>
+                    <td>持续配置</td>
+                    <td>低</td>
+                </tr>
+                <tr>
+                    <td><span class="tech-box future">未来重点技术</span></td>
+                    <td>零知识证明、跨链桥</td>
+                    <td>技术突破点</td>
+                    <td>积极布局</td>
+                    <td>中高</td>
+                </tr>
+                <tr>
+                    <td><span class="tech-box advanced">重要技术</span></td>
+                    <td>波卡、IPFS、DID</td>
+                    <td>生态完善</td>
+                    <td>选择性投资</td>
+                    <td>中</td>
+                </tr>
+                <tr>
+                    <td><span class="tech-box core">核心技术</span></td>
+                    <td>开发工具、钱包</td>
+                    <td>基础设施</td>
+                    <td>稳健投资</td>
+                    <td>低中</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="layer-detail" style="margin-top: 40px;">
+            <div class="detail-section">
+                <h3>短期策略 (1-2年)</h3>
+                <ul>
+                    <li>重点关注DeFi协议成熟和NFT市场发展</li>
+                    <li>Layer 2扩展方案的产业化应用</li>
+                    <li>监管政策明确带来的市场机会</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>中期策略 (3-5年)</h3>
+                <ul>
+                    <li>零知识证明技术的大规模商业化</li>
+                    <li>跨链技术成熟，多链生态互联</li>
+                    <li>元宇宙和GameFi的主流化</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>长期愿景 (5-10年)</h3>
+                <ul>
+                    <li>Web3.0基础设施全面成熟</li>
+                    <li>去中心化应用成为主流</li>
+                    <li>数字经济新模式全面建立</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>风险提示</h3>
+                <ul>
+                    <li>监管政策不确定性</li>
+                    <li>技术安全风险</li>
+                    <li>市场竞争加剧</li>
+                    <li>用户接受度挑战</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="slide-number">9</div>
+    </div>
+    
+    <!-- 幻灯片10: 总结与展望 -->
+    <div class="slide">
+        <h1>总结与展望</h1>
+        
+        <div class="layer-detail">
+            <div class="detail-section">
+                <h3>关键洞察</h3>
+                <ul>
+                    <li><strong>分层架构清晰：</strong>L0-L5形成完整技术栈</li>
+                    <li><strong>技术成熟度不一：</strong>L1最成熟，L2-L4快速发展</li>
+                    <li><strong>价值实现路径：</strong>从基础设施到应用场景</li>
+                    <li><strong>生态协同效应：</strong>各层级相互依赖，共同发展</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>投资机会</h3>
+                <ul>
+                    <li><strong>基础设施投资：</strong>公链、预言机、开发工具</li>
+                    <li><strong>应用场景投资：</strong>DeFi、NFT、GameFi</li>
+                    <li><strong>技术突破投资：</strong>零知识证明、跨链技术</li>
+                    <li><strong>用户入口投资：</strong>钱包、浏览器、网关</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>发展趋势</h3>
+                <ul>
+                    <li><strong>技术融合：</strong>AI、IoT与区块链深度融合</li>
+                    <li><strong>监管明确：</strong>政策框架逐步完善</li>
+                    <li><strong>用户普及：</strong>Web3.0应用用户体验改善</li>
+                    <li><strong>商业模式：</strong>新的价值创造和分配模式</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>行动建议</h3>
+                <ul>
+                    <li><strong>战略布局：</strong>基于分层架构制定投资策略</li>
+                    <li><strong>技术储备：</strong>关注关键技术发展动态</li>
+                    <li><strong>生态参与：</strong>积极参与Web3.0生态建设</li>
+                    <li><strong>风险管控：</strong>平衡创新与风险控制</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="slide-number">10</div>
+    </div>
+    
+    <script>
+        // 添加交互功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 为技术标签添加点击事件
+            const techBoxes = document.querySelectorAll('.tech-box');
+            techBoxes.forEach(box => {
+                box.addEventListener('click', function() {
+                    // 可以添加详细信息弹窗或其他交互
+                    console.log('点击了技术:', this.textContent);
+                });
+            });
+            
+            // 添加键盘导航
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowRight' || e.key === ' ') {
+                    // 下一页逻辑
+                    console.log('下一页');
+                } else if (e.key === 'ArrowLeft') {
+                    // 上一页逻辑
+                    console.log('上一页');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

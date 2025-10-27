@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400" height="1800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 麦肯锡风格渐变 - 蓝色系 -->
+    <linearGradient id="primaryBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1f4e79;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2e5984;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="secondaryBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2e5984;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3d6b94;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="lightBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4a7ba7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5a8ab8;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="accentBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6699cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7aa9d6;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="softBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8bb8e0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a0c7ea;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="paleBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#b5d6f3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c9e2f7;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 专业阴影 -->
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#00000020"/>
+    </filter>
+    
+    <!-- 重点技术高亮 -->
+    <linearGradient id="criticalTech" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#d73027;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e85a4f;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="futureTech" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f7b733;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1400" height="1800" fill="#ffffff"/>
+  
+  <!-- 标题区域 -->
+  <rect x="0" y="0" width="1400" height="90" fill="#1f4e79"/>
+  <text x="700" y="55" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="600" fill="#ffffff">
+    Web3.0 生态业务架构图 (L0-L5)
+  </text>
+  
+  <!-- L5: 接入层 -->
+  <g id="l5-layer">
+    <!-- 层级标题栏 -->
+    <rect x="50" y="110" width="1300" height="50" fill="url(#paleBlue)" stroke="#1f4e79" stroke-width="2"/>
+    <text x="70" y="145" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" fill="#1f4e79">
+      L5: 接入层 (Access Layer)
+    </text>
+    
+    <!-- 主要组件区域 -->
+    <rect x="50" y="160" width="1300" height="180" fill="#f8f9fa" stroke="#e9ecef" stroke-width="2" filter="url(#subtleShadow)"/>
+    
+    <!-- 钱包与身份管理 -->
+    <g id="l5-wallets">
+      <rect x="70" y="180" width="390" height="140" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+      <text x="85" y="210" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#495057">钱包与身份管理</text>
+      
+      <!-- 关键技术 -->
+      <rect x="85" y="220" width="180" height="28" fill="url(#criticalTech)" stroke="#c82333" stroke-width="1"/>
+      <text x="95" y="240" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="500" fill="#ffffff">MetaMask - 关键入口</text>
+      
+      <!-- 重要技术 -->
+      <rect x="85" y="255" width="160" height="28" fill="url(#secondaryBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="95" y="275" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">WalletConnect</text>
+      
+      <!-- 标准技术 -->
+      <rect x="85" y="290" width="120" height="28" fill="#6c757d" stroke="#495057" stroke-width="1"/>
+      <text x="95" y="310" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">硬件钱包</text>
+    </g>
+    
+    <!-- 用户界面 -->
+    <g id="l5-interfaces">
+      <rect x="480" y="180" width="380" height="140" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+      <text x="495" y="210" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#495057">用户界面</text>
+      
+      <rect x="495" y="220" width="160" height="28" fill="url(#lightBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="505" y="240" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">Web3 DApp浏览器</text>
+      
+      <rect x="495" y="255" width="130" height="28" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="505" y="275" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">移动端DApp</text>
+      
+      <rect x="495" y="290" width="100" height="28" fill="#6c757d" stroke="#495057" stroke-width="1"/>
+      <text x="505" y="310" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">桌面应用</text>
+    </g>
+    
+    <!-- Web3网关 -->
+    <g id="l5-gateways">
+      <rect x="880" y="180" width="420" height="140" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+      <text x="895" y="210" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#495057">Web3网关</text>
+      
+      <rect x="895" y="220" width="120" height="28" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="905" y="240" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">Infura - 节点服务</text>
+      
+      <rect x="895" y="255" width="130" height="28" fill="url(#lightBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="905" y="275" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">Alchemy - 开发平台</text>
+      
+      <rect x="895" y="290" width="140" height="28" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="905" y="310" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">QuickNode - RPC服务</text>
+    </g>
+  </g>
+  
+  <!-- L4: 场景层 -->
+  <g id="l4-layer">
+    <rect x="50" y="360" width="1300" height="50" fill="url(#softBlue)" stroke="#1f4e79" stroke-width="2"/>
+    <text x="70" y="395" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" fill="#1f4e79">
+      L4: 场景层 (Application Scenario Layer)
+    </text>
+    
+    <rect x="50" y="410" width="1300" height="180" fill="#f8f9fa" stroke="#e9ecef" stroke-width="2" filter="url(#subtleShadow)"/>
+    
+    <!-- DeFi -->
+    <g id="l4-defi">
+      <rect x="70" y="430" width="300" height="140" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+      <text x="85" y="460" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#495057">去中心化金融 (DeFi)</text>
+      
+      <rect x="85" y="470" width="170" height="28" fill="url(#criticalTech)" stroke="#c82333" stroke-width="1"/>
+      <text x="95" y="490" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="500" fill="#ffffff">DEX (Uniswap) - 关键</text>
+      
+      <rect x="85" y="505" width="150" height="28" fill="url(#secondaryBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="95" y="525" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">借贷协议 (Aave)</text>
+      
+      <rect x="85" y="540" width="120" height="28" fill="url(#lightBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="95" y="560" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">流动性挖矿</text>
+    </g>
+    
+    <!-- NFT与数字资产 -->
+    <g id="l4-nft">
+      <rect x="390" y="430" width="300" height="140" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+      <text x="405" y="460" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#495057">NFT与数字资产</text>
+      
+      <rect x="405" y="470" width="140" height="28" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="415" y="490" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">NFT市场 (OpenSea)</text>
+      
+      <rect x="405" y="505" width="150" height="28" fill="url(#futureTech)" stroke="#e67e22" stroke-width="1"/>
+      <text x="415" y="525" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="500" fill="#ffffff">元宇宙资产 - 未来</text>
+      
+      <rect x="405" y="540" width="110" height="28" fill="url(#lightBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="415" y="560" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">数字艺术品</text>
+    </g>
+    
+    <!-- GameFi与元宇宙 -->
+    <g id="l4-gamefi">
+      <rect x="710" y="430" width="300" height="140" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+      <text x="725" y="460" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#495057">GameFi与元宇宙</text>
+      
+      <rect x="725" y="470" width="150" height="28" fill="url(#futureTech)" stroke="#e67e22" stroke-width="1"/>
+      <text x="735" y="490" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="500" fill="#ffffff">P2E游戏 - 未来</text>
+      
+      <rect x="725" y="505" width="160" height="28" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="735" y="525" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">虚拟世界</text>
+      
+      <rect x="725" y="540" width="140" height="28" fill="url(#futureTech)" stroke="#e67e22" stroke-width="1"/>
+      <text x="735" y="560" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="500" fill="#ffffff">游戏内经济</text>
+    </g>
+    
+    <!-- DAO与治理 -->
+    <g id="l4-dao">
+      <rect x="1030" y="430" width="270" height="140" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+      <text x="1045" y="460" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#495057">DAO与治理</text>
+      
+      <rect x="1045" y="470" width="160" height="28" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="1055" y="490" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">去中心化自治组织</text>
+      
+      <rect x="1045" y="505" width="110" height="28" fill="url(#lightBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="1055" y="525" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">治理代币</text>
+      
+      <rect x="1045" y="540" width="120" height="28" fill="url(#futureTech)" stroke="#e67e22" stroke-width="1"/>
+      <text x="1055" y="560" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="500" fill="#ffffff">链上投票</text>
+    </g>
+  </g>
+  
+  <!-- L3: 组件层 -->
+  <g id="l3-layer">
+    <rect x="50" y="610" width="1300" height="50" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="2"/>
+    <text x="70" y="645" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" fill="#ffffff">
+      L3: 组件层 (Component Layer)
+    </text>
+    
+    <rect x="50" y="660" width="1300" height="180" fill="#f8f9fa" stroke="#e9ecef" stroke-width="2" filter="url(#subtleShadow)"/>
+    
+    <!-- 预言机服务 -->
+    <g id="l3-oracles">
+      <rect x="70" y="680" width="300" height="140" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+      <text x="85" y="710" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#495057">预言机服务</text>
+      
+      <rect x="85" y="720" width="160" height="28" fill="url(#criticalTech)" stroke="#c82333" stroke-width="1"/>
+      <text x="95" y="740" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="500" fill="#ffffff">Chainlink - 关键</text>
+      
+      <rect x="85" y="755" width="140" height="28" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="95" y="775" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">Band Protocol</text>
+      
+      <rect x="85" y="790" width="90" height="28" fill="url(#lightBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="95" y="810" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">Tellor</text>
+    </g>
+    
+    <!-- 智能合约平台 -->
+    <g id="l3-contracts">
+      <rect x="390" y="680" width="300" height="140" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+      <text x="405" y="710" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#495057">智能合约平台</text>
+      
+      <rect x="405" y="720" width="150" height="28" fill="url(#criticalTech)" stroke="#c82333" stroke-width="1"/>
+      <text x="415" y="740" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="500" fill="#ffffff">Solidity - 关键</text>
+      
+      <rect x="405" y="755" width="120" height="28" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="415" y="775" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">Rust</text>
+      
+      <rect x="405" y="790" width="100" height="28" fill="url(#lightBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="415" y="810" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">Vyper</text>
+    </g>
+    
+    <!-- 开发工具 -->
+    <g id="l3-tools">
+      <rect x="710" y="680" width="280" height="140" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+      <text x="725" y="710" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#495057">开发工具</text>
+      
+      <rect x="725" y="720" width="150" height="28" fill="url(#lightBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="735" y="740" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">Web3.js / Ethers.js</text>
+      
+      <rect x="725" y="755" width="140" height="28" fill="url(#lightBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="735" y="775" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">Truffle / Hardhat</text>
+      
+      <rect x="725" y="790" width="130" height="28" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="735" y="810" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">MetaMask SDK</text>
+    </g>
+    
+    <!-- 身份与认证 -->
+    <g id="l3-identity">
+      <rect x="1010" y="680" width="290" height="140" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+      <text x="1025" y="710" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#495057">身份与认证</text>
+      
+      <rect x="1025" y="720" width="150" height="28" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="1035" y="740" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">DID (去中心化身份)</text>
+      
+      <rect x="1025" y="755" width="160" height="28" fill="url(#lightBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="1035" y="775" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">ENS (以太坊域名)</text>
+      
+      <rect x="1025" y="790" width="170" height="28" fill="url(#futureTech)" stroke="#e67e22" stroke-width="1"/>
+      <text x="1035" y="810" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="500" fill="#ffffff">Verifiable Credentials</text>
+    </g>
+  </g>
+  
+  <!-- L2: 中间件层 -->
+  <g id="l2-layer">
+    <rect x="50" y="860" width="1300" height="50" fill="url(#lightBlue)" stroke="#1f4e79" stroke-width="2"/>
+    <text x="70" y="895" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" fill="#ffffff">
+      L2: 中间件层 (Middleware Layer)
+    </text>
+    
+    <rect x="50" y="910" width="1300" height="180" fill="#f8f9fa" stroke="#e9ecef" stroke-width="2" filter="url(#subtleShadow)"/>
+    
+    <!-- 扩展性解决方案 -->
+    <g id="l2-scaling">
+      <rect x="70" y="930" width="400" height="140" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+      <text x="85" y="960" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#495057">扩展性解决方案</text>
+      
+      <rect x="85" y="970" width="170" height="28" fill="url(#futureTech)" stroke="#e67e22" stroke-width="1"/>
+      <text x="95" y="990" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="500" fill="#ffffff">零知识证明 (ZK-Rollups)</text>
+      
+      <rect x="85" y="1005" width="160" height="28" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="95" y="1025" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">Optimistic Rollups</text>
+      
+      <rect x="85" y="1040" width="150" height="28" fill="url(#lightBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="95" y="1060" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">状态通道 (Lightning)</text>
+    </g>
+    
+    <!-- 跨链技术 -->
+    <g id="l2-interop">
+      <rect x="490" y="930" width="400" height="140" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+      <text x="505" y="960" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#495057">跨链技术</text>
+      
+      <rect x="505" y="970" width="170" height="28" fill="url(#futureTech)" stroke="#e67e22" stroke-width="1"/>
+      <text x="515" y="990" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="500" fill="#ffffff">跨链桥 - 未来重点</text>
+      
+      <rect x="505" y="1005" width="140" height="28" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="515" y="1025" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">原子交换</text>
+      
+      <rect x="505" y="1040" width="120" height="28" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="515" y="1060" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">中继链</text>
+    </g>
+    
+    <!-- 隐私保护 -->
+    <g id="l2-privacy">
+      <rect x="910" y="930" width="390" height="140" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+      <text x="925" y="960" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#495057">隐私保护</text>
+      
+      <rect x="925" y="970" width="190" height="28" fill="url(#futureTech)" stroke="#e67e22" stroke-width="1"/>
+      <text x="935" y="990" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="500" fill="#ffffff">零知识证明 (zk-SNARKs)</text>
+      
+      <rect x="925" y="1005" width="140" height="28" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="935" y="1025" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">环签名</text>
+      
+      <rect x="925" y="1040" width="110" height="28" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="935" y="1060" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">同态加密</text>
+    </g>
+  </g>
+  
+  <!-- L1: 协议层 -->
+  <g id="l1-layer">
+    <rect x="50" y="1110" width="1300" height="50" fill="url(#secondaryBlue)" stroke="#1f4e79" stroke-width="2"/>
+    <text x="70" y="1145" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" fill="#ffffff">
+      L1: 协议层 (公链层) - Blockchain Protocol Layer
+    </text>
+    
+    <rect x="50" y="1160" width="1300" height="180" fill="#f8f9fa" stroke="#e9ecef" stroke-width="2" filter="url(#subtleShadow)"/>
+    
+    <!-- 主要公链 -->
+    <g id="l1-blockchains">
+      <rect x="70" y="1180" width="400" height="140" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+      <text x="85" y="1210" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#495057">主要公链</text>
+      
+      <rect x="85" y="1220" width="160" height="28" fill="url(#criticalTech)" stroke="#c82333" stroke-width="1"/>
+      <text x="95" y="1240" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="500" fill="#ffffff">以太坊 (Ethereum)</text>
+      
+      <rect x="255" y="1220" width="150" height="28" fill="url(#criticalTech)" stroke="#c82333" stroke-width="1"/>
+      <text x="265" y="1240" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="500" fill="#ffffff">比特币 (Bitcoin)</text>
+      
+      <rect x="85" y="1255" width="140" height="28" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="95" y="1275" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">波卡 (Polkadot)</text>
+      
+      <rect x="235" y="1255" width="100" height="28" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="245" y="1275" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">Solana</text>
+    </g>
+    
+    <!-- 共识机制 -->
+    <g id="l1-consensus">
+      <rect x="490" y="1180" width="400" height="140" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+      <text x="505" y="1210" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#495057">共识机制</text>
+      
+      <rect x="505" y="1220" width="180" height="28" fill="url(#criticalTech)" stroke="#c82333" stroke-width="1"/>
+      <text x="515" y="1240" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="500" fill="#ffffff">哈希算法 (SHA-256)</text>
+      
+      <rect x="505" y="1255" width="140" height="28" fill="url(#lightBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="515" y="1275" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">工作量证明 (PoW)</text>
+      
+      <rect x="655" y="1255" width="130" height="28" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="665" y="1275" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">权益证明 (PoS)</text>
+      
+      <rect x="505" y="1290" width="110" height="28" fill="url(#futureTech)" stroke="#e67e22" stroke-width="1"/>
+      <text x="515" y="1310" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="500" fill="#ffffff">DPoS - 未来</text>
+    </g>
+    
+    <!-- 分布式存储 -->
+    <g id="l1-storage">
+      <rect x="910" y="1180" width="390" height="140" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+      <text x="925" y="1210" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#495057">分布式存储</text>
+      
+      <rect x="925" y="1220" width="150" height="28" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="935" y="1240" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">IPFS - 星际文件系统</text>
+      
+      <rect x="925" y="1255" width="120" height="28" fill="url(#lightBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="935" y="1275" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">Swarm</text>
+      
+      <rect x="1055" y="1255" width="110" height="28" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="1065" y="1275" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">Arweave</text>
+    </g>
+  </g>
+  
+  <!-- L0: 物理设施层 -->
+  <g id="l0-layer">
+    <rect x="50" y="1360" width="1300" height="50" fill="url(#primaryBlue)" stroke="#1f4e79" stroke-width="2"/>
+    <text x="70" y="1395" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" fill="#ffffff">
+      L0: 物理设施层 (Physical Infrastructure Layer)
+    </text>
+    
+    <rect x="50" y="1410" width="1300" height="180" fill="#f8f9fa" stroke="#e9ecef" stroke-width="2" filter="url(#subtleShadow)"/>
+    
+    <!-- 网络基础设施 -->
+    <g id="l0-network">
+      <rect x="70" y="1430" width="400" height="140" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+      <text x="85" y="1460" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#495057">网络基础设施</text>
+      
+      <rect x="85" y="1470" width="150" height="28" fill="url(#lightBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="95" y="1490" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">P2P网络 (Libp2p)</text>
+      
+      <rect x="85" y="1505" width="130" height="28" fill="#6c757d" stroke="#495057" stroke-width="1"/>
+      <text x="95" y="1525" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">互联网基础设施</text>
+      
+      <rect x="85" y="1540" width="90" height="28" fill="#6c757d" stroke="#495057" stroke-width="1"/>
+      <text x="95" y="1560" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">CDN网络</text>
+    </g>
+    
+    <!-- 硬件设施 -->
+    <g id="l0-hardware">
+      <rect x="490" y="1430" width="400" height="140" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+      <text x="505" y="1460" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#495057">硬件设施</text>
+      
+      <rect x="505" y="1470" width="90" height="28" fill="#6c757d" stroke="#495057" stroke-width="1"/>
+      <text x="515" y="1490" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">数据中心</text>
+      
+      <rect x="605" y="1470" width="100" height="28" fill="#6c757d" stroke="#495057" stroke-width="1"/>
+      <text x="615" y="1490" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">服务器集群</text>
+      
+      <rect x="505" y="1505" width="90" height="28" fill="#6c757d" stroke="#495057" stroke-width="1"/>
+      <text x="515" y="1525" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">存储设备</text>
+    </g>
+    
+    <!-- 计算平台 -->
+    <g id="l0-compute">
+      <rect x="910" y="1430" width="390" height="140" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+      <text x="925" y="1460" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#495057">计算平台</text>
+      
+      <rect x="925" y="1470" width="160" height="28" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="935" y="1490" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">EVM (以太坊虚拟机)</text>
+      
+      <rect x="925" y="1505" width="150" height="28" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+      <text x="935" y="1525" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">WASM (WebAssembly)</text>
+    </g>
+  </g>
+  
+  <!-- 专业图例 -->
+  <g id="professional-legend">
+    <rect x="50" y="1610" width="1300" height="140" fill="#ffffff" stroke="#dee2e6" stroke-width="2" filter="url(#subtleShadow)"/>
+    
+    <!-- 标题 -->
+    <text x="70" y="1640" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" fill="#1f4e79">技术重要性分类</text>
+    
+    <!-- 关键核心技术 -->
+    <rect x="70" y="1655" width="25" height="18" fill="url(#criticalTech)" stroke="#c82333" stroke-width="1"/>
+    <text x="105" y="1670" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#495057">关键核心技术 - 当前Web3生态的基石</text>
+    
+    <!-- 未来重点技术 -->
+    <rect x="70" y="1680" width="25" height="18" fill="url(#futureTech)" stroke="#e67e22" stroke-width="1"/>
+    <text x="105" y="1695" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#495057">未来重点技术 - 下一代技术突破点</text>
+    
+    <!-- 重要技术 -->
+    <rect x="70" y="1705" width="25" height="18" fill="url(#accentBlue)" stroke="#1f4e79" stroke-width="1"/>
+    <text x="105" y="1720" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#495057">重要技术 - 技术成熟度较高的核心组件</text>
+    
+    <!-- 基础技术 -->
+    <rect x="70" y="1730" width="25" height="18" fill="#6c757d" stroke="#495057" stroke-width="1"/>
+    <text x="105" y="1745" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#495057">基础技术 - 基础设施层面的支撑技术</text>
+    
+    <!-- 架构说明 -->
+    <text x="700" y="1670" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#495057">架构层级：从上至下为L5接入层 → L4场景层 → L3组件层 → L2中间件层 → L1协议层 → L0物理设施层</text>
+    <text x="700" y="1695" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#495057">依赖关系：上层依赖下层技术，形成完整的Web3.0技术栈</text>
+    <text x="700" y="1720" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#495057">发展趋势：重点关注红色标记的核心技术和橙色标记的未来技术</text>
+  </g>
+  
+  <!-- 连接线 - 简洁的专业风格 -->
+  <defs>
+    <marker id="professionalArrow" markerWidth="10" markerHeight="8" 
+            refX="10" refY="4" orient="auto">
+      <polygon points="0 0, 10 4, 0 8" fill="#1f4e79" />
+    </marker>
+  </defs>
+  
+  <!-- 层级连接线 -->
+  <line x1="700" y1="340" x2="700" y2="360" stroke="#1f4e79" stroke-width="3" marker-end="url(#professionalArrow)"/>
+  <line x1="700" y1="590" x2="700" y2="610" stroke="#1f4e79" stroke-width="3" marker-end="url(#professionalArrow)"/>
+  <line x1="700" y1="840" x2="700" y2="860" stroke="#1f4e79" stroke-width="3" marker-end="url(#professionalArrow)"/>
+  <line x1="700" y1="1090" x2="700" y2="1110" stroke="#1f4e79" stroke-width="3" marker-end="url(#professionalArrow)"/>
+  <line x1="700" y1="1340" x2="700" y2="1360" stroke="#1f4e79" stroke-width="3" marker-end="url(#professionalArrow)"/>
+  
+</svg>
