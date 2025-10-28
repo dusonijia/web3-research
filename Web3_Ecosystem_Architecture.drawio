@@ -1,0 +1,375 @@
+<mxfile host="app.diagrams.net" modified="2025-09-15T00:00:00.000Z" agent="5.0" version="24.7.8" etag="9WIbWdtaEYlHWB4KJmNT" type="device">
+  <diagram name="Web3.0生态业务架构" id="Web3-Ecosystem-Architecture">
+    <mxGraphModel dx="2074" dy="1196" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2339" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- 标题 -->
+        <mxCell id="title" value="Web3.0生态业务架构" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=28;fontStyle=1;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="627" y="30" width="400" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- L5层：接入层 -->
+        <mxCell id="L5-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;opacity=30;" vertex="1" parent="1">
+          <mxGeometry x="50" y="100" width="1554" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="L5-title" value="L5: 接入层 (Access Layer)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#5a5a5a;" vertex="1" parent="1">
+          <mxGeometry x="70" y="110" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="L5-desc" value="核心功能：用户与Web3交互的合规入口" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="70" y="140" width="300" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- L5 组件 -->
+        <mxCell id="wallets" value="钱包 Wallets" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="metamask" value="MetaMask" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="540" y="170" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="phantom" value="Phantom" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="540" y="200" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="compliance" value="合规网关" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="securitize" value="Securitize" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="790" y="170" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="coinbase" value="Coinbase" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="790" y="200" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dapp-browser" value="DApp浏览器" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- L4层：场景层 -->
+        <mxCell id="L4-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;opacity=30;" vertex="1" parent="1">
+          <mxGeometry x="50" y="300" width="1554" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="L4-title" value="L4: 场景层 (Scene Layer)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#5a5a5a;" vertex="1" parent="1">
+          <mxGeometry x="70" y="310" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="L4-desc" value="核心功能：落地应用" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="70" y="340" width="300" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- L4 组件 -->
+        <mxCell id="defi-apps" value="DeFi 应用" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uniswap" value="Uniswap" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="540" y="370" width="70" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="aave" value="Aave" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="540" y="395" width="70" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="makerdao" value="MakerDAO" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="540" y="420" width="70" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="gamefi" value="GameFi / 元宇宙" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="axie" value="Axie Infinity" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="790" y="380" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="socialfi" value="SocialFi" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lens" value="Lens Protocol" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="380" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="depin" value="DePIN" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="helium" value="Helium" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="380" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- L3层：组件层 -->
+        <mxCell id="L3-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;opacity=30;" vertex="1" parent="1">
+          <mxGeometry x="50" y="520" width="1554" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="L3-title" value="L3: 组件层 (Component Layer)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#5a5a5a;" vertex="1" parent="1">
+          <mxGeometry x="70" y="530" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="L3-desc" value="核心功能：封装金融协议与开发者工具" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="70" y="560" width="300" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- L3 重点突出的组件 -->
+        <mxCell id="stablecoins" value="稳定币 Stablecoins" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ff9999;strokeColor=#cc0000;fontSize=14;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="400" y="590" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="usdc" value="USDC (Circle)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="560" y="590" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="usdt" value="USDT (Tether)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="560" y="620" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="rwa" value="RWA 真实世界资产" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ff9999;strokeColor=#cc0000;fontSize=14;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="670" y="590" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="blackrock" value="BlackRock BUIDL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="830" y="590" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ondo" value="Ondo Finance" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="830" y="615" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="centrifuge" value="Centrifuge" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="830" y="640" width="90" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="nft" value="NFT 非同质化代币" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ff9999;strokeColor=#cc0000;fontSize=14;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="950" y="590" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="opensea" value="OpenSea" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="600" width="70" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="yuga" value="Yuga Labs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="625" width="70" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="defi-protocols" value="DeFi协议原语" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="590" width="120" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- L2层：中间件层 -->
+        <mxCell id="L2-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;opacity=30;" vertex="1" parent="1">
+          <mxGeometry x="50" y="760" width="1554" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="L2-title" value="L2: 中间件层 (Middleware Layer)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#5a5a5a;" vertex="1" parent="1">
+          <mxGeometry x="70" y="770" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="L2-desc" value="核心功能：扩展性能、跨链互通、链下数据接入" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="70" y="800" width="350" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- L2 重点突出的技术 -->
+        <mxCell id="zkp" value="零知识证明 ZKP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9900cc;strokeColor=#660099;fontSize=16;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="400" y="830" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="starkware" value="StarkWare" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="580" y="830" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="matter-labs" value="Matter Labs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="580" y="855" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="scroll" value="Scroll" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="580" y="880" width="80" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="cross-chain" value="跨链技术 Cross-Chain" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9900cc;strokeColor=#660099;fontSize=16;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="690" y="830" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="layerzero" value="LayerZero" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="870" y="830" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="wormhole" value="Wormhole" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="870" y="855" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="axelar" value="Axelar" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="870" y="880" width="80" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="oracle" value="预言机 Oracle" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9900cc;strokeColor=#660099;fontSize=16;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="980" y="830" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="chainlink" value="Chainlink (LINK)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="840" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="band" value="Band Protocol" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="865" width="90" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="l2-scaling" value="L2扩容方案" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="optimism" value="Optimism" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="540" y="940" width="70" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="arbitrum" value="Arbitrum" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="540" y="965" width="70" height="25" as="geometry" />
+        </mxCell>
+        
+        <!-- L1层：区块链层 -->
+        <mxCell id="L1-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#0066cc;opacity=30;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1060" width="1554" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="L1-title" value="L1: 区块链层 (Blockchain Layer)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#5a5a5a;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1070" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="L1-desc" value="核心功能：价值结算与智能合约执行" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1100" width="350" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- L1 重点突出的公链 -->
+        <mxCell id="ethereum" value="以太坊 Ethereum (ETH)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0066cc;strokeColor=#004499;fontSize=16;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1130" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eth-foundation" value="以太坊基金会" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1130" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="consensys" value="ConsenSys" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1155" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="pos" value="PoS共识" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1180" width="80" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="solana" value="Solana (SOL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0066cc;strokeColor=#004499;fontSize=16;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="720" y="1130" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="solana-labs" value="Solana Labs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="890" y="1130" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="poh" value="PoH+PoS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="890" y="1155" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="jump" value="Jump Crypto" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="890" y="1180" width="80" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="bitcoin" value="比特币 Bitcoin (BTC)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0066cc;strokeColor=#004499;fontSize=16;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1130" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pow" value="PoW共识" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="1145" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="digital-gold" value="数字黄金" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="1170" width="80" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="hashing" value="哈希函数 Hashing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9900cc;strokeColor=#660099;fontSize=16;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1240" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sha256" value="SHA-256" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="580" y="1255" width="70" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="other-l1" value="其他公链" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="1240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="polygon" value="Polygon" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="840" y="1240" width="60" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="avalanche" value="Avalanche" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="840" y="1265" width="60" height="25" as="geometry" />
+        </mxCell>
+        
+        <!-- L0层：物理设施层 -->
+        <mxCell id="L0-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;opacity=30;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1380" width="1554" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="L0-title" value="L0: 物理设施层 (Physical Infrastructure Layer)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#5a5a5a;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1390" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="L0-desc" value="核心功能：提供分布式网络基础资源" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1420" width="350" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- L0 组件 -->
+        <mxCell id="p2p" value="P2P网络" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6e6e6;strokeColor=#999999;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1450" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="storage" value="去中心化存储" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6e6e6;strokeColor=#999999;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="1450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="filecoin" value="Filecoin (FIL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="680" y="1450" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ipfs" value="IPFS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="680" y="1475" width="80" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="node-operators" value="节点运营商" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6e6e6;strokeColor=#999999;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="1450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="infura" value="Infura" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="940" y="1450" width="70" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="alchemy" value="Alchemy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="940" y="1475" width="70" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="hardware" value="硬件制造商" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6e6e6;strokeColor=#999999;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="1450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bitmain" value="比特大陆" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="1450" width="70" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="nvidia" value="NVIDIA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="1475" width="70" height="25" as="geometry" />
+        </mxCell>
+        
+        <!-- 图例 -->
+        <mxCell id="legend-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="100" width="280" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" value="图例 Legend" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="110" width="180" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-core" value="核心技术（高技术先进性）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9900cc;strokeColor=#660099;fontSize=10;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="140" width="130" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-key" value="关键资产/协议" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ff9999;strokeColor=#cc0000;fontSize=10;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="170" width="130" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-important" value="重要公链平台" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0066cc;strokeColor=#004499;fontSize=10;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="200" width="130" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-standard" value="标准组件/应用" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="230" width="130" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-players" value="市场主体/玩家" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="140" width="100" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-tech" value="技术特性" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="170" width="100" height="25" as="geometry" />
+        </mxCell>
+        
+        <!-- 连接线 -->
+        <mxCell id="arrow1" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="827" y="280" as="sourcePoint" />
+            <mxPoint x="827" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow2" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="827" y="500" as="sourcePoint" />
+            <mxPoint x="827" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow3" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="827" y="740" as="sourcePoint" />
+            <mxPoint x="827" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow4" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="827" y="1040" as="sourcePoint" />
+            <mxPoint x="827" y="1060" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow5" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="827" y="1360" as="sourcePoint" />
+            <mxPoint x="827" y="1380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
