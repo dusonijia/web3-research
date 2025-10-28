@@ -1,0 +1,82 @@
+Level,Topic,Note
+1,Web3.0 生态业务架构,分层架构与核心技术生态图
+2,L5: 接入层 (Access Layer),用户与Web3交互的合规入口
+3,🔐 钱包 (Wallets),
+4,MetaMask (以太坊生态),
+4,Phantom (Solana生态),
+4,Ledger (硬件钱包),
+3,📋 合规网关,
+4,Securitize (KYC/AML),
+4,Coinbase (中心化交易所),
+3,🌐 DApp浏览器,
+2,L4: 场景层 (Scene Layer),落地应用
+3,💰 DeFi (去中心化金融),
+4,交易所 (Uniswap SushiSwap),
+4,借贷 (Aave Compound),
+4,衍生品,
+3,🎮 GameFi / 元宇宙,
+4,Axie Infinity,
+4,The Sandbox,
+3,👥 SocialFi,
+4,Lens Protocol,
+3,🏗️ DePIN,
+4,Helium (去中心化无线网络),
+2,L3: 组件层 (Component Layer),封装金融协议与开发者工具
+3,💵 稳定币 (Stablecoins) ⭐,核心关键技术
+4,USDC (Circle),
+4,USDT (Tether),
+4,DAI (MakerDAO),
+3,🏢 真实世界资产 (RWA) ⭐,核心关键技术
+4,BlackRock BUIDL,
+4,Ondo Finance,
+4,Centrifuge,
+3,🎨 NFT (非同质化代币),
+4,OpenSea,
+4,Yuga Labs,
+3,🔧 DeFi协议原语,
+4,Uniswap (UNI),
+4,Aave,
+2,L2: 中间件层 (Middleware Layer),扩展性能、跨链互通、链下数据接入
+3,⚡ Layer2扩容方案,
+4,🔒 零知识证明 (ZKP) ⭐,核心关键技术
+5,StarkWare (Starknet),
+5,Matter Labs (zkSync),
+5,Scroll,
+3,🌉 跨链技术 (Cross-Chain) ⭐,核心关键技术
+4,LayerZero,
+4,Wormhole,
+4,Axelar,
+4,Chainlink CCIP,
+3,🔮 预言机 (Oracle) ⭐,核心关键技术
+4,Chainlink (LINK) - 市场领导者,
+4,Band Protocol,
+4,API3,
+2,L1: 区块链层 (Blockchain Layer),价值结算与智能合约执行
+3,⛓️ 公链平台 ⭐,核心关键技术
+4,以太坊 (ETH) - PoS共识,全球结算层 最大开发者生态
+4,Solana (SOL) - PoH+PoS,高性能 65000 TPS理论值
+4,比特币 (BTC) - PoW,数字黄金 最去中心化
+3,🧮 核心算法 ⭐,核心关键技术
+4,哈希函数 (SHA-256) ⭐,数据不可篡改性基石
+4,共识机制,
+5,PoS (权益证明),
+5,PoW (工作量证明),
+5,PoH (历史证明),
+3,🏢 市场主体,
+4,以太坊基金会,
+4,ConsenSys,
+4,Solana Labs,
+4,验证者网络,
+2,L0: 物理设施层 (Physical Infrastructure),提供分布式网络基础资源
+3,🌐 P2P网络 ⭐,去中心化通信协议基础
+3,💾 去中心化存储,
+4,IPFS,
+4,Filecoin (FIL),
+3,🏭 市场主体,
+4,节点运营商,
+5,Infura,
+5,Alchemy,
+4,硬件制造商,
+5,比特大陆 (Bitmain),
+5,英伟达 (NVIDIA),
+4,存储矿工,
