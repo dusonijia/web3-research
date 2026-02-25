@@ -1,0 +1,35 @@
+version: "3.9"
+
+services:
+  greenpulse:
+    build:
+      context: ../../
+      dockerfile: deployment/docker/Dockerfile
+    container_name: greenpulse-app
+    ports:
+      - "8000:8000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - DEBUG=false
+      - DATABASE_URL=sqlite+aiosqlite:///./data/greenpulse.db
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - OPENAI_MODEL=${OPENAI_MODEL:-gpt-4o}
+      - SERPAPI_KEY=${SERPAPI_KEY:-}
+      - SEMANTIC_SCHOLAR_KEY=${SEMANTIC_SCHOLAR_KEY:-}
+      - PATENT_SCAN_INTERVAL_MINUTES=60
+      - PAPER_SCAN_INTERVAL_MINUTES=120
+      - NEWS_SCAN_INTERVAL_MINUTES=30
+    volumes:
+      - greenpulse-data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+volumes:
+  greenpulse-data:
+    driver: local
