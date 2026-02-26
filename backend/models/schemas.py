@@ -159,3 +159,65 @@ class DashboardResponse(BaseModel):
     feed: list[FeedItem] = []
     map_events: list[MapEvent] = []
     agents: list[AgentInfo] = []
+
+
+# ---- Investment ----
+
+class InvestmentOpportunity(BaseModel):
+    name: str
+    desc: str = ""
+    potential: str = "中"
+    risk: str = "中"
+
+
+class InvestmentReport(BaseModel):
+    id: str
+    title: str
+    rating: str = ""
+    rating_color: str = "#ffd600"
+    timeframe: str = ""
+    summary: str = ""
+    opportunities: list[InvestmentOpportunity] = []
+    key_companies: list[str] = []
+    analysis: str = ""
+
+
+# ---- Company Detail ----
+
+class CompanyMetric(BaseModel):
+    label: str
+    value: str
+
+
+class CompanyDetail(BaseModel):
+    id: str
+    name: str
+    country: str = ""
+    founded: str = ""
+    stock_code: str = ""
+    market_cap: str = ""
+    description: str = ""
+    key_metrics: list[CompanyMetric] = []
+    tech_roadmap: str = ""
+    financials: str = ""
+    recent_patents: list[str] = []
+    investment_rating: str = ""
+    investment_note: str = ""
+
+
+# ---- Tech Detail ----
+
+class TechMetric(BaseModel):
+    label: str
+    value: str
+
+
+class TechDetail(BaseModel):
+    id: str
+    name: str
+    category: str = ""
+    score: float = 0
+    summary: str = ""
+    key_metrics: list[TechMetric] = []
+    analysis: str = ""
+    top_companies: list[str] = []

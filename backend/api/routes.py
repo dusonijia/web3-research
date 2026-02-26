@@ -9,11 +9,13 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.models.database import get_session
 from backend.models.schemas import (
-    DashboardResponse, FeedItem, Paper, Patent, RankingsResponse, Report,
+    CompanyDetail, DashboardResponse, FeedItem, InvestmentReport,
+    Paper, Patent, RankingsResponse, Report, TechDetail,
 )
 from backend.services.data_service import (
-    get_dashboard, get_feed, get_map_events, get_papers, get_patents,
-    get_rankings, get_reports,
+    get_company_detail, get_dashboard, get_feed, get_investments,
+    get_map_events, get_papers, get_patents, get_rankings, get_reports,
+    get_tech_detail,
 )
 
 router = APIRouter(prefix="/api/v1", tags=["GreenPulse API"])
@@ -88,6 +90,29 @@ async def rankings(session: AsyncSession = Depends(get_session)):
 @router.get("/map/events")
 async def map_events(session: AsyncSession = Depends(get_session)):
     return await get_map_events(session)
+
+
+@router.get("/investments", response_model=list[InvestmentReport])
+async def investments():
+    return get_investments()
+
+
+@router.get("/companies/{company_id}", response_model=CompanyDetail)
+async def company_detail(company_id: str):
+    result = get_company_detail(company_id)
+    if not result:
+        from fastapi import HTTPException
+        raise HTTPException(status_code=404, detail="Company not found")
+    return result
+
+
+@router.get("/technologies/{tech_id}", response_model=TechDetail)
+async def tech_detail(tech_id: str):
+    result = get_tech_detail(tech_id)
+    if not result:
+        from fastapi import HTTPException
+        raise HTTPException(status_code=404, detail="Technology not found")
+    return result
 
 
 @router.get("/health")

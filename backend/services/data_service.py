@@ -13,9 +13,11 @@ from backend.models.database import (
     AgentLog, NewsRecord, PaperRecord, PatentRecord, ReportRecord,
 )
 from backend.models.schemas import (
-    AgentInfo, AgentStatus, DashboardResponse, DashboardStats,
-    FeedItem, ImpactLevel, ItemType, MapEvent, Paper, Patent,
-    RankingCategory, RankingItem, RankingsResponse, Report,
+    AgentInfo, AgentStatus, CompanyDetail, CompanyMetric,
+    DashboardResponse, DashboardStats, FeedItem, ImpactLevel,
+    InvestmentOpportunity, InvestmentReport, ItemType, MapEvent,
+    Paper, Patent, RankingCategory, RankingItem, RankingsResponse,
+    Report, TechDetail, TechMetric,
 )
 
 
@@ -201,3 +203,85 @@ def get_agent_status() -> list[AgentInfo]:
         AgentInfo(name="报告生成智能体", icon="📊", status=AgentStatus.RUNNING, today_count=3, total_count="1.2K", sources="全数据源综合", accuracy="96.8%", last_action="正在撰写固态电池产业周报"),
         AgentInfo(name="翻译与摘要智能体", icon="🌐", status=AgentStatus.RUNNING, today_count=234, total_count="89K", sources="中/英/日/韩/德", accuracy="98.9%", last_action="完成日本专利JP2026-045678中文翻译"),
     ]
+
+
+def get_investments() -> list[InvestmentReport]:
+    return [
+        InvestmentReport(
+            id="inv-1", title="固态电池产业链投资机会",
+            rating="强烈推荐", rating_color="#ff5252", timeframe="中长期 (2-5年)",
+            summary="固态电池处于从实验室向中试跨越的关键阶段，当前是布局产业链的最佳窗口期。",
+            opportunities=[
+                InvestmentOpportunity(name="硫化物电解质材料", desc="Li₆PS₅Cl等材料供应商", potential="极高", risk="中"),
+                InvestmentOpportunity(name="干法成膜设备", desc="R2R压延和干法电极设备", potential="高", risk="中"),
+            ],
+            key_companies=["三星SDI", "丰田", "QuantumScape", "宁德时代"],
+            analysis="固态电池赛道投资逻辑已从概念验证进入量产验证阶段。",
+        ),
+        InvestmentReport(
+            id="inv-2", title="钠离子电池商业化加速",
+            rating="推荐", rating_color="#ffd600", timeframe="短中期 (1-3年)",
+            summary="钠离子电池已进入商业化元年，成本优势显著。",
+            opportunities=[
+                InvestmentOpportunity(name="钠离子电池制造", desc="整电池企业", potential="高", risk="中"),
+                InvestmentOpportunity(name="正极材料", desc="层状氧化物和聚阴离子供应商", potential="高", risk="低"),
+            ],
+            key_companies=["中科海钠", "鹏辉能源", "宁德时代", "比亚迪"],
+            analysis="钠离子电池投资窗口已打开，2026年全球产能预计突破100GWh。",
+        ),
+    ]
+
+
+def get_company_detail(company_id: str) -> Optional[CompanyDetail]:
+    companies = {
+        "comp-catl": CompanyDetail(
+            id="comp-catl", name="宁德时代 (CATL)", country="🇨🇳 中国",
+            founded="2011", stock_code="SZ: 300750", market_cap="1.2万亿 CNY",
+            description="全球最大的动力电池制造商，连续7年蝉联全球装机量第一。",
+            key_metrics=[
+                CompanyMetric(label="全球市占率", value="37.0%"),
+                CompanyMetric(label="2025年装机量", value="275 GWh"),
+                CompanyMetric(label="研发投入", value="183亿 CNY"),
+                CompanyMetric(label="专利数量", value="12,800+"),
+            ],
+            tech_roadmap="LFP + 三元 + 凝聚态 + 钠离子 + 全固态的全路线布局",
+            financials="2025年营收4,500亿元，净利润480亿元",
+            recent_patents=["凝聚态电池电解质", "CTP 3.0结构设计"],
+            investment_rating="买入",
+            investment_note="全球龙头地位稳固，技术储备深厚。",
+        ),
+        "comp-byd": CompanyDetail(
+            id="comp-byd", name="比亚迪 (BYD)", country="🇨🇳 中国",
+            founded="1995", stock_code="SZ: 002594", market_cap="8,500亿 CNY",
+            description="全球领先的新能源汽车和动力电池一体化企业。",
+            key_metrics=[
+                CompanyMetric(label="全球市占率", value="16.2%"),
+                CompanyMetric(label="汽车年销量", value="420万辆"),
+                CompanyMetric(label="专利数量", value="9,200+"),
+            ],
+            tech_roadmap="刀片电池 + DMi混动 + 储能全产业链",
+            financials="2025年营收7,200亿元，净利润620亿元",
+            recent_patents=["第二代刀片电池", "CTC底盘一体化"],
+            investment_rating="买入",
+            investment_note="新能源汽车+电池双轮驱动。",
+        ),
+    }
+    return companies.get(company_id)
+
+
+def get_tech_detail(tech_id: str) -> Optional[TechDetail]:
+    techs = {
+        "tech-ssbattery": TechDetail(
+            id="tech-ssbattery", name="固态电池 (Solid-State Battery)",
+            category="电池技术", score=98,
+            summary="全固态电池采用固态电解质替代传统液态电解液。",
+            key_metrics=[
+                TechMetric(label="能量密度潜力", value="400-500 Wh/kg"),
+                TechMetric(label="技术成熟度", value="TRL 6-7"),
+                TechMetric(label="预计量产时间", value="2027-2028"),
+            ],
+            analysis="三大技术路线——硫化物、氧化物和聚合物各有优劣。",
+            top_companies=["丰田", "三星SDI", "宁德时代", "QuantumScape"],
+        ),
+    }
+    return techs.get(tech_id)
