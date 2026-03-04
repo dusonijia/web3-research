@@ -37,7 +37,7 @@ class BaseAgent(ABC):
         ...
 
     async def analyze_with_ai(self, text: str, prompt_template: str) -> str:
-        """Call Azure OpenAI for analysis / summarization."""
+        """Call Azure OpenAI Responses API for analysis / summarization."""
         if not settings.AZURE_API_KEY:
             return ""
         try:
@@ -50,20 +50,24 @@ class BaseAgent(ABC):
             }
             payload = {
                 "model": settings.AZURE_MODEL,
-                "messages": [
+                "input": [
                     {"role": "system", "content": prompt_template},
                     {"role": "user", "content": text},
                 ],
-                "max_completion_tokens": 1024,
+                "max_output_tokens": 4096,
             }
 
-            async with httpx.AsyncClient(timeout=60) as client:
+            async with httpx.AsyncClient(timeout=120) as client:
                 resp = await client.post(url, json=payload, headers=headers)
                 resp.raise_for_status()
                 data = resp.json()
 
-            return data.get("output", [{}])[0].get("content", [{}])[0].get("text", "") or \
-                   data.get("choices", [{}])[0].get("message", {}).get("content", "")
+            for item in data.get("output", []):
+                if item.get("type") == "message":
+                    for block in item.get("content", []):
+                        if block.get("type") == "output_text" and block.get("text"):
+                            return block["text"]
+            return ""
         except Exception as e:
             logger.error(f"[{self.name}] AI analysis error: {e}")
             return ""
