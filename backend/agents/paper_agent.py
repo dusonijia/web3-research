@@ -98,9 +98,9 @@ class PaperAgent(BaseAgent):
         """Query arXiv API for recent new energy preprints."""
         items = []
         try:
-            async with httpx.AsyncClient(timeout=30) as client:
+            async with httpx.AsyncClient(timeout=30, follow_redirects=True) as client:
                 for query in PAPER_QUERIES[:3]:
-                    url = "http://export.arxiv.org/api/query"
+                    url = "https://export.arxiv.org/api/query"
                     params = {
                         "search_query": f'all:"{query}"',
                         "sortBy": "submittedDate",
