@@ -1,120 +1,202 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Inter,sans-serif">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" font-family="Inter,Arial,Helvetica,sans-serif">
   <defs>
     <linearGradient id="gGreen" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#00c853"/>
-      <stop offset="100%" style="stop-color:#00b0ff"/>
+      <stop offset="0%" stop-color="#00c853"/>
+      <stop offset="100%" stop-color="#00b0ff"/>
     </linearGradient>
     <linearGradient id="gDark" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a2332"/>
-      <stop offset="100%" style="stop-color:#111827"/>
+      <stop offset="0%" stop-color="#1a2332"/>
+      <stop offset="100%" stop-color="#111827"/>
     </linearGradient>
-    <filter id="shadow"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.3"/></filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#00c853"/>
+    </marker>
+    <marker id="arrBlue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#00b0ff"/>
+    </marker>
+    <marker id="arrPurple" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#ab47bc"/>
+    </marker>
   </defs>
-  <rect width="1000" height="700" rx="16" fill="#0a0f1a"/>
-  <text x="500" y="40" text-anchor="middle" fill="#e8eaed" font-size="20" font-weight="700">GreenPulse ˚ﬂ∂Ñ˛</text>
 
-  <!-- External Data Sources -->
-  <rect x="30" y="70" width="200" height="220" rx="12" fill="#111827" stroke="#1e293b" filter="url(#shadow)"/>
-  <text x="130" y="95" text-anchor="middle" fill="#00c853" font-size="13" font-weight="700">Ëpnê</text>
-  <rect x="45" y="110" width="170" height="28" rx="6" fill="#1a2332"/><text x="130" y="129" text-anchor="middle" fill="#ffd600" font-size="11">USPTO / EPO / CNIPA</text>
-  <rect x="45" y="145" width="170" height="28" rx="6" fill="#1a2332"/><text x="130" y="164" text-anchor="middle" fill="#ffd600" font-size="11">JPO / KIPO )@</text>
-  <rect x="45" y="180" width="170" height="28" rx="6" fill="#1a2332"/><text x="130" y="199" text-anchor="middle" fill="#00b0ff" font-size="11">Nature / Science / arXiv</text>
-  <rect x="45" y="215" width="170" height="28" rx="6" fill="#1a2332"/><text x="130" y="234" text-anchor="middle" fill="#00c853" font-size="11">Reuters / Bloomberg</text>
-  <rect x="45" y="250" width="170" height="28" rx="6" fill="#1a2332"/><text x="130" y="269" text-anchor="middle" fill="#ab47bc" font-size="11">SerpAPI / Semantic Scholar</text>
+  <!-- Background -->
+  <rect width="1000" height="720" rx="16" fill="#0a0f1a"/>
 
-  <!-- AI Agent Layer -->
-  <rect x="280" y="70" width="420" height="220" rx="12" fill="#111827" stroke="#1e293b" filter="url(#shadow)"/>
-  <text x="490" y="95" text-anchor="middle" fill="#00c853" font-size="13" font-weight="700">AI z˝S∆§ (7◊24h)</text>
-  <rect x="295" y="110" width="120" height="50" rx="8" fill="url(#gDark)" stroke="#2d3a4f"/>
-  <text x="355" y="133" text-anchor="middle" fill="#ffd600" font-size="10" font-weight="600">=À )—ß</text>
-  <text x="355" y="148" text-anchor="middle" fill="#6b7280" font-size="9">EPO/CNIPA/USPTO</text>
-  <rect x="425" y="110" width="120" height="50" rx="8" fill="url(#gDark)" stroke="#2d3a4f"/>
-  <text x="485" y="133" text-anchor="middle" fill="#00b0ff" font-size="10" font-weight="600">=ƒ ∫á˝*</text>
-  <text x="485" y="148" text-anchor="middle" fill="#6b7280" font-size="9">S2/arXiv/IEEE</text>
-  <rect x="555" y="110" width="120" height="50" rx="8" fill="url(#gDark)" stroke="#2d3a4f"/>
-  <text x="615" y="133" text-anchor="middle" fill="#00c853" font-size="10" font-weight="600">= ∞˚«∆</text>
-  <text x="615" y="148" text-anchor="middle" fill="#6b7280" font-size="9">Google News</text>
-  <rect x="295" y="175" width="120" height="50" rx="8" fill="url(#gDark)" stroke="#2d3a4f"/>
-  <text x="355" y="198" text-anchor="middle" fill="#ff5252" font-size="10" font-weight="600">= 5`y</text>
-  <text x="355" y="213" text-anchor="middle" fill="#6b7280" font-size="9">Ò¶AIê</text>
-  <rect x="425" y="175" width="120" height="50" rx="8" fill="url(#gDark)" stroke="#2d3a4f"/>
-  <text x="485" y="198" text-anchor="middle" fill="#ab47bc" font-size="10" font-weight="600">=  •J</text>
-  <text x="485" y="213" text-anchor="middle" fill="#6b7280" font-size="9">h•/ò</text>
-  <rect x="555" y="175" width="120" height="50" rx="8" fill="url(#gDark)" stroke="#2d3a4f"/>
-  <text x="615" y="198" text-anchor="middle" fill="#00b0ff" font-size="10" font-weight="600">< ˚—XÅ</text>
-  <text x="615" y="213" text-anchor="middle" fill="#6b7280" font-size="9">-/Ò/Â/È/∑</text>
-  <rect x="380" y="240" width="220" height="36" rx="8" fill="#1a2332" stroke="#00c853" stroke-dasharray="4"/>
-  <text x="490" y="263" text-anchor="middle" fill="#00c853" font-size="11" font-weight="600">Agent Scheduler (APScheduler)</text>
+  <!-- Title -->
+  <text x="500" y="38" text-anchor="middle" fill="#e8eaed" font-size="18" font-weight="700">GreenPulse System Architecture</text>
+  <text x="500" y="56" text-anchor="middle" fill="#6b7280" font-size="11">Global New Energy Intelligence Platform</text>
 
-  <!-- OpenAI -->
-  <rect x="750" y="70" width="220" height="100" rx="12" fill="#111827" stroke="#1e293b" filter="url(#shadow)"/>
-  <text x="860" y="95" text-anchor="middle" fill="#00c853" font-size="13" font-weight="700">AI Œ</text>
-  <rect x="765" y="110" width="190" height="46" rx="8" fill="url(#gDark)" stroke="#2d3a4f"/>
-  <text x="860" y="133" text-anchor="middle" fill="#e8eaed" font-size="11" font-weight="600">OpenAI GPT-4o</text>
-  <text x="860" y="148" text-anchor="middle" fill="#6b7280" font-size="9">ê / ˚— / •J</text>
+  <!-- ========== Layer 1: External Data Sources (left) ========== -->
+  <rect x="25" y="80" width="195" height="230" rx="12" fill="#111827" stroke="#1e293b" filter="url(#shadow)"/>
+  <text x="122" y="103" text-anchor="middle" fill="#00c853" font-size="12" font-weight="700">Data Sources</text>
 
-  <!-- Backend -->
-  <rect x="280" y="320" width="420" height="170" rx="12" fill="#111827" stroke="#1e293b" filter="url(#shadow)"/>
-  <text x="490" y="345" text-anchor="middle" fill="#00c853" font-size="13" font-weight="700">Ô° (FastAPI + SQLAlchemy)</text>
-  <rect x="295" y="360" width="130" height="55" rx="8" fill="url(#gDark)" stroke="#2d3a4f"/>
-  <text x="360" y="383" text-anchor="middle" fill="#e8eaed" font-size="10" font-weight="600">REST API</text>
-  <text x="360" y="398" text-anchor="middle" fill="#6b7280" font-size="9">13*Ôπ</text>
-  <text x="360" y="410" text-anchor="middle" fill="#6b7280" font-size="8">/api/v1/*</text>
-  <rect x="435" y="360" width="130" height="55" rx="8" fill="url(#gDark)" stroke="#2d3a4f"/>
-  <text x="500" y="383" text-anchor="middle" fill="#e8eaed" font-size="10" font-weight="600">pn°B</text>
-  <text x="500" y="398" text-anchor="middle" fill="#6b7280" font-size="9">Â‚/Z/í</text>
-  <rect x="295" y="425" width="270" height="50" rx="8" fill="url(#gDark)" stroke="#2d3a4f"/>
-  <text x="430" y="448" text-anchor="middle" fill="#e8eaed" font-size="10" font-weight="600">SQLite / PostgreSQL pnì</text>
-  <text x="430" y="463" text-anchor="middle" fill="#6b7280" font-size="9">patents / papers / news / reports / agent_logs</text>
-  <rect x="575" y="360" width="110" height="115" rx="8" fill="url(#gDark)" stroke="#2d3a4f"/>
-  <text x="630" y="383" text-anchor="middle" fill="#e8eaed" font-size="10" font-weight="600">Yáˆ</text>
-  <text x="630" y="398" text-anchor="middle" fill="#6b7280" font-size="9">MÔHTML</text>
-  <text x="630" y="413" text-anchor="middle" fill="#6b7280" font-size="9">CSS/JS</text>
-  <text x="630" y="428" text-anchor="middle" fill="#6b7280" font-size="9">Leaflet0˛</text>
+  <rect x="38" y="115" width="170" height="26" rx="5" fill="#1a2332"/>
+  <text x="123" y="133" text-anchor="middle" fill="#ffd600" font-size="10">USPTO / EPO / CNIPA</text>
 
-  <!-- Frontend -->
-  <rect x="280" y="520" width="420" height="160" rx="12" fill="#111827" stroke="#1e293b" filter="url(#shadow)"/>
-  <text x="490" y="545" text-anchor="middle" fill="#00c853" font-size="13" font-weight="700">MÔ (HTML5 / CSS3 / Vanilla JS)</text>
-  <rect x="295" y="560" width="90" height="45" rx="6" fill="url(#gDark)" stroke="#2d3a4f"/>
-  <text x="340" y="580" text-anchor="middle" fill="#e8eaed" font-size="9" font-weight="600">< h0˛</text>
-  <text x="340" y="594" text-anchor="middle" fill="#6b7280" font-size="8">Leaflet</text>
-  <rect x="395" y="560" width="90" height="45" rx="6" fill="url(#gDark)" stroke="#2d3a4f"/>
-  <text x="440" y="580" text-anchor="middle" fill="#e8eaed" font-size="9" font-weight="600">=  Ä/í</text>
-  <text x="440" y="594" text-anchor="middle" fill="#6b7280" font-size="8">Ùƒ</text>
-  <rect x="495" y="560" width="90" height="45" rx="6" fill="url(#gDark)" stroke="#2d3a4f"/>
-  <text x="540" y="580" text-anchor="middle" fill="#e8eaed" font-size="9" font-weight="600">=ƒ ∫á˚</text>
-  <text x="540" y="594" text-anchor="middle" fill="#6b7280" font-size="8">AIê</text>
-  <rect x="595" y="560" width="90" height="45" rx="6" fill="url(#gDark)" stroke="#2d3a4f"/>
-  <text x="640" y="580" text-anchor="middle" fill="#e8eaed" font-size="9" font-weight="600">=À )˚</text>
-  <text x="640" y="594" text-anchor="middle" fill="#6b7280" font-size="8">Ò¶„˚</text>
-  <rect x="295" y="615" width="90" height="45" rx="6" fill="url(#gDark)" stroke="#2d3a4f"/>
-  <text x="340" y="635" text-anchor="middle" fill="#e8eaed" font-size="9" font-weight="600">=∞ ïD˙Æ</text>
-  <text x="340" y="649" text-anchor="middle" fill="#6b7280" font-size="8">:ƒ0</text>
-  <rect x="395" y="615" width="90" height="45" rx="6" fill="url(#gDark)" stroke="#2d3a4f"/>
-  <text x="440" y="635" text-anchor="middle" fill="#e8eaed" font-size="9" font-weight="600">=» ß•J</text>
-  <text x="440" y="649" text-anchor="middle" fill="#6b7280" font-size="8">Í®</text>
-  <rect x="495" y="615" width="90" height="45" rx="6" fill="url(#gDark)" stroke="#2d3a4f"/>
-  <text x="540" y="635" text-anchor="middle" fill="#e8eaed" font-size="9" font-weight="600">> z˝Sb</text>
-  <text x="540" y="649" text-anchor="middle" fill="#6b7280" font-size="8">ûˆ∂</text>
-  <rect x="595" y="615" width="90" height="45" rx="6" fill="url(#gDark)" stroke="#2d3a4f"/>
-  <text x="640" y="635" text-anchor="middle" fill="#e8eaed" font-size="9" font-weight="600"><‚ Ê≈</text>
-  <text x="640" y="649" text-anchor="middle" fill="#6b7280" font-size="8">hoê</text>
+  <rect x="38" y="148" width="170" height="26" rx="5" fill="#1a2332"/>
+  <text x="123" y="166" text-anchor="middle" fill="#ffd600" font-size="10">JPO / KIPO Patents</text>
 
-  <!-- Deployment -->
-  <rect x="750" y="320" width="220" height="170" rx="12" fill="#111827" stroke="#1e293b" filter="url(#shadow)"/>
-  <text x="860" y="345" text-anchor="middle" fill="#00c853" font-size="13" font-weight="700">Ër</text>
-  <rect x="765" y="360" width="190" height="36" rx="8" fill="url(#gDark)" stroke="#2d3a4f"/>
-  <text x="860" y="383" text-anchor="middle" fill="#e8eaed" font-size="11">=3 Docker + Compose</text>
-  <rect x="765" y="406" width="190" height="36" rx="8" fill="url(#gDark)" stroke="#2d3a4f"/>
-  <text x="860" y="429" text-anchor="middle" fill="#e8eaed" font-size="11"> AWS CloudFormation</text>
-  <rect x="765" y="452" width="190" height="28" rx="8" fill="url(#gDark)" stroke="#2d3a4f"/>
-  <text x="860" y="471" text-anchor="middle" fill="#e8eaed" font-size="11">= Nginx Õ„</text>
+  <rect x="38" y="181" width="170" height="26" rx="5" fill="#1a2332"/>
+  <text x="123" y="199" text-anchor="middle" fill="#00b0ff" font-size="10">Nature / Science / arXiv</text>
 
-  <!-- Arrows -->
-  <line x1="230" y1="180" x2="280" y2="180" stroke="#00c853" stroke-width="2" marker-end="url(#arr)"/>
-  <line x1="490" y1="290" x2="490" y2="320" stroke="#00c853" stroke-width="2" marker-end="url(#arr)"/>
-  <line x1="490" y1="490" x2="490" y2="520" stroke="#00c853" stroke-width="2" marker-end="url(#arr)"/>
-  <line x1="700" y1="180" x2="750" y2="140" stroke="#ab47bc" stroke-width="1.5" stroke-dasharray="4"/>
-  <line x1="700" y1="405" x2="750" y2="405" stroke="#00b0ff" stroke-width="1.5" stroke-dasharray="4"/>
-  <defs><marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#00c853"/></marker></defs>
+  <rect x="38" y="214" width="170" height="26" rx="5" fill="#1a2332"/>
+  <text x="123" y="232" text-anchor="middle" fill="#00c853" font-size="10">Reuters / Bloomberg</text>
+
+  <rect x="38" y="247" width="170" height="26" rx="5" fill="#1a2332"/>
+  <text x="123" y="265" text-anchor="middle" fill="#ab47bc" font-size="10">SerpAPI / Semantic Scholar</text>
+
+  <!-- Label arrow: Sources -> Agents -->
+  <line x1="220" y1="195" x2="272" y2="195" stroke="#00c853" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ========== Layer 2: AI Agent Cluster (center top) ========== -->
+  <rect x="280" y="80" width="420" height="230" rx="12" fill="#111827" stroke="#1e293b" filter="url(#shadow)"/>
+  <text x="490" y="103" text-anchor="middle" fill="#00c853" font-size="12" font-weight="700">AI Agent Cluster (7x24h)</text>
+
+  <!-- Row 1 agents -->
+  <rect x="295" y="115" width="120" height="48" rx="7" fill="url(#gDark)" stroke="#2d3a4f"/>
+  <text x="355" y="136" text-anchor="middle" fill="#ffd600" font-size="10" font-weight="600">Patent Monitor</text>
+  <text x="355" y="151" text-anchor="middle" fill="#6b7280" font-size="8">EPO / CNIPA / USPTO</text>
+
+  <rect x="425" y="115" width="120" height="48" rx="7" fill="url(#gDark)" stroke="#2d3a4f"/>
+  <text x="485" y="136" text-anchor="middle" fill="#00b0ff" font-size="10" font-weight="600">Paper Tracker</text>
+  <text x="485" y="151" text-anchor="middle" fill="#6b7280" font-size="8">S2 / arXiv / IEEE</text>
+
+  <rect x="555" y="115" width="120" height="48" rx="7" fill="url(#gDark)" stroke="#2d3a4f"/>
+  <text x="615" y="136" text-anchor="middle" fill="#00c853" font-size="10" font-weight="600">News Collector</text>
+  <text x="615" y="151" text-anchor="middle" fill="#6b7280" font-size="8">Google News API</text>
+
+  <!-- Row 2 agents -->
+  <rect x="295" y="175" width="120" height="48" rx="7" fill="url(#gDark)" stroke="#2d3a4f"/>
+  <text x="355" y="196" text-anchor="middle" fill="#ff5252" font-size="10" font-weight="600">Battery Expert</text>
+  <text x="355" y="211" text-anchor="middle" fill="#6b7280" font-size="8">Deep AI Analysis</text>
+
+  <rect x="425" y="175" width="120" height="48" rx="7" fill="url(#gDark)" stroke="#2d3a4f"/>
+  <text x="485" y="196" text-anchor="middle" fill="#ab47bc" font-size="10" font-weight="600">Report Generator</text>
+  <text x="485" y="211" text-anchor="middle" fill="#6b7280" font-size="8">Weekly / Topic</text>
+
+  <rect x="555" y="175" width="120" height="48" rx="7" fill="url(#gDark)" stroke="#2d3a4f"/>
+  <text x="615" y="196" text-anchor="middle" fill="#00b0ff" font-size="10" font-weight="600">Translator</text>
+  <text x="615" y="211" text-anchor="middle" fill="#6b7280" font-size="8">CN/EN/JP/KR/DE</text>
+
+  <!-- Scheduler bar -->
+  <rect x="380" y="238" width="220" height="30" rx="7" fill="#1a2332" stroke="#00c853" stroke-width="1" stroke-dasharray="4"/>
+  <text x="490" y="258" text-anchor="middle" fill="#00c853" font-size="10" font-weight="600">Agent Scheduler (APScheduler)</text>
+
+  <!-- Arrow: Agents -> OpenAI -->
+  <line x1="700" y1="165" x2="740" y2="130" stroke="#ab47bc" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arrPurple)"/>
+
+  <!-- ========== OpenAI Engine (right top) ========== -->
+  <rect x="748" y="80" width="225" height="100" rx="12" fill="#111827" stroke="#1e293b" filter="url(#shadow)"/>
+  <text x="860" y="103" text-anchor="middle" fill="#00c853" font-size="12" font-weight="700">AI Engine</text>
+
+  <rect x="763" y="115" width="195" height="48" rx="7" fill="url(#gDark)" stroke="#2d3a4f"/>
+  <text x="860" y="136" text-anchor="middle" fill="#e8eaed" font-size="11" font-weight="600">OpenAI GPT-4o</text>
+  <text x="860" y="151" text-anchor="middle" fill="#6b7280" font-size="9">Analysis / Translation / Reports</text>
+
+  <!-- Arrow: Agents -> Backend -->
+  <line x1="490" y1="310" x2="490" y2="338" stroke="#00c853" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ========== Layer 3: Backend Service (center middle) ========== -->
+  <rect x="280" y="345" width="420" height="175" rx="12" fill="#111827" stroke="#1e293b" filter="url(#shadow)"/>
+  <text x="490" y="368" text-anchor="middle" fill="#00c853" font-size="12" font-weight="700">Backend (FastAPI + SQLAlchemy)</text>
+
+  <rect x="295" y="382" width="125" height="54" rx="7" fill="url(#gDark)" stroke="#2d3a4f"/>
+  <text x="357" y="403" text-anchor="middle" fill="#e8eaed" font-size="10" font-weight="600">REST API</text>
+  <text x="357" y="418" text-anchor="middle" fill="#6b7280" font-size="8">13 Endpoints</text>
+  <text x="357" y="430" text-anchor="middle" fill="#6b7280" font-size="8">/api/v1/*</text>
+
+  <rect x="430" y="382" width="125" height="54" rx="7" fill="url(#gDark)" stroke="#2d3a4f"/>
+  <text x="492" y="403" text-anchor="middle" fill="#e8eaed" font-size="10" font-weight="600">Data Service</text>
+  <text x="492" y="418" text-anchor="middle" fill="#6b7280" font-size="8">Query / Aggregate</text>
+  <text x="492" y="430" text-anchor="middle" fill="#6b7280" font-size="8">Rankings</text>
+
+  <rect x="565" y="382" width="120" height="54" rx="7" fill="url(#gDark)" stroke="#2d3a4f"/>
+  <text x="625" y="403" text-anchor="middle" fill="#e8eaed" font-size="10" font-weight="600">Static Files</text>
+  <text x="625" y="418" text-anchor="middle" fill="#6b7280" font-size="8">HTML / CSS / JS</text>
+  <text x="625" y="430" text-anchor="middle" fill="#6b7280" font-size="8">Leaflet Map</text>
+
+  <rect x="295" y="448" width="260" height="52" rx="7" fill="url(#gDark)" stroke="#2d3a4f"/>
+  <text x="425" y="470" text-anchor="middle" fill="#e8eaed" font-size="10" font-weight="600">SQLite / PostgreSQL Database</text>
+  <text x="425" y="486" text-anchor="middle" fill="#6b7280" font-size="8">patents / papers / news / reports / agent_logs</text>
+
+  <!-- Arrow: Backend -> Deployment -->
+  <line x1="700" y1="432" x2="740" y2="432" stroke="#00b0ff" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arrBlue)"/>
+
+  <!-- ========== Deployment (right middle) ========== -->
+  <rect x="748" y="345" width="225" height="175" rx="12" fill="#111827" stroke="#1e293b" filter="url(#shadow)"/>
+  <text x="860" y="368" text-anchor="middle" fill="#00c853" font-size="12" font-weight="700">Deployment</text>
+
+  <rect x="763" y="385" width="195" height="34" rx="7" fill="url(#gDark)" stroke="#2d3a4f"/>
+  <text x="860" y="407" text-anchor="middle" fill="#e8eaed" font-size="10">Docker + Compose</text>
+
+  <rect x="763" y="427" width="195" height="34" rx="7" fill="url(#gDark)" stroke="#2d3a4f"/>
+  <text x="860" y="449" text-anchor="middle" fill="#e8eaed" font-size="10">AWS CloudFormation</text>
+
+  <rect x="763" y="469" width="195" height="34" rx="7" fill="url(#gDark)" stroke="#2d3a4f"/>
+  <text x="860" y="491" text-anchor="middle" fill="#e8eaed" font-size="10">Nginx Reverse Proxy</text>
+
+  <!-- Arrow: Backend -> Frontend -->
+  <line x1="490" y1="520" x2="490" y2="548" stroke="#00c853" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ========== Layer 4: Frontend (center bottom) ========== -->
+  <rect x="280" y="555" width="420" height="150" rx="12" fill="#111827" stroke="#1e293b" filter="url(#shadow)"/>
+  <text x="490" y="578" text-anchor="middle" fill="#00c853" font-size="12" font-weight="700">Frontend (HTML5 / CSS3 / Vanilla JS)</text>
+
+  <!-- Row 1 modules -->
+  <rect x="295" y="592" width="92" height="40" rx="6" fill="url(#gDark)" stroke="#2d3a4f"/>
+  <text x="341" y="610" text-anchor="middle" fill="#e8eaed" font-size="8" font-weight="600">Global Map</text>
+  <text x="341" y="623" text-anchor="middle" fill="#6b7280" font-size="7">Leaflet</text>
+
+  <rect x="397" y="592" width="92" height="40" rx="6" fill="url(#gDark)" stroke="#2d3a4f"/>
+  <text x="443" y="610" text-anchor="middle" fill="#e8eaed" font-size="8" font-weight="600">Tech Rankings</text>
+  <text x="443" y="623" text-anchor="middle" fill="#6b7280" font-size="7">AI Scoring</text>
+
+  <rect x="499" y="592" width="92" height="40" rx="6" fill="url(#gDark)" stroke="#2d3a4f"/>
+  <text x="545" y="610" text-anchor="middle" fill="#e8eaed" font-size="8" font-weight="600">Papers</text>
+  <text x="545" y="623" text-anchor="middle" fill="#6b7280" font-size="7">AI Analysis</text>
+
+  <rect x="601" y="592" width="92" height="40" rx="6" fill="url(#gDark)" stroke="#2d3a4f"/>
+  <text x="647" y="610" text-anchor="middle" fill="#e8eaed" font-size="8" font-weight="600">Patents</text>
+  <text x="647" y="623" text-anchor="middle" fill="#6b7280" font-size="7">Deep Read</text>
+
+  <!-- Row 2 modules -->
+  <rect x="295" y="642" width="92" height="40" rx="6" fill="url(#gDark)" stroke="#2d3a4f"/>
+  <text x="341" y="660" text-anchor="middle" fill="#e8eaed" font-size="8" font-weight="600">Investment</text>
+  <text x="341" y="673" text-anchor="middle" fill="#6b7280" font-size="7">Advisory</text>
+
+  <rect x="397" y="642" width="92" height="40" rx="6" fill="url(#gDark)" stroke="#2d3a4f"/>
+  <text x="443" y="660" text-anchor="middle" fill="#e8eaed" font-size="8" font-weight="600">Reports</text>
+  <text x="443" y="673" text-anchor="middle" fill="#6b7280" font-size="7">Auto-generated</text>
+
+  <rect x="499" y="642" width="92" height="40" rx="6" fill="url(#gDark)" stroke="#2d3a4f"/>
+  <text x="545" y="660" text-anchor="middle" fill="#e8eaed" font-size="8" font-weight="600">Agent Panel</text>
+  <text x="545" y="673" text-anchor="middle" fill="#6b7280" font-size="7">Live Status</text>
+
+  <rect x="601" y="642" width="92" height="40" rx="6" fill="url(#gDark)" stroke="#2d3a4f"/>
+  <text x="647" y="660" text-anchor="middle" fill="#e8eaed" font-size="8" font-weight="600">Company</text>
+  <text x="647" y="673" text-anchor="middle" fill="#6b7280" font-size="7">Detail Pages</text>
+
+  <!-- Users (bottom left) -->
+  <rect x="25" y="580" width="195" height="105" rx="12" fill="#111827" stroke="#1e293b" filter="url(#shadow)"/>
+  <text x="122" y="603" text-anchor="middle" fill="#00c853" font-size="12" font-weight="700">Users</text>
+  <rect x="38" y="615" width="170" height="24" rx="5" fill="#1a2332"/>
+  <text x="123" y="632" text-anchor="middle" fill="#e8eaed" font-size="9">Desktop Browser</text>
+  <rect x="38" y="645" width="170" height="24" rx="5" fill="#1a2332"/>
+  <text x="123" y="662" text-anchor="middle" fill="#e8eaed" font-size="9">Mobile Browser</text>
+
+  <!-- Arrow: Users -> Frontend -->
+  <line x1="220" y1="630" x2="272" y2="630" stroke="#00c853" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="247" y="622" text-anchor="middle" fill="#6b7280" font-size="7">HTTP</text>
+
+  <!-- Flow labels on arrows -->
+  <text x="247" y="188" text-anchor="middle" fill="#6b7280" font-size="7">APIs</text>
+  <text x="500" y="332" text-anchor="middle" fill="#6b7280" font-size="7">DB Write</text>
+  <text x="500" y="542" text-anchor="middle" fill="#6b7280" font-size="7">Serve</text>
+  <text x="720" y="158" text-anchor="middle" fill="#6b7280" font-size="7">GPT-4o</text>
+  <text x="720" y="426" text-anchor="middle" fill="#6b7280" font-size="7">Deploy</text>
+
 </svg>
