@@ -107,7 +107,7 @@ class ReportAgent(BaseAgent):
         return tasks
 
     async def process(self, items: list[dict[str, Any]]) -> int:
-        if not settings.OPENAI_API_KEY:
+        if not settings.AZURE_API_KEY:
             logger.info("[Report] No API key, skipping report generation")
             return 0
 

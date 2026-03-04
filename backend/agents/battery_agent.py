@@ -91,7 +91,7 @@ class BatterySpecialistAgent(BaseAgent):
 
     async def process(self, items: list[dict[str, Any]]) -> int:
         """Generate deep AI analysis for battery items."""
-        if not settings.OPENAI_API_KEY:
+        if not settings.AZURE_API_KEY:
             logger.info("[Battery] No API key, skipping AI analysis")
             return 0
 

@@ -37,22 +37,33 @@ class BaseAgent(ABC):
         ...
 
     async def analyze_with_ai(self, text: str, prompt_template: str) -> str:
-        """Call LLM for analysis / summarization."""
-        if not settings.OPENAI_API_KEY:
+        """Call Azure OpenAI for analysis / summarization."""
+        if not settings.AZURE_API_KEY:
             return ""
         try:
-            import openai
-            client = openai.AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
-            response = await client.chat.completions.create(
-                model=settings.OPENAI_MODEL,
-                messages=[
+            import httpx
+
+            url = f"{settings.AZURE_ENDPOINT}?api-version={settings.AZURE_API_VERSION}"
+            headers = {
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {settings.AZURE_API_KEY}",
+            }
+            payload = {
+                "model": settings.AZURE_MODEL,
+                "messages": [
                     {"role": "system", "content": prompt_template},
                     {"role": "user", "content": text},
                 ],
-                max_tokens=1024,
-                temperature=0.3,
-            )
-            return response.choices[0].message.content or ""
+                "max_completion_tokens": 1024,
+            }
+
+            async with httpx.AsyncClient(timeout=60) as client:
+                resp = await client.post(url, json=payload, headers=headers)
+                resp.raise_for_status()
+                data = resp.json()
+
+            return data.get("output", [{}])[0].get("content", [{}])[0].get("text", "") or \
+                   data.get("choices", [{}])[0].get("message", {}).get("content", "")
         except Exception as e:
             logger.error(f"[{self.name}] AI analysis error: {e}")
             return ""

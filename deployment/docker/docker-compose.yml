@@ -13,8 +13,10 @@ services:
       - PORT=8000
       - DEBUG=false
       - DATABASE_URL=sqlite+aiosqlite:///./data/greenpulse.db
-      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
-      - OPENAI_MODEL=${OPENAI_MODEL:-gpt-4o}
+      - AZURE_API_KEY=${AZURE_API_KEY:-}
+      - AZURE_ENDPOINT=${AZURE_ENDPOINT:-https://admin-mm4mum0p-eastus2.cognitiveservices.azure.com/openai/responses}
+      - AZURE_API_VERSION=${AZURE_API_VERSION:-2025-04-01-preview}
+      - AZURE_MODEL=${AZURE_MODEL:-gpt-5.2-chat}
       - SERPAPI_KEY=${SERPAPI_KEY:-}
       - SEMANTIC_SCHOLAR_KEY=${SEMANTIC_SCHOLAR_KEY:-}
       - PATENT_SCAN_INTERVAL_MINUTES=60

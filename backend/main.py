@@ -19,7 +19,7 @@ from backend.models.database import init_db
 async def lifespan(app: FastAPI):
     await init_db()
 
-    if settings.OPENAI_API_KEY:
+    if settings.AZURE_API_KEY:
         from backend.agents.scheduler import start_scheduler
         start_scheduler()
 

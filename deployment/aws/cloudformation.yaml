@@ -12,11 +12,11 @@ Parameters:
     Type: AWS::EC2::KeyPair::KeyName
     Description: SSH key pair for EC2 access
 
-  OpenAIApiKey:
+  AzureApiKey:
     Type: String
     Default: ""
     NoEcho: true
-    Description: "OpenAI API key for AI agent analysis (optional)"
+    Description: "Azure OpenAI API key for AI agent analysis (optional)"
 
   SerpApiKey:
     Type: String
@@ -148,9 +148,11 @@ Resources:
 
           # Set environment
           cat > .env << 'ENVEOF'
-          OPENAI_API_KEY=${OpenAIApiKey}
+          AZURE_API_KEY=${AzureApiKey}
+          AZURE_ENDPOINT=https://admin-mm4mum0p-eastus2.cognitiveservices.azure.com/openai/responses
+          AZURE_API_VERSION=2025-04-01-preview
+          AZURE_MODEL=gpt-5.2-chat
           SERPAPI_KEY=${SerpApiKey}
-          OPENAI_MODEL=gpt-4o
           ENVEOF
 
           # Build and start

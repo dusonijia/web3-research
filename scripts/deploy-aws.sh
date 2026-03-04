@@ -8,7 +8,7 @@ STACK_NAME="${STACK_NAME:-greenpulse}"
 REGION="${AWS_REGION:-us-east-1}"
 INSTANCE_TYPE="${INSTANCE_TYPE:-t3.medium}"
 KEY_PAIR="${KEY_PAIR_NAME:-}"
-OPENAI_KEY="${OPENAI_API_KEY:-}"
+AZURE_KEY="${AZURE_API_KEY:-}"
 SERPAPI_KEY="${SERPAPI_KEY:-}"
 
 RED='\033[0;31m'
@@ -44,7 +44,7 @@ echo "  Stack Name:    $STACK_NAME"
 echo "  Region:        $REGION"
 echo "  Instance Type: $INSTANCE_TYPE"
 echo "  Key Pair:      $KEY_PAIR"
-echo "  OpenAI API:    $([ -n "$OPENAI_KEY" ] && echo 'Configured' || echo 'Not set (AI agents disabled)')"
+echo "  Azure API:     $([ -n "$AZURE_KEY" ] && echo 'Configured' || echo 'Not set (AI agents disabled)')"
 echo "  SerpAPI:       $([ -n "$SERPAPI_KEY" ] && echo 'Configured' || echo 'Not set (search agents disabled)')"
 echo ""
 
@@ -67,7 +67,7 @@ aws cloudformation create-stack \
     --parameters \
         ParameterKey=InstanceType,ParameterValue="$INSTANCE_TYPE" \
         ParameterKey=KeyPairName,ParameterValue="$KEY_PAIR" \
-        ParameterKey=OpenAIApiKey,ParameterValue="$OPENAI_KEY" \
+        ParameterKey=AzureApiKey,ParameterValue="$AZURE_KEY" \
         ParameterKey=SerpApiKey,ParameterValue="$SERPAPI_KEY" \
     --capabilities CAPABILITY_IAM
 

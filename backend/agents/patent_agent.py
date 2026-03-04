@@ -131,7 +131,7 @@ class PatentAgent(BaseAgent):
                     continue
 
                 ai_summary = ""
-                if settings.OPENAI_API_KEY and item.get("abstract"):
+                if settings.AZURE_API_KEY and item.get("abstract"):
                     ai_summary = await self.analyze_with_ai(
                         f"专利号: {pat_num}\n标题: {item.get('title','')}\n摘要: {item.get('abstract','')}",
                         AI_PATENT_PROMPT,

@@ -17,8 +17,15 @@ class Settings:
         default_factory=lambda: os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./greenpulse.db")
     )
 
-    OPENAI_API_KEY: str = field(default_factory=lambda: os.getenv("OPENAI_API_KEY", ""))
-    OPENAI_MODEL: str = field(default_factory=lambda: os.getenv("OPENAI_MODEL", "gpt-4o"))
+    AZURE_API_KEY: str = field(default_factory=lambda: os.getenv("AZURE_API_KEY", ""))
+    AZURE_ENDPOINT: str = field(
+        default_factory=lambda: os.getenv(
+            "AZURE_ENDPOINT",
+            "https://admin-mm4mum0p-eastus2.cognitiveservices.azure.com/openai/responses",
+        )
+    )
+    AZURE_API_VERSION: str = field(default_factory=lambda: os.getenv("AZURE_API_VERSION", "2025-04-01-preview"))
+    AZURE_MODEL: str = field(default_factory=lambda: os.getenv("AZURE_MODEL", "gpt-5.2-chat"))
 
     # Data source API keys
     SERPAPI_KEY: str = field(default_factory=lambda: os.getenv("SERPAPI_KEY", ""))

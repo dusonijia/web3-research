@@ -150,7 +150,7 @@ class PaperAgent(BaseAgent):
                 )
 
                 ai_summary = ""
-                if settings.OPENAI_API_KEY and is_high_impact and item.get("abstract"):
+                if settings.AZURE_API_KEY and is_high_impact and item.get("abstract"):
                     ai_summary = await self.analyze_with_ai(
                         f"标题: {title}\n期刊: {item.get('journal','')}\n摘要: {item.get('abstract','')}",
                         AI_PAPER_PROMPT,

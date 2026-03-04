@@ -68,7 +68,7 @@ class TranslationAgent(BaseAgent):
         return items[:20]
 
     async def process(self, items: list[dict[str, Any]]) -> int:
-        if not settings.OPENAI_API_KEY:
+        if not settings.AZURE_API_KEY:
             return 0
 
         count = 0
