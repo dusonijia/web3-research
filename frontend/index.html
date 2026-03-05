@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenPulse - 全球新能源情报平台</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header">
+    <nav class="nav-container">
+      <a href="#" class="logo" onclick="closeDetail();return false;">
+        <div class="logo-icon">⚡</div>
+        <span>GreenPulse</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#map" class="active">全球动态</a></li>
+        <li><a href="#rankings">技术排名</a></li>
+        <li><a href="#papers">核心论文</a></li>
+        <li><a href="#patents">核心专利</a></li>
+        <li><a href="#investments">投资建议</a></li>
+        <li><a href="#reports">产业报告</a></li>
+        <li><a href="#agents">智能体</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="搜索专利、论文、技术..." id="globalSearch">
+        </div>
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          AI 监控中
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()">☰</button>
+      </div>
+    </nav>
+    <!-- Mobile dropdown menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#map" onclick="closeMobileMenu()">🌍 全球动态</a>
+      <a href="#rankings" onclick="closeMobileMenu()">📊 技术排名</a>
+      <a href="#papers" onclick="closeMobileMenu()">📄 核心论文</a>
+      <a href="#patents" onclick="closeMobileMenu()">📋 核心专利</a>
+      <a href="#investments" onclick="closeMobileMenu()">💰 投资建议</a>
+      <a href="#reports" onclick="closeMobileMenu()">📈 产业报告</a>
+      <a href="#agents" onclick="closeMobileMenu()">🤖 智能体</a>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT (scrollable home) ==================== -->
+  <main id="mainContent">
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero">
+    <div class="hero-badge">🤖 AI智能体 7×24小时全球监控运行中</div>
+    <h1>全球<span class="highlight">新能源</span>情报<br>实时监控与深度分析平台</h1>
+    <p>基于AI智能体持续监控全球新能源领域专利、前沿论文和产业动态，聚焦电池技术突破，为您提供最及时、最深度的行业情报。</p>
+    <div class="stats-bar">
+      <div class="stat-item"><div class="stat-value" id="statPatents">128,439</div><div class="stat-label">监控专利数</div></div>
+      <div class="stat-item"><div class="stat-value" id="statPapers">56,782</div><div class="stat-label">追踪论文数</div></div>
+      <div class="stat-item"><div class="stat-value" id="statNews">12,305</div><div class="stat-label">行业新闻</div></div>
+      <div class="stat-item"><div class="stat-value" id="statCountries">47</div><div class="stat-label">覆盖国家</div></div>
+      <div class="stat-item"><div class="stat-value" id="statAgents">6</div><div class="stat-label">运行智能体</div></div>
+    </div>
+  </section>
+
+  <!-- ==================== GLOBAL MAP ==================== -->
+  <section class="section map-section" id="map">
+    <div class="section-header">
+      <div>
+        <div class="section-title"><span class="icon">🌍</span> 全球新能源每日动态</div>
+        <div class="section-desc">AI智能体实时监控全球47个国家的新能源专利、论文与产业动态</div>
+      </div>
+      <div class="view-all" style="cursor:pointer">查看全部动态 →</div>
+    </div>
+    <div class="map-container">
+      <div id="worldMap" style="width:100%;height:100%;z-index:1"></div>
+      <div class="map-overlay">
+        <button class="map-filter-btn active" data-filter="all">全部</button>
+        <button class="map-filter-btn" data-filter="patent">专利</button>
+        <button class="map-filter-btn" data-filter="paper">论文</button>
+        <button class="map-filter-btn" data-filter="news">新闻</button>
+        <button class="map-filter-btn" data-filter="battery">电池</button>
+      </div>
+      <div class="map-legend">
+        <div class="legend-title">活动类型</div>
+        <div class="legend-items">
+          <div class="legend-item"><div class="legend-dot" style="background:#ffd600"></div> 专利申请/授权</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#00b0ff"></div> 论文发表</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#00c853"></div> 产业新闻</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#ff5252"></div> 重大突破</div>
+        </div>
+      </div>
+    </div>
+    <div class="daily-feed" id="dailyFeed"></div>
+  </section>
+
+  <!-- ==================== TECH RANKINGS ==================== -->
+  <section class="section" id="rankings">
+    <div class="section-header">
+      <div>
+        <div class="section-title"><span class="icon">📊</span> 最新前沿技术排名</div>
+        <div class="section-desc">基于专利数量、论文引用、产业投资等多维度AI综合评分</div>
+      </div>
+      <div class="view-all" style="cursor:pointer">完整排名 →</div>
+    </div>
+    <div class="tab-container">
+      <button class="tab-btn active" data-tab="battery">🔋 电池技术</button>
+      <button class="tab-btn" data-tab="solar">☀️ 太阳能</button>
+      <button class="tab-btn" data-tab="hydrogen">💧 氢能</button>
+      <button class="tab-btn" data-tab="wind">🌬️ 风能</button>
+      <button class="tab-btn" data-tab="storage">⚡ 储能</button>
+      <button class="tab-btn" data-tab="ev">🚗 电动汽车</button>
+    </div>
+    <div class="rankings-grid" id="rankingsGrid"></div>
+  </section>
+
+  <!-- ==================== CORE PAPERS ==================== -->
+  <section class="section surface-section" id="papers">
+    <div class="section-header">
+      <div>
+        <div class="section-title"><span class="icon">📄</span> 核心重大论文研读</div>
+        <div class="section-desc">AI智能体筛选高影响因子期刊中的新能源与电池技术突破性论文</div>
+      </div>
+      <div class="view-all" style="cursor:pointer">全部论文 →</div>
+    </div>
+    <div class="tab-container">
+      <button class="tab-btn active" data-tab="paper-all">全部</button>
+      <button class="tab-btn" data-tab="paper-battery">固态电池</button>
+      <button class="tab-btn" data-tab="paper-lithium">锂离子电池</button>
+      <button class="tab-btn" data-tab="paper-sodium">钠离子电池</button>
+      <button class="tab-btn" data-tab="paper-perovskite">钙钛矿</button>
+      <button class="tab-btn" data-tab="paper-hydrogen">氢燃料电池</button>
+    </div>
+    <div class="papers-grid" id="papersGrid"></div>
+  </section>
+
+  <!-- ==================== CORE PATENTS ==================== -->
+  <section class="section" id="patents">
+    <div class="section-header">
+      <div>
+        <div class="section-title"><span class="icon">📋</span> 核心专利研读</div>
+        <div class="section-desc">全球新能源领域核心专利追踪，重点关注电池技术专利布局</div>
+      </div>
+      <div class="view-all" style="cursor:pointer">全部专利 →</div>
+    </div>
+    <div class="tab-container">
+      <button class="tab-btn active" data-tab="pat-all">全部</button>
+      <button class="tab-btn" data-tab="pat-battery">电池</button>
+      <button class="tab-btn" data-tab="pat-solar">光伏</button>
+      <button class="tab-btn" data-tab="pat-hydrogen">氢能</button>
+      <button class="tab-btn" data-tab="pat-storage">储能</button>
+      <button class="tab-btn" data-tab="pat-ev">电动汽车</button>
+    </div>
+    <div class="patents-grid" id="patentsGrid"></div>
+  </section>
+
+  <!-- ==================== INVESTMENT ADVISORY ==================== -->
+  <section class="section surface-section" id="investments">
+    <div class="section-header">
+      <div>
+        <div class="section-title"><span class="icon">💰</span> 投资建议与机会</div>
+        <div class="section-desc">基于AI情报分析的新能源领域投资机会评估与建议报告</div>
+      </div>
+      <div class="view-all" style="cursor:pointer">全部投资报告 →</div>
+    </div>
+    <div class="investments-grid" id="investmentsGrid"></div>
+  </section>
+
+  <!-- ==================== INDUSTRY REPORTS ==================== -->
+  <section class="section" id="reports">
+    <div class="section-header">
+      <div>
+        <div class="section-title"><span class="icon">📈</span> 产业布局报告</div>
+        <div class="section-desc">AI自动生成的深度产业分析报告，覆盖全球主要新能源企业和技术路线</div>
+      </div>
+      <div class="view-all" style="cursor:pointer">全部报告 →</div>
+    </div>
+    <div class="reports-grid" id="reportsGrid"></div>
+  </section>
+
+  <!-- ==================== AI AGENT STATUS ==================== -->
+  <section class="section agent-panel" id="agents">
+    <div class="section-header">
+      <div>
+        <div class="section-title"><span class="icon">🤖</span> AI智能体运行状态</div>
+        <div class="section-desc">7×24小时自动监控系统，实时采集和分析全球新能源情报</div>
+      </div>
+    </div>
+    <div class="agent-grid" id="agentGrid"></div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo"><div class="logo-icon">⚡</div><span>GreenPulse</span></div>
+        <p style="margin-top:1rem;">全球领先的新能源情报监控与分析平台，基于AI智能体技术，7×24小时不间断监控全球新能源领域的专利、论文和产业动态。</p>
+      </div>
+      <div class="footer-col">
+        <h4>平台功能</h4>
+        <ul>
+          <li><a href="#map">全球动态地图</a></li>
+          <li><a href="#rankings">技术排名</a></li>
+          <li><a href="#papers">论文研读</a></li>
+          <li><a href="#patents">专利研读</a></li>
+          <li><a href="#investments">投资建议</a></li>
+          <li><a href="#reports">产业报告</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>数据来源</h4>
+        <ul>
+          <li><a href="#">USPTO / EPO / CNIPA</a></li>
+          <li><a href="#">Nature / Science / Joule</a></li>
+          <li><a href="#">arXiv / IEEE / ACS</a></li>
+          <li><a href="#">Bloomberg NEF</a></li>
+          <li><a href="#">IEA / IRENA</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>关于我们</h4>
+        <ul>
+          <li><a href="#">API 文档</a></li>
+          <li><a href="#">技术博客</a></li>
+          <li><a href="#">联系我们</a></li>
+          <li><a href="#">隐私政策</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 GreenPulse. All rights reserved.</span>
+      <span>Powered by AI Agents &middot; 数据更新于 <span id="lastUpdate"></span></span>
+    </div>
+  </footer>
+
+  </main><!-- /mainContent -->
+
+  <!-- ==================== DETAIL OVERLAY ==================== -->
+  <div class="detail-overlay" id="detailOverlay">
+    <div class="detail-panel" id="detailPanel">
+      <button class="detail-close" onclick="closeDetail()">&times;</button>
+      <div class="detail-content" id="detailContent"></div>
+    </div>
+  </div>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/map.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

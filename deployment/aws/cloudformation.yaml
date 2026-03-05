@@ -1,0 +1,194 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "GreenPulse - New Energy Intelligence Platform - One-Click AWS Deployment"
+
+Parameters:
+  InstanceType:
+    Type: String
+    Default: t3.medium
+    AllowedValues: [t3.micro, t3.small, t3.medium, t3.large, t3.xlarge]
+    Description: EC2 instance type
+
+  KeyPairName:
+    Type: AWS::EC2::KeyPair::KeyName
+    Description: SSH key pair for EC2 access
+
+  AzureApiKey:
+    Type: String
+    Default: ""
+    NoEcho: true
+    Description: "Azure OpenAI API key for AI agent analysis (optional)"
+
+  SerpApiKey:
+    Type: String
+    Default: ""
+    NoEcho: true
+    Description: "SerpAPI key for patent/news search (optional)"
+
+Mappings:
+  RegionAMI:
+    us-east-1:
+      AMI: ami-0c7217cdde317cfec
+    us-west-2:
+      AMI: ami-008fe2fc65df48dac
+    eu-west-1:
+      AMI: ami-0905a3c97561e0b69
+    ap-northeast-1:
+      AMI: ami-0d52744d6551d851e
+    ap-southeast-1:
+      AMI: ami-0df7a207adb9748c7
+
+Resources:
+
+  GreenPulseVPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.0.0.0/16
+      EnableDnsHostnames: true
+      EnableDnsSupport: true
+      Tags:
+        - Key: Name
+          Value: GreenPulse-VPC
+
+  PublicSubnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref GreenPulseVPC
+      CidrBlock: 10.0.1.0/24
+      MapPublicIpOnLaunch: true
+      AvailabilityZone: !Select [0, !GetAZs ""]
+      Tags:
+        - Key: Name
+          Value: GreenPulse-PublicSubnet
+
+  InternetGateway:
+    Type: AWS::EC2::InternetGateway
+
+  AttachGateway:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      VpcId: !Ref GreenPulseVPC
+      InternetGatewayId: !Ref InternetGateway
+
+  PublicRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: !Ref GreenPulseVPC
+
+  PublicRoute:
+    Type: AWS::EC2::Route
+    DependsOn: AttachGateway
+    Properties:
+      RouteTableId: !Ref PublicRouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref InternetGateway
+
+  SubnetRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref PublicSubnet
+      RouteTableId: !Ref PublicRouteTable
+
+  SecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: GreenPulse Security Group
+      VpcId: !Ref GreenPulseVPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 8000
+          ToPort: 8000
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: !Ref InstanceType
+      KeyName: !Ref KeyPairName
+      ImageId: !FindInMap [RegionAMI, !Ref "AWS::Region", AMI]
+      SubnetId: !Ref PublicSubnet
+      SecurityGroupIds:
+        - !Ref SecurityGroup
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: 30
+            VolumeType: gp3
+      Tags:
+        - Key: Name
+          Value: GreenPulse-Server
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          set -e
+
+          # System update
+          apt-get update -y
+          apt-get install -y docker.io docker-compose git curl
+
+          # Start Docker
+          systemctl enable docker
+          systemctl start docker
+
+          # Clone repository
+          cd /opt
+          git clone https://github.com/YOUR_ORG/greenpulse.git || mkdir -p greenpulse
+          cd greenpulse
+
+          # Set environment
+          cat > .env << 'ENVEOF'
+          AZURE_API_KEY=${AzureApiKey}
+          AZURE_ENDPOINT=https://admin-mm4mum0p-eastus2.cognitiveservices.azure.com/openai/responses
+          AZURE_API_VERSION=2025-04-01-preview
+          AZURE_MODEL=gpt-5.2-chat
+          SERPAPI_KEY=${SerpApiKey}
+          ENVEOF
+
+          # Build and start
+          cd deployment/docker
+          docker-compose up -d --build
+
+          # Set up Nginx reverse proxy
+          apt-get install -y nginx
+          cat > /etc/nginx/sites-available/greenpulse << 'NGINXEOF'
+          server {
+              listen 80;
+              server_name _;
+
+              location / {
+                  proxy_pass http://127.0.0.1:8000;
+                  proxy_set_header Host $host;
+                  proxy_set_header X-Real-IP $remote_addr;
+                  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                  proxy_set_header X-Forwarded-Proto $scheme;
+              }
+          }
+          NGINXEOF
+
+          ln -sf /etc/nginx/sites-available/greenpulse /etc/nginx/sites-enabled/
+          rm -f /etc/nginx/sites-enabled/default
+          systemctl restart nginx
+
+Outputs:
+  WebsiteURL:
+    Description: "GreenPulse Platform URL"
+    Value: !Sub "http://${EC2Instance.PublicIp}"
+
+  APIURL:
+    Description: "GreenPulse API URL"
+    Value: !Sub "http://${EC2Instance.PublicIp}/api/v1"
+
+  SSHCommand:
+    Description: "SSH access command"
+    Value: !Sub "ssh -i ${KeyPairName}.pem ubuntu@${EC2Instance.PublicIp}"
