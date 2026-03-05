@@ -30,7 +30,7 @@
 - **后端**: Python / FastAPI / SQLAlchemy / SQLite
 - **AI**: OpenAI GPT-4o / 自定义Agent框架
 - **数据源**: EPO OPS / Semantic Scholar / arXiv / SerpAPI
-- **部署**: Docker / AWS CloudFormation
+- **部署**: Docker / AWS CloudFormation / 阿里云 ECS
 
 ## 快速开始
 
@@ -60,7 +60,7 @@ cp .env.example .env
 cd deployment/docker
 
 # 设置环境变量
-export OPENAI_API_KEY=sk-your-key
+export AZURE_API_KEY=your-azure-key
 export SERPAPI_KEY=your-serpapi-key
 
 docker-compose up -d --build
@@ -75,11 +75,36 @@ export AWS_SECRET_ACCESS_KEY=your-secret
 export AWS_REGION=us-east-1
 
 # 设置 API Keys
-export OPENAI_API_KEY=sk-your-key
+export AZURE_API_KEY=your-azure-key
 export KEY_PAIR_NAME=your-ec2-keypair
 
 # 一键部署
 ./scripts/deploy-aws.sh
+```
+
+### 5. 一键部署到阿里云 ECS
+
+```bash
+# 前置: 安装并配置阿里云 CLI
+pip install aliyun-cli
+aliyun configure  # 填入 AccessKey ID/Secret
+
+# 设置 API Keys (可选)
+export AZURE_API_KEY=your-azure-key
+
+# 一键部署 (交互式, 可选密码或密钥对登录)
+./scripts/deploy-aliyun.sh
+```
+
+**或者使用 Terraform:**
+
+```bash
+cd deployment/aliyun
+cp terraform.tfvars.example terraform.tfvars
+# 编辑 terraform.tfvars 填入配置
+
+terraform init
+terraform apply
 ```
 
 ## 项目结构
@@ -116,11 +141,16 @@ greenpulse/
 │   ├── docker/
 │   │   ├── Dockerfile
 │   │   └── docker-compose.yml
-│   └── aws/
-│       └── cloudformation.yaml
+│   ├── aws/
+│   │   └── cloudformation.yaml
+│   └── aliyun/             # 阿里云 ECS 部署
+│       ├── main.tf         # Terraform 主配置
+│       ├── user_data.sh    # ECS 初始化脚本
+│       └── terraform.tfvars.example
 ├── scripts/
 │   ├── run-local.sh        # 本地启动
-│   └── deploy-aws.sh       # AWS一键部署
+│   ├── deploy-aws.sh       # AWS一键部署
+│   └── deploy-aliyun.sh    # 阿里云一键部署
 ├── requirements.txt
 ├── .env.example
 └── README.md
@@ -145,7 +175,9 @@ greenpulse/
 
 | 变量 | 必填 | 说明 |
 |------|------|------|
-| `OPENAI_API_KEY` | 推荐 | OpenAI API密钥，用于AI分析 |
+| `AZURE_API_KEY` | 推荐 | Azure OpenAI API密钥，用于AI分析 |
+| `AZURE_ENDPOINT` | 可选 | Azure端点URL (已有默认值) |
+| `AZURE_MODEL` | 可选 | 模型名称 (默认 gpt-5.2-chat) |
 | `SERPAPI_KEY` | 可选 | SerpAPI密钥，用于专利/新闻搜索 |
 | `SEMANTIC_SCHOLAR_KEY` | 可选 | Semantic Scholar API密钥 |
 | `DATABASE_URL` | 可选 | 数据库连接串（默认SQLite） |

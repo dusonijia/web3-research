@@ -1,0 +1,19 @@
+# GreenPulse 阿里云部署配置
+# 复制为 terraform.tfvars 并填入实际值
+
+region        = "cn-shanghai"
+zone          = "cn-shanghai-b"
+instance_type = "ecs.t6-c1m2.large"
+
+# ECS 登录密码 (8-30位, 必须包含大小写字母和数字)
+instance_password = "YourPassword123"
+
+# Azure OpenAI API Key (可选, 用于 AI 智能体分析)
+azure_api_key = ""
+
+# SerpAPI Key (可选, 用于专利/新闻搜索)
+serpapi_key = ""
+
+# Git 仓库
+repo_url    = "https://github.com/dusonijia/web3-research.git"
+repo_branch = "main"
